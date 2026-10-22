@@ -3,14 +3,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F6EFE6">
 
-  <title>Olson Outdoor Services LLC | Minnesota Property Care</title>
+  <title>
+    About OOS | Olson Outdoor Services LLC
+  </title>
 
-  <meta name="description" content="Owner-operated lawn care, snow removal, and seasonal property maintenance for HOA communities, commercial properties, and residential customers in Minnesota.">
+  <meta name="description"
+        content="Discover the family roots behind Olson Outdoor Services LLC, from childhood lessons at Lyle Olson Landscapes to a new owner-operated Minnesota property maintenance business.">
 
   <style>
+
+    /* ====================================
+       OOS BRAND COLORS
+    ==================================== */
+
     :root {
       --cream: #F6EFE6;
       --navy: #102C54;
@@ -21,11 +30,12 @@
       --white: #FFFFFF;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 115px;
     }
 
     body {
@@ -33,7 +43,7 @@
       background: var(--cream);
       color: var(--ink);
       font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     img {
@@ -41,77 +51,88 @@
       max-width: 100%;
     }
 
-    a { color: inherit; }
-
-    section {
-      scroll-margin-top: 115px;
+    [hidden] {
+      display: none !important;
     }
 
-    a:focus-visible,
-    summary:focus-visible {
-      outline: 3px solid #3577AC;
-      outline-offset: 4px;
+    a {
+      color: inherit;
     }
 
     h1, h2, h3 {
-      color: var(--navy);
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.18;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.2;
     }
 
     h1 {
-      font-size: clamp(42px, 4.5vw, 76px);
-      letter-spacing: -.035em;
-      font-weight: 500;
+      font-size: clamp(38px, 4.8vw, 70px);
+      letter-spacing: -0.035em;
       margin: 0;
     }
 
     h2 {
-      font-size: clamp(32px, 3vw, 47px);
-      font-weight: 500;
-      margin: 0 0 23px;
+      font-size: clamp(30px, 3.3vw, 47px);
+      margin: 0 0 24px;
     }
 
-    /* STICKY NAVIGATION */
+    h3 {
+      font-size: 27px;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #2876B2;
+      outline-offset: 4px;
+    }
+
+    /* ====================================
+       STICKY NAVIGATION
+    ==================================== */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(246,239,230,.97);
-      border-bottom: 1px solid #DCDDD9;
-      box-shadow: 0 2px 15px rgba(16,44,84,.06);
+      background: rgba(246,239,230,0.98);
+      border-bottom: 1px solid #DDDCD7;
+      box-shadow: 0 3px 15px rgba(16,44,84,0.06);
     }
 
     .nav-inner {
       max-width: 1500px;
+      min-height: 100px;
       margin: auto;
-      min-height: 96px;
-      padding: 7px 5%;
+      padding: 8px 5%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      align-items: center;
+      gap: 24px;
     }
 
     .brand {
+      flex-shrink: 0;
       display: flex;
       align-items: center;
-      flex-shrink: 0;
       text-decoration: none;
       color: var(--navy);
     }
 
     .brand img {
-      width: 145px;
-      height: 88px;
+      width: 190px;
+      height: 90px;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
 
     .brand-fallback {
       font-family: Georgia, serif;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: bold;
       line-height: 1.1;
     }
@@ -121,77 +142,79 @@
       font-family: Arial, sans-serif;
       font-size: 10px;
       letter-spacing: .1em;
-      margin-top: 5px;
     }
 
     .desktop-nav {
       display: flex;
+      gap: 26px;
       align-items: center;
-      gap: 27px;
     }
 
     .desktop-nav a:not(.button) {
-      color: var(--navy);
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
+      color: var(--navy);
     }
 
-    .desktop-nav a:not(.button):hover {
+    .desktop-nav a:not(.button):hover,
+    .desktop-nav a[aria-current="page"] {
       text-decoration: underline;
-      text-underline-offset: 5px;
+      text-decoration-color: var(--sage);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 7px;
+    }
+
+    /* ====================================
+       BUTTONS
+    ==================================== */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      transition: background .2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white !important;
+      border: 2px solid var(--navy);
+    }
+
+    .button-primary:hover {
+      background: #254A78;
+    }
+
+    .button-outline {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      background: #E5EAE8;
     }
 
     .mobile-menu {
       display: none;
     }
 
-    /* BUTTONS */
+    /* ====================================
+       ABOUT PAGE HERO
+    ==================================== */
 
-    .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 48px;
-      padding: 13px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-      text-align: center;
-      transition: background .2s, transform .2s;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button-primary {
-      background: var(--navy);
-      border: 2px solid var(--navy);
-      color: var(--white) !important;
-    }
-
-    .button-primary:hover {
-      background: #234772;
-    }
-
-    .button-outline {
-      background: transparent;
-      border: 2px solid var(--navy);
-      color: var(--navy);
-    }
-
-    .button-outline:hover {
-      background: #E6EBE9;
-    }
-
-    /* SPLIT-SCREEN HOMEPAGE */
-
-    .hero {
+    .about-hero {
       display: grid;
-      grid-template-columns: 51% 49%;
-      min-height: 620px;
+      grid-template-columns: 56% 44%;
+      min-height: 540px;
     }
 
     .hero-content {
@@ -199,212 +222,367 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 75px clamp(30px, 6vw, 115px);
+      padding: 80px clamp(30px, 7vw, 120px);
     }
 
     .eyebrow {
-      color: var(--slate);
       text-transform: uppercase;
-      letter-spacing: .15em;
+      letter-spacing: .17em;
       font-size: 12px;
       font-weight: 700;
-      margin-bottom: 18px;
+      color: var(--slate);
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      max-width: 600px;
+      font-size: 18px;
+      margin-top: 0;
     }
 
     .accent-line {
       width: 75px;
       height: 4px;
       background: var(--sage);
-      margin: 28px 0;
       border-radius: 3px;
+      margin: 30px 0;
     }
 
-    .hero-content p {
-      max-width: 500px;
-      font-size: 17px;
-      margin: 0 0 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .hero-image {
-      position: relative;
-      min-height: 520px;
-      overflow: hidden;
-      background: #B1C6BC;
-    }
-
-    .hero-image img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .photo-note {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      background: rgba(16,44,84,.84);
+    .heritage-panel {
+      background: var(--navy);
       color: white;
-      padding: 5px 10px;
-      font-size: 11px;
-      border-radius: 3px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 55px;
+      overflow: hidden;
     }
 
-    /* HOMEPAGE SECTIONS */
+    .heritage-panel::before,
+    .heritage-panel::after {
+      content: "";
+      position: absolute;
+      width: 410px;
+      height: 410px;
+      border: 1px solid rgba(155,203,224,.22);
+      border-radius: 50%;
+      right: -160px;
+      top: -170px;
+    }
+
+    .heritage-panel::after {
+      width: 310px;
+      height: 310px;
+      right: -110px;
+      top: -120px;
+    }
+
+    .heritage-content {
+      position: relative;
+      max-width: 390px;
+      z-index: 1;
+    }
+
+    .heritage-label {
+      color: var(--sky);
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .heritage-content h2 {
+      font-size: clamp(34px, 3.5vw, 51px);
+      color: white;
+      margin: 24px 0;
+    }
+
+    .heritage-content p {
+      font-size: 16px;
+      color: #E2E9F0;
+    }
+
+    .heritage-rule {
+      width: 70px;
+      height: 3px;
+      background: var(--sage);
+      margin: 28px 0;
+    }
+
+    /* ====================================
+       GENERAL LAYOUT
+    ==================================== */
 
     .section {
-      padding: 100px 6%;
+      padding: 100px 7%;
     }
 
     .container {
-      max-width: 1180px;
+      max-width: 1160px;
       margin: auto;
     }
 
-    .small-label {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 12px;
-      font-weight: 700;
+    .section-label {
       color: var(--slate);
-      margin-bottom: 12px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: .17em;
+      margin-bottom: 17px;
     }
 
-    .intro {
+    /* ====================================
+       CHILDHOOD STORY AND FATHER PHOTO
+    ==================================== */
+
+    .beginnings {
       background: var(--white);
     }
 
-    .intro-grid {
+    .story-grid {
       display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: 75px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 80px;
       align-items: center;
     }
 
-    .intro p,
-    .story p,
-    .contact p {
-      font-size: 17px;
-    }
-
-    .intro-highlight {
-      border-left: 4px solid var(--sage);
-      padding-left: 25px;
-      color: var(--navy);
-      font-family: Georgia, serif;
-      font-size: 23px;
-      line-height: 1.5;
-      margin-top: 28px;
-    }
-
-    /* SERVICES */
-
-    .services {
-      background: var(--cream);
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 40px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      background: white;
-      border-top: 4px solid var(--sage);
-      padding: 36px 29px;
-      min-height: 260px;
-      box-shadow: 0 10px 30px rgba(16,44,84,.04);
-    }
-
-    .service-number {
-      color: var(--slate);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .12em;
-    }
-
-    .service-card h3 {
-      font-size: 25px;
-      font-weight: 500;
-      margin: 18px 0 12px;
-    }
-
-    /* FAMILY STORY */
-
-    .story {
-      background: #EAF0EC;
-      text-align: center;
-    }
-
-    .story-inner {
-      max-width: 760px;
-      margin: auto;
-    }
-
-    .story .accent-line {
-      margin: 26px auto;
-    }
-
-    .story-link {
-      margin-top: 16px;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .contact h2 {
-      color: white;
-    }
-
-    .contact .small-label {
-      color: var(--sky);
-    }
-
-    .contact-layout {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 45px;
-      flex-wrap: wrap;
-    }
-
-    .contact-copy {
+    .story-copy {
       max-width: 700px;
     }
 
-    .contact a:not(.button) {
-      color: white;
-      text-underline-offset: 4px;
+    .story-copy p {
+      font-size: 18px;
     }
 
-    .contact .button {
-      background: var(--sky);
-      border: 2px solid var(--sky);
+    .father-column {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 25px;
+    }
+
+    .father-photo {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .father-photo img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      border-radius: 7px;
+      filter: drop-shadow(
+        0 12px 18px rgba(16,44,84,.12)
+      );
+    }
+
+    .father-photo figcaption {
+      padding-top: 15px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .father-photo figcaption span {
+      display: block;
+      margin-top: 3px;
+      color: var(--slate);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: .04em;
+    }
+
+    .history-card {
+      background: var(--cream);
+      border-left: 4px solid var(--sage);
+      padding: 28px;
+    }
+
+    .history-card h3 {
+      font-size: 27px;
+      margin: 8px 0 16px;
+    }
+
+    .history-card p {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    /* ====================================
+       FATHER'S QUOTE AND MONARCH BUTTERFLY
+    ==================================== */
+
+    .quote-section {
+      background: #EAF0EC;
+      padding: 100px 7% 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-inner {
+      max-width: 850px;
+      margin: auto;
+      position: relative;
+    }
+
+    .quote-mark {
+      font-family: Georgia, serif;
+      font-size: 105px;
+      line-height: .7;
+      color: var(--sage);
+      margin-bottom: 25px;
+    }
+
+    blockquote {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(29px, 3.8vw, 47px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.4;
       color: var(--navy);
     }
 
+    .quote-credit {
+      margin-top: 27px;
+      color: var(--slate);
+      font-weight: 700;
+      letter-spacing: .05em;
+      font-size: 16px;
+    }
+
+    /* Butterfly has transparent background */
+
+    .butterfly-tribute {
+      margin: 38px auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .butterfly-tribute img {
+      width: 150px;
+      max-width: 45vw;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(
+        0 7px 8px rgba(16,44,84,.12)
+      );
+    }
+
+    .butterfly-caption {
+      max-width: 440px;
+      color: var(--slate);
+      font-size: 14px;
+      line-height: 1.6;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* ====================================
+       A NEW CHAPTER
+    ==================================== */
+
+    .new-chapter {
+      background: var(--cream);
+    }
+
+    .chapter-inner {
+      max-width: 880px;
+      margin: auto;
+    }
+
+    .chapter-inner p {
+      font-size: 18px;
+    }
+
+    /* ====================================
+       OOS APPROACH
+    ==================================== */
+
+    .values-section {
+      background: white;
+    }
+
+    .values-heading {
+      max-width: 750px;
+      margin-bottom: 45px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .value-card {
+      padding: 30px;
+      background: var(--cream);
+      border-top: 4px solid var(--sage);
+    }
+
+    .value-card h3 {
+      font-size: 25px;
+      margin: 5px 0 15px;
+    }
+
+    .value-card p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* ====================================
+       CONTACT SECTION
+    ==================================== */
+
+    .cta-section {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 95px 7%;
+    }
+
+    .cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .cta-section h2 {
+      color: white;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: #E2E9F0;
+      margin-bottom: 32px;
+    }
+
+    .cta-section .button {
+      background: var(--sky);
+      color: var(--navy);
+      border: 2px solid var(--sky);
+    }
+
+    .cta-section .button:hover {
+      background: #C5E4F0;
+    }
+
+    /* ====================================
+       FOOTER
+    ==================================== */
+
     footer {
       background: #0B213F;
-      padding: 30px 6%;
       color: #DEE7F0;
+      padding: 32px 6%;
       text-align: center;
       font-size: 13px;
     }
@@ -413,35 +591,48 @@
       margin: 5px 0;
     }
 
-    /* TABLET AND MOBILE */
+    footer a {
+      color: #DEE7F0;
+    }
 
-    @media (max-width: 1000px) {
+    /* ====================================
+       RESPONSIVE DESIGN
+    ==================================== */
+
+    @media (max-width: 1050px) {
+
       .desktop-nav {
         gap: 15px;
       }
 
-      .nav-inner {
-        padding: 7px 3%;
+      .brand img {
+        width: 155px;
       }
 
       .hero-content {
-        padding: 55px 35px;
+        padding: 65px 38px;
       }
 
-      .intro-grid {
-        gap: 35px;
+      .heritage-panel {
+        padding: 40px;
       }
+
+      .story-grid {
+        gap: 40px;
+      }
+
     }
 
     @media (max-width: 800px) {
+
       .nav-inner {
         min-height: 78px;
         padding: 5px 5%;
       }
 
       .brand img {
-        width: 140px;
-        height: 77px;
+        width: 135px;
+        height: 75px;
       }
 
       .desktop-nav {
@@ -454,12 +645,12 @@
       }
 
       .mobile-menu summary {
-        min-height: 44px;
-        padding: 10px 15px;
         border: 1px solid var(--navy);
         border-radius: 5px;
         color: var(--navy);
         cursor: pointer;
+        padding: 10px 15px;
+        min-height: 44px;
         font-weight: 700;
       }
 
@@ -467,74 +658,81 @@
         position: absolute;
         right: 0;
         top: 49px;
-        width: min(280px, 88vw);
+        width: min(280px,88vw);
+        padding: 12px;
+        z-index: 110;
         background: var(--cream);
         border: 1px solid #D5D6D2;
         box-shadow: 0 10px 25px rgba(0,0,0,.12);
-        padding: 12px;
-        z-index: 110;
       }
 
       .mobile-links a {
         display: block;
+        padding: 12px;
         text-decoration: none;
         color: var(--navy);
         font-weight: 600;
-        padding: 12px;
       }
 
-      .hero {
+      .about-hero {
         grid-template-columns: 1fr;
       }
 
       .hero-content {
-        padding: 65px 7%;
-      }
-
-      .hero-image {
-        min-height: 420px;
-      }
-
-      .section {
         padding: 70px 7%;
       }
 
-      .intro-grid {
+      .heritage-panel {
+        min-height: 310px;
+      }
+
+      .section {
+        padding: 75px 7%;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .father-photo img {
+        max-width: 300px;
+      }
+
+      .values-grid {
         grid-template-columns: 1fr;
       }
 
-      .service-grid {
-        grid-template-columns: 1fr;
+      .quote-section {
+        padding: 85px 7%;
       }
 
-      .service-card {
-        min-height: auto;
-      }
-
-      .contact-layout {
-        align-items: flex-start;
-      }
     }
 
     @media (max-width: 480px) {
-      .hero-image {
-        min-height: 340px;
+
+      .hero-content p,
+      .story-copy p,
+      .chapter-inner p {
+        font-size: 16px;
       }
 
-      .hero-actions {
-        width: 100%;
+      .heritage-panel {
+        padding: 45px 8%;
       }
 
-      .hero-actions .button {
-        width: 100%;
+      .history-card {
+        padding: 25px;
       }
 
-      .brand img {
-        width: 125px;
+      .butterfly-tribute img {
+        width: 120px;
       }
+
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       html {
         scroll-behavior: auto;
       }
@@ -543,20 +741,22 @@
         transition: none;
       }
 
-      .button:hover {
-        transform: none;
-      }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- STICKY TOP NAVIGATION -->
+  <!-- ===================================
+       STICKY NAVIGATION
+  =================================== -->
+
   <header class="site-header">
     <div class="nav-inner">
 
-      <a href="#home" class="brand"
+      <a href="index.html"
+         class="brand"
          aria-label="Olson Outdoor Services homepage">
 
         <img
@@ -568,40 +768,57 @@
           OLSON
           <small>OUTDOOR SERVICES, LLC</small>
         </span>
+
       </a>
 
-      <!-- DESKTOP NAVIGATION -->
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav"
+           aria-label="Main navigation">
 
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
+        <a href="index.html">Home</a>
 
-        <!-- LINK TO DEDICATED ABOUT PAGE -->
-        <a href="about-oos.html">About OOS</a>
+        <a href="index.html#services">
+          Services
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="about-oos.html"
+           aria-current="page">
+          About OOS
+        </a>
 
-        <a class="button button-primary"
-           href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+        <a
+          class="button button-primary"
+          href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
           Request an Estimate
         </a>
 
       </nav>
 
-      <!-- MOBILE NAVIGATION -->
-      <details class="mobile-menu">
+      <!-- MOBILE MENU -->
 
+      <details class="mobile-menu">
         <summary>Menu</summary>
 
-        <nav class="mobile-links" aria-label="Mobile navigation">
+        <nav class="mobile-links"
+             aria-label="Mobile navigation">
 
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
+          <a href="index.html">Home</a>
 
-          <!-- MOBILE ABOUT PAGE LINK -->
-          <a href="about-oos.html">About OOS</a>
+          <a href="index.html#services">
+            Services
+          </a>
 
-          <a href="#contact">Contact</a>
+          <a href="about-oos.html"
+             aria-current="page">
+            About OOS
+          </a>
+
+          <a href="index.html#contact">
+            Contact
+          </a>
 
           <a href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
             Request an Estimate
@@ -615,220 +832,350 @@
 
   <main>
 
-    <!-- SPLIT-SCREEN HERO -->
-    <section class="hero" id="home">
+    <!-- ===================================
+         ABOUT PAGE HERO
+    =================================== -->
+
+    <section class="about-hero">
 
       <div class="hero-content">
 
         <div class="eyebrow">
-          Minnesota · Owner-Operated Property Care
+          The Story Behind Olson Outdoor Services
         </div>
 
         <h1>
-          First Impressions Start at the Curb.
+          Our Roots Run Deeper Than Our Name.
         </h1>
 
         <div class="accent-line"></div>
 
         <p>
-          Lawn care, snow removal, and seasonal property
-          maintenance with a personal, professional approach.
+          Olson Outdoor Services LLC may be a
+          new chapter, but the knowledge,
+          experiences, and values behind it
+          began long before the company existed.
         </p>
 
-        <div class="hero-actions">
-
-          <a class="button button-primary"
-             href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
-            Request an Estimate
-          </a>
-
-          <a class="button button-outline" href="#services">
-            Explore Our Services
-          </a>
-
-        </div>
       </div>
 
-      <!-- NEIGHBORHOOD PHOTOGRAPH -->
-      <div class="hero-image">
+      <div class="heritage-panel">
 
-        <img
-          src="https://images.pexels.com/photos/37480475/pexels-photo-37480475.jpeg"
-          alt="Sunny residential neighborhood with green lawns, sidewalks, mature trees, and landscaping"
-          fetchpriority="high">
+        <div class="heritage-content">
 
-        <span class="photo-note">
-          Illustrative stock photography
-        </span>
-
-      </div>
-
-    </section>
-
-    <!-- OWNER-OPERATED INTRODUCTION -->
-    <section class="section intro" id="about">
-
-      <div class="container intro-grid">
-
-        <div>
-          <div class="small-label">Welcome to OOS</div>
-
-          <h2>
-            A Personal Approach to Property Care.
-          </h2>
-
-          <div class="accent-line"></div>
-        </div>
-
-        <div>
-          <p>
-            Olson Outdoor Services LLC is an owner-operated
-            Minnesota business focused on professional
-            outdoor property maintenance.
-          </p>
-
-          <p>
-            We work to build lasting customer relationships
-            through clear communication, thoughtful attention
-            to detail, and care for the properties entrusted
-            to us.
-          </p>
-
-          <div class="intro-highlight">
-            Professional standards. A personal connection.
+          <div class="heritage-label">
+            An Olson Family Story
           </div>
+
+          <h2>
+            The Work Came First.
+            The Lessons Stayed.
+          </h2>
+
+          <div class="heritage-rule"></div>
+
+          <p>
+            A connection to the outdoors passed
+            from father to son, and carried forward
+            into a business of its own.
+          </p>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- SERVICES OVERVIEW -->
-    <section class="section services" id="services">
+    <!-- ===================================
+         CHILDHOOD AND FATHER'S PHOTO
+    =================================== -->
 
-      <div class="container">
+    <section class="section beginnings">
 
-        <div class="section-heading">
+      <div class="container story-grid">
 
-          <div class="small-label">What We Do</div>
+        <div class="story-copy">
+
+          <div class="section-label">
+            Where It All Began
+          </div>
 
           <h2>
-            Property Care Through the Seasons.
+            A Childhood Spent Learning the Trade.
           </h2>
 
           <p>
-            Outdoor maintenance services for HOA communities,
-            commercial properties, and residential customers.
+            My introduction to landscaping
+            wasn't something that began in a
+            classroom or with a business plan.
+            It started when I was a kid,
+            going to work with my mom and dad.
           </p>
-        </div>
 
-        <div class="service-grid">
+          <p>
+            At the time, my parents couldn't
+            afford babysitting, so it made more
+            sense for me to accompany them to
+            job sites. What began simply as a
+            family making ends meet eventually
+            became something much more meaningful.
+          </p>
 
-          <article class="service-card">
-            <div class="service-number">01 / GROUNDS</div>
+          <p>
+            As I grew older, I became more
+            involved in the work. I watched,
+            listened, helped where I could,
+            and gradually learned what my dad
+            called the "tricks of the trade."
+          </p>
 
-            <h3>Lawn &amp; Grounds Care</h3>
-
-            <p>
-              Lawn mowing, trimming, and routine grounds
-              maintenance to help properties look their best
-              throughout the growing season.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">02 / WINTER</div>
-
-            <h3>Snow Removal</h3>
-
-            <p>
-              Winter property services focused on maintaining
-              accessible driveways, parking areas, and
-              pedestrian walkways.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">03 / SEASONAL</div>
-
-            <h3>Seasonal Maintenance</h3>
-
-            <p>
-              Spring and fall cleanups and additional outdoor
-              maintenance services tailored to your
-              property's needs.
-            </p>
-          </article>
+          <p>
+            Those early experiences gave me a
+            foundation in outdoor work that has
+            stayed with me throughout my life.
+          </p>
 
         </div>
+
+        <!-- FATHER PHOTOGRAPH AND HISTORY -->
+
+        <div class="father-column">
+
+          <figure class="father-photo">
+
+            <img
+              src="Lyle_Olson.png"
+              alt="Lyle Olson, father of the owner of Olson Outdoor Services"
+              loading="lazy">
+
+            <figcaption>
+              Lyle Olson
+
+              <span>
+                Lyle Olson Landscapes
+              </span>
+
+            </figcaption>
+
+          </figure>
+
+          <aside class="history-card">
+
+            <div class="section-label">
+              A Generation Before OOS
+            </div>
+
+            <h3>
+              Lyle Olson Landscapes
+            </h3>
+
+            <p>
+              My father, Lyle Olson, operated
+              his own landscaping business.
+              It was alongside him that I
+              received my earliest hands-on
+              introduction to the trade.
+            </p>
+
+          </aside>
+
+        </div>
+
       </div>
+
     </section>
 
-    <!-- FAMILY STORY WITH ABOUT OOS LINK -->
-    <section class="section story">
+    <!-- ===================================
+         LYLE OLSON'S WORDS AND BUTTERFLY
+    =================================== -->
 
-      <div class="story-inner">
+    <section class="quote-section"
+             aria-label="Words of Lyle Olson">
 
-        <div class="small-label">
-          The Story Behind OOS
+      <div class="quote-inner">
+
+        <div class="quote-mark"
+             aria-hidden="true">
+          &ldquo;
+        </div>
+
+        <blockquote>
+          Pride in workmanship is the best
+          boss you will ever have.
+        </blockquote>
+
+        <div class="quote-credit">
+          — Lyle Olson
+        </div>
+
+        <!-- MONARCH BUTTERFLY -->
+
+        <figure class="butterfly-tribute">
+
+          <img
+            src="Monarch_Butterfly.png"
+            alt="Orange and black monarch butterfly representing a personal connection to Lyle Olson"
+            loading="lazy">
+
+          <figcaption class="butterfly-caption">
+            A personal symbol of the lasting
+            connection between father and son.
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </section>
+
+    <!-- ===================================
+         A NEW CHAPTER
+    =================================== -->
+
+    <section class="section new-chapter">
+
+      <div class="chapter-inner">
+
+        <div class="section-label">
+          Carrying the Lessons Forward
         </div>
 
         <h2>
-          Our Roots Run Deeper Than Our Name.
+          A New Business. Deeply Rooted Values.
         </h2>
 
-        <div class="accent-line"></div>
-
         <p>
-          Olson Outdoor Services is a new chapter shaped
-          by lessons and hands-on experience passed down
-          through generations. Our story is rooted in
-          family, hard work, and a lasting appreciation
-          for quality workmanship.
+          My dad passed away in 2019, but the
+          lessons he taught me continue to
+          influence the way I approach my
+          work today.
         </p>
 
-        <!-- LINK TO FULL ABOUT OOS PAGE -->
-        <a
-          class="button button-outline story-link"
-          href="about-oos.html">
-          Read Our Story
-        </a>
+        <p>
+          Olson Outdoor Services LLC is not
+          an inherited company or a continuation
+          of Lyle Olson Landscapes as a business.
+          It is something I'm building independently,
+          shaped by the knowledge and experiences
+          that came before it.
+        </p>
+
+        <p>
+          To me, carrying that legacy forward
+          doesn't mean trying to recreate the
+          past. It means taking what I learned,
+          putting it to work, and continuing
+          to grow through the opportunities ahead.
+        </p>
+
+        <p>
+          The name may be different, and the
+          business may be new, but the foundation
+          behind it reaches back to those childhood
+          days spent working alongside my father.
+        </p>
 
       </div>
+
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="section contact" id="contact">
+    <!-- ===================================
+         OOS VALUES
+    =================================== -->
 
-      <div class="container contact-layout">
+    <section class="section values-section">
 
-        <div class="contact-copy">
+      <div class="container">
 
-          <div class="small-label">
-            Let's Connect
+        <div class="values-heading">
+
+          <div class="section-label">
+            The OOS Approach
           </div>
 
           <h2>
-            Let's Talk About Your Property.
+            What Those Roots Mean Today.
           </h2>
 
           <p>
-            Whether you manage a residential community,
-            commercial property, or your own home,
-            we'd welcome the opportunity to discuss
-            your outdoor maintenance needs.
-          </p>
-
-          <p>
-            <a href="tel:+16512107486">
-              (651) 210-7486
-            </a>
-            <br>
-            <a href="mailto:OlsonOutdoorServices26@gmail.com">
-              OlsonOutdoorServices26@gmail.com
-            </a>
+            The experiences behind Olson Outdoor
+            Services influence how we approach
+            our work and the relationships we
+            build with customers.
           </p>
 
         </div>
+
+        <div class="values-grid">
+
+          <article class="value-card">
+
+            <h3>
+              Hands-On Knowledge
+            </h3>
+
+            <p>
+              Lessons learned through real
+              experience, observation, and years
+              of working alongside family.
+            </p>
+
+          </article>
+
+          <article class="value-card">
+
+            <h3>
+              Personal Accountability
+            </h3>
+
+            <p>
+              An owner-operated approach built
+              around direct communication and
+              taking responsibility for the
+              work performed.
+            </p>
+
+          </article>
+
+          <article class="value-card">
+
+            <h3>
+              Attention to Workmanship
+            </h3>
+
+            <p>
+              A belief that how a job is done
+              matters just as much as getting
+              the job completed.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ===================================
+         CONTACT CALL TO ACTION
+    =================================== -->
+
+    <section class="cta-section">
+
+      <div class="cta-inner">
+
+        <h2>
+          Let's Talk About Your Property.
+        </h2>
+
+        <p>
+          From HOA communities to commercial
+          grounds and residential properties,
+          Olson Outdoor Services brings a
+          personal approach to outdoor
+          property maintenance.
+        </p>
 
         <a
           class="button"
@@ -837,11 +1184,15 @@
         </a>
 
       </div>
+
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ===================================
+       FOOTER
+  =================================== -->
+
   <footer>
 
     <p>
@@ -853,6 +1204,14 @@
     </p>
 
     <p>
+      <a href="index.html">Home</a>
+      &nbsp;·&nbsp;
+      <a href="index.html#services">Services</a>
+      &nbsp;·&nbsp;
+      <a href="index.html#contact">Contact</a>
+    </p>
+
+    <p>
       &copy; <span id="year">2026</span>
       Olson Outdoor Services LLC
     </p>
@@ -860,11 +1219,14 @@
   </footer>
 
   <script>
-    // Automatically update the footer year
+
+    // Update copyright year
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Close mobile navigation after choosing a link
+    // Close mobile menu after selecting a link
+
     document.querySelectorAll(".mobile-links a").forEach(
       function(link) {
         link.addEventListener("click", function() {
@@ -872,6 +1234,7 @@
         });
       }
     );
+
   </script>
 
 </body>
