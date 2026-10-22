@@ -3,10 +3,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
   <meta name="theme-color" content="#F6EFE6">
-  <meta name="description" content="Learn the family story behind Olson Outdoor Services LLC, from childhood lessons at Lyle Olson Landscapes to owner-operated property care in Minnesota.">
+
   <title>About OOS | Olson Outdoor Services LLC</title>
+
+  <meta name="description"
+        content="Discover the Olson family history behind Olson Outdoor Services LLC, from Lyle Olson Landscapes to a new generation of owner-operated property care in Minnesota.">
 
   <style>
     :root {
@@ -17,13 +22,16 @@
       --slate: #64798A;
       --ink: #34465B;
       --white: #FFFFFF;
+      --pale-sage: #EAF0EC;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 115px;
+      scroll-padding-top: 120px;
     }
 
     body {
@@ -31,13 +39,25 @@
       background: var(--cream);
       color: var(--ink);
       font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
-    [hidden] { display: none !important; }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; }
-    section { scroll-margin-top: 115px; }
+    [hidden] {
+      display: none !important;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    section {
+      scroll-margin-top: 120px;
+    }
 
     h1, h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
@@ -47,25 +67,33 @@
     }
 
     h1 {
-      font-size: clamp(38px, 4.8vw, 70px);
+      font-size: clamp(40px, 5vw, 72px);
       letter-spacing: -.035em;
       margin: 0;
     }
 
     h2 {
-      font-size: clamp(30px, 3.3vw, 47px);
-      margin: 0 0 24px;
+      font-size: clamp(31px, 3.5vw, 47px);
+      margin: 0 0 26px;
     }
 
-    h3 { font-size: 26px; }
-    p { margin: 0 0 20px; }
+    h3 {
+      font-size: 25px;
+    }
 
-    a:focus-visible, summary:focus-visible {
+    p {
+      margin: 0 0 22px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
       outline: 3px solid #2876B2;
       outline-offset: 4px;
     }
 
-    /* NAVIGATION */
+    /* ===================================
+       STICKY NAVIGATION
+    =================================== */
 
     .site-header {
       position: sticky;
@@ -73,38 +101,38 @@
       z-index: 100;
       background: rgba(246,239,230,.98);
       border-bottom: 1px solid #DDDCD7;
-      box-shadow: 0 3px 15px rgba(16,44,84,.06);
+      box-shadow: 0 3px 15px rgba(16,44,84,.07);
     }
 
     .nav-inner {
       max-width: 1500px;
-      min-height: 100px;
+      min-height: 95px;
       margin: auto;
-      padding: 8px 5%;
+      padding: 7px 5%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 24px;
     }
 
     .brand {
-      flex-shrink: 0;
       display: flex;
       align-items: center;
-      text-decoration: none;
+      flex-shrink: 0;
       color: var(--navy);
+      text-decoration: none;
     }
 
     .brand img {
-      width: 190px;
-      height: 90px;
+      width: 180px;
+      height: 85px;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
 
     .brand-fallback {
       font-family: Georgia, serif;
-      font-size: 26px;
+      font-size: 25px;
       font-weight: bold;
       line-height: 1.1;
     }
@@ -119,13 +147,13 @@
     .desktop-nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 25px;
     }
 
     .desktop-nav a:not(.button) {
-      text-decoration: none;
       font-size: 15px;
       font-weight: 600;
+      text-decoration: none;
       color: var(--navy);
     }
 
@@ -137,39 +165,48 @@
       text-underline-offset: 7px;
     }
 
-    .mobile-menu { display: none; }
+    .mobile-menu {
+      display: none;
+    }
 
-    /* BUTTONS */
+    /* ===================================
+       BUTTONS
+    =================================== */
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
       padding: 12px 24px;
+      min-height: 48px;
       border-radius: 5px;
-      text-decoration: none;
       font-size: 14px;
       font-weight: 700;
       text-align: center;
+      text-decoration: none;
+      line-height: 1.4;
       transition: background .2s ease;
     }
 
     .button-primary {
       background: var(--navy);
-      color: white !important;
       border: 2px solid var(--navy);
+      color: white !important;
     }
 
-    .button-primary:hover { background: #254A78; }
+    .button-primary:hover {
+      background: #254A78;
+    }
 
     .button-outline {
       background: transparent;
-      color: var(--navy);
       border: 2px solid var(--navy);
+      color: var(--navy);
     }
 
-    .button-outline:hover { background: #E5EAE8; }
+    .button-outline:hover {
+      background: #E5EAE8;
+    }
 
     .button-light {
       background: var(--sky);
@@ -177,12 +214,14 @@
       border: 2px solid var(--sky);
     }
 
-    .button-light:hover { background: #C5E4F0; }
+    .button-light:hover {
+      background: #C5E4F0;
+    }
 
     .button-on-dark {
       background: transparent;
-      border: 2px solid white;
       color: white;
+      border: 2px solid white;
     }
 
     .button-on-dark:hover {
@@ -191,273 +230,430 @@
 
     .action-row {
       display: flex;
-      gap: 13px;
-      flex-wrap: wrap;
       align-items: center;
-      margin-top: 15px;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 24px;
     }
 
-    /* HERO */
+    /* ===================================
+       HERO
+    =================================== */
 
-    .about-hero {
+    .hero {
       display: grid;
       grid-template-columns: 56% 44%;
-      min-height: 540px;
+      min-height: 570px;
     }
 
-    .hero-content {
-      padding: 75px clamp(30px,7vw,120px);
+    .hero-left {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       justify-content: center;
+      align-items: flex-start;
+      padding: 80px clamp(32px,7vw,120px);
     }
 
-    .eyebrow, .section-label {
+    .eyebrow,
+    .section-label {
       color: var(--slate);
       font-size: 12px;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: .17em;
+      text-transform: uppercase;
       margin-bottom: 20px;
     }
 
-    .hero-content p {
-      max-width: 600px;
+    .hero-left p {
+      max-width: 620px;
       font-size: 18px;
     }
 
     .accent-line {
       width: 75px;
       height: 4px;
-      background: var(--sage);
       border-radius: 3px;
+      background: var(--sage);
       margin: 30px 0;
     }
 
-    .heritage-panel {
-      background: var(--navy);
-      color: white;
+    .hero-right {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 55px;
-      position: relative;
+      padding: 60px;
+      background: var(--navy);
+      color: white;
       overflow: hidden;
     }
 
-    .heritage-panel::before,
-    .heritage-panel::after {
+    .hero-right::before,
+    .hero-right::after {
       content: "";
       position: absolute;
-      width: 410px;
-      height: 410px;
-      border: 1px solid rgba(155,203,224,.22);
+      border: 1px solid rgba(155,203,224,.2);
       border-radius: 50%;
+      width: 430px;
+      height: 430px;
+      top: -150px;
       right: -160px;
-      top: -170px;
+      pointer-events: none;
     }
 
-    .heritage-panel::after {
+    .hero-right::after {
       width: 310px;
       height: 310px;
-      right: -110px;
-      top: -120px;
+      top: -90px;
+      right: -100px;
     }
 
-    .heritage-content {
+    .hero-right-inner {
       position: relative;
-      max-width: 390px;
       z-index: 1;
+      max-width: 400px;
     }
 
-    .heritage-label {
+    .hero-right .section-label {
       color: var(--sky);
-      text-transform: uppercase;
-      letter-spacing: .17em;
-      font-size: 12px;
-      font-weight: 700;
     }
 
-    .heritage-content h2 {
+    .hero-right h2 {
       color: white;
-      font-size: clamp(34px,3.5vw,51px);
-      margin: 24px 0;
+      font-size: clamp(34px,3.8vw,52px);
     }
 
-    .heritage-content p { color: #E2E9F0; }
-
-    .heritage-rule {
-      width: 70px;
-      height: 3px;
-      background: var(--sage);
-      margin: 28px 0;
+    .hero-right p {
+      color: #E1EAF2;
+      font-size: 17px;
     }
 
-    /* GENERAL LAYOUT */
+    /* ===================================
+       CHAPTER NAVIGATION
+    =================================== */
 
-    .section { padding: 100px 7%; }
-    .container { max-width: 1160px; margin: auto; }
+    .chapter-nav {
+      padding: 25px 6%;
+      background: white;
+      border-bottom: 1px solid #E1E4E0;
+    }
 
-    /* FATHER'S STORY */
-
-    .beginnings { background: white; }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 80px;
+    .chapter-nav-inner {
+      max-width: 1160px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 15px 30px;
+      flex-wrap: wrap;
       align-items: center;
     }
 
-    .story-copy p { font-size: 18px; }
-
-    .father-column {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    .father-photo {
-      text-align: center;
-      margin: 0;
-    }
-
-    .father-photo img {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-      margin: auto;
-      border-radius: 7px;
-      filter: drop-shadow(0 12px 18px rgba(16,44,84,.12));
-    }
-
-    .father-photo figcaption {
-      padding-top: 15px;
+    .chapter-nav a {
       color: var(--navy);
-      font-family: Georgia, serif;
-      font-size: 22px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px;
     }
 
-    .father-photo figcaption span {
+    .chapter-nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    /* ===================================
+       GENERAL STORY LAYOUT
+    =================================== */
+
+    .section {
+      padding: 95px 7%;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: auto;
+    }
+
+    .reading-column {
+      max-width: 870px;
+      margin: auto;
+    }
+
+    .story-text {
+      font-size: 17px;
+      line-height: 1.95;
+    }
+
+    .section-intro {
+      font-size: 19px;
+      color: var(--navy);
+    }
+
+    .white-section {
+      background: white;
+    }
+
+    .cream-section {
+      background: var(--cream);
+    }
+
+    .sage-section {
+      background: var(--pale-sage);
+    }
+
+    .subtle-divider {
+      width: 100%;
+      height: 1px;
+      background: #D8DFDA;
+      margin: 40px 0;
+    }
+
+    /* ===================================
+       FATHER'S HISTORY AND PHOTO
+    =================================== */
+
+    .history-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .portrait-figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .portrait-frame {
+      padding: 12px;
+      background: white;
+      border: 1px solid #E3E6E1;
+      box-shadow: 0 12px 28px rgba(16,44,84,.09);
+      border-radius: 7px;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 3px;
+    }
+
+    .portrait-figure figcaption {
+      padding: 18px 5px 3px;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: var(--navy);
+    }
+
+    .portrait-figure figcaption span {
       display: block;
-      color: var(--slate);
+      margin-top: 5px;
       font-family: "Segoe UI", Arial, sans-serif;
       font-size: 13px;
-      margin-top: 3px;
+      color: var(--slate);
+      letter-spacing: .03em;
     }
 
-    .history-card {
-      background: var(--cream);
-      border-left: 4px solid var(--sage);
-      padding: 28px;
+    .photo-aside {
+      position: sticky;
+      top: 125px;
     }
 
-    .history-card h3 { margin: 8px 0 16px; }
-    .history-card p { margin-bottom: 0; }
-
-    /* FATHER'S QUOTE AND BUTTERFLY */
+    /* ===================================
+       FATHER'S QUOTE
+    =================================== */
 
     .quote-section {
-      background: #EAF0EC;
-      padding: 100px 7% 90px;
+      padding: 90px 7%;
       text-align: center;
+      background: #EAF0EC;
     }
 
     .quote-inner {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
     }
 
     .quote-mark {
-      font-family: Georgia, serif;
       color: var(--sage);
-      font-size: 105px;
+      font-family: Georgia, serif;
+      font-size: 110px;
       line-height: .7;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     blockquote {
       margin: 0;
-      color: var(--navy);
       font-family: Georgia, serif;
       font-size: clamp(29px,3.8vw,47px);
-      font-style: italic;
       line-height: 1.4;
+      font-style: italic;
+      color: var(--navy);
     }
 
     .quote-credit {
-      margin-top: 27px;
+      margin-top: 25px;
       color: var(--slate);
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
     }
 
-    .butterfly-tribute {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      margin: 38px auto 0;
+    .butterfly {
+      margin: 36px auto 0;
+      text-align: center;
     }
 
-    .butterfly-tribute img {
-      width: 150px;
-      max-width: 45vw;
+    .butterfly img {
+      display: block;
+      width: 145px;
       height: auto;
-      filter: drop-shadow(0 7px 8px rgba(16,44,84,.12));
+      margin: 0 auto;
+      filter: drop-shadow(
+        0 7px 8px rgba(16,44,84,.12)
+      );
     }
 
-    .butterfly-caption {
+    .butterfly figcaption {
+      max-width: 420px;
+      margin: 14px auto 0;
       color: var(--slate);
-      max-width: 440px;
       font-size: 14px;
       font-style: italic;
-      line-height: 1.6;
+    }
+
+    /* ===================================
+       CHILDHOOD HIGHLIGHT
+    =================================== */
+
+    .memory-highlight {
+      max-width: 790px;
+      margin: 40px auto;
+      padding: 35px 38px;
+      background: white;
+      border-left: 5px solid var(--sage);
+      box-shadow: 0 7px 22px rgba(16,44,84,.035);
+    }
+
+    .memory-highlight p {
+      font-family: Georgia, serif;
+      font-size: clamp(21px,2.6vw,29px);
+      color: var(--navy);
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    /* ===================================
+       MOTHER'S STORY
+    =================================== */
+
+    .mother-feature {
+      margin-top: 35px;
+      padding: 34px 40px;
+      border-left: 4px solid var(--sage);
+      background: rgba(255,255,255,.65);
+    }
+
+    .mother-feature h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: var(--navy);
+    }
+
+    .mother-feature p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ===================================
+       PERSONAL STORY AND USER PHOTO
+    =================================== */
+
+    .owner-section {
+      background: white;
+    }
+
+    .owner-heading {
+      max-width: 870px;
+      margin: 0 auto 50px;
+    }
+
+    .owner-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1.45fr) minmax(260px,.8fr);
+      gap: 65px;
+      align-items: start;
+    }
+
+    .owner-photo {
+      margin: 0;
+      position: sticky;
+      top: 125px;
+    }
+
+    .owner-photo .portrait-frame {
+      background: var(--cream);
+      border-color: #DFE3DD;
+    }
+
+    .owner-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 3px;
+    }
+
+    .owner-photo figcaption {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: var(--navy);
+      padding: 18px 0 0;
+    }
+
+    .owner-photo figcaption span {
+      display: block;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 13px;
+      color: var(--slate);
+      margin-top: 4px;
+    }
+
+    /* ===================================
+       ENDING
+    =================================== */
+
+    .ending {
+      background: var(--cream);
+    }
+
+    .ending-emphasis {
+      max-width: 880px;
+      margin: 50px auto 0;
+      padding: 45px 35px;
+      border-top: 4px solid var(--sage);
+      background: white;
+      text-align: center;
+    }
+
+    .ending-emphasis p {
+      font-family: Georgia, serif;
+      font-size: clamp(23px,3vw,35px);
+      line-height: 1.5;
+      color: var(--navy);
       margin: 0;
     }
 
-    /* A NEW CHAPTER */
-
-    .new-chapter { background: var(--cream); }
-
-    .chapter-inner {
-      max-width: 880px;
-      margin: auto;
+    .ending-emphasis .final-line {
+      font-size: 21px;
+      font-style: italic;
+      margin-top: 25px;
     }
 
-    .chapter-inner p { font-size: 18px; }
-
-    /* OOS VALUES */
-
-    .values-section { background: white; }
-
-    .values-heading {
-      max-width: 750px;
-      margin-bottom: 45px;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 22px;
-    }
-
-    .value-card {
-      background: var(--cream);
-      padding: 30px;
-      border-top: 4px solid var(--sage);
-    }
-
-    .value-card h3 { margin: 5px 0 15px; }
-    .value-card p { margin: 0; }
-
-    /* CONTACT SECTION */
+    /* ===================================
+       CONTACT
+    =================================== */
 
     .contact-section {
+      padding: 95px 7%;
       background: var(--navy);
       color: white;
-      padding: 95px 7%;
       text-align: center;
     }
 
@@ -466,20 +662,26 @@
       margin: auto;
     }
 
-    .contact-section h2 { color: white; }
+    .contact-section h2 {
+      color: white;
+    }
+
+    .contact-section .section-label {
+      color: var(--sky);
+    }
 
     .contact-section p {
-      color: #E2E9F0;
       font-size: 17px;
+      color: #E1EAF2;
     }
 
     .contact-details {
-      margin: 25px 0 30px;
-      font-size: 18px;
+      margin: 30px 0;
     }
 
     .contact-details a {
       color: white;
+      font-size: 18px;
       text-underline-offset: 4px;
       overflow-wrap: anywhere;
     }
@@ -488,33 +690,52 @@
       justify-content: center;
     }
 
-    .contact-section .section-label {
-      color: var(--sky);
-    }
-
-    /* FOOTER */
+    /* ===================================
+       FOOTER
+    =================================== */
 
     footer {
+      padding: 30px 6%;
+      text-align: center;
       background: #0B213F;
       color: #DEE7F0;
-      padding: 32px 6%;
-      text-align: center;
       font-size: 13px;
     }
 
-    footer p { margin: 5px 0; }
-    footer a { color: #DEE7F0; }
+    footer p {
+      margin: 5px 0;
+    }
 
-    .footer-nav a { margin: 0 8px; }
+    footer a {
+      color: #DEE7F0;
+      margin: 0 8px;
+    }
 
-    /* RESPONSIVE */
+    /* ===================================
+       RESPONSIVE DESIGN
+    =================================== */
 
     @media (max-width: 1050px) {
-      .desktop-nav { gap: 15px; }
-      .brand img { width: 155px; }
-      .hero-content { padding: 65px 38px; }
-      .heritage-panel { padding: 40px; }
-      .story-grid { gap: 40px; }
+      .desktop-nav {
+        gap: 15px;
+      }
+
+      .brand img {
+        width: 155px;
+      }
+
+      .hero-left {
+        padding: 65px 38px;
+      }
+
+      .hero-right {
+        padding: 40px;
+      }
+
+      .history-grid,
+      .owner-grid {
+        gap: 35px;
+      }
     }
 
     @media (max-width: 800px) {
@@ -528,7 +749,9 @@
         height: 75px;
       }
 
-      .desktop-nav { display: none; }
+      .desktop-nav {
+        display: none;
+      }
 
       .mobile-menu {
         display: block;
@@ -559,63 +782,131 @@
 
       .mobile-links a {
         display: block;
-        color: var(--navy);
-        text-decoration: none;
-        font-weight: 600;
         padding: 12px;
+        color: var(--navy);
+        font-weight: 600;
+        text-decoration: none;
       }
 
-      .about-hero { grid-template-columns: 1fr; }
-      .hero-content { padding: 70px 7%; }
-      .heritage-panel { min-height: 310px; }
-      .section { padding: 75px 7%; }
-      .story-grid { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
-      .father-photo img { max-width: 300px; }
-      .quote-section { padding: 85px 7%; }
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-left {
+        padding: 65px 7%;
+      }
+
+      .hero-right {
+        min-height: 340px;
+        padding: 55px 7%;
+      }
+
+      .section {
+        padding: 75px 7%;
+      }
+
+      .history-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .owner-grid {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .photo-aside,
+      .owner-photo {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .owner-photo {
+        order: -1;
+      }
+
+      .quote-section {
+        padding: 80px 7%;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero-content p,
-      .story-copy p,
-      .chapter-inner p { font-size: 16px; }
+      .story-text {
+        font-size: 16px;
+      }
 
-      .heritage-panel { padding: 45px 8%; }
-      .history-card { padding: 25px; }
-      .butterfly-tribute img { width: 120px; }
-      .action-row .button { width: 100%; }
+      .hero-left p {
+        font-size: 16px;
+      }
+
+      .action-row .button {
+        width: 100%;
+      }
+
+      .memory-highlight,
+      .mother-feature {
+        padding: 25px;
+      }
+
+      .chapter-nav-inner {
+        justify-content: flex-start;
+      }
+
+      .butterfly img {
+        width: 125px;
+      }
+
+      .ending-emphasis {
+        padding: 32px 23px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .button { transition: none; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button {
+        transition: none;
+      }
     }
   </style>
 </head>
 
 <body id="top">
 
-  <!-- STICKY NAVIGATION -->
+  <!-- ===================================
+       STICKY NAVIGATION
+  =================================== -->
+
   <header class="site-header">
     <div class="nav-inner">
 
-      <a href="index.html" class="brand"
-         aria-label="Return to Olson Outdoor Services homepage">
+      <a href="index.html"
+         class="brand"
+         aria-label="Olson Outdoor Services homepage">
+
         <img
           src="Finalized logo - Navy blue.png"
           alt="Olson Outdoor Services LLC logo"
           onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+
         <span class="brand-fallback" hidden>
           OLSON
           <small>OUTDOOR SERVICES, LLC</small>
         </span>
+
       </a>
 
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav"
+           aria-label="Main navigation">
+
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
         <a href="#top" aria-current="page">About OOS</a>
         <a href="#contact">Contact</a>
+
         <a class="button button-primary"
            href="#contact">
           Request an Estimate
@@ -624,7 +915,9 @@
 
       <details class="mobile-menu">
         <summary>Menu</summary>
-        <nav class="mobile-links" aria-label="Mobile navigation">
+
+        <nav class="mobile-links"
+             aria-label="Mobile navigation">
           <a href="index.html">Home</a>
           <a href="index.html#services">Services</a>
           <a href="#top" aria-current="page">About OOS</a>
@@ -638,41 +931,51 @@
 
   <main>
 
-    <!-- ABOUT OOS HERO -->
-    <section class="about-hero">
+    <!-- ===================================
+         HERO
+    =================================== -->
 
-      <div class="hero-content">
+    <section class="hero">
+
+      <div class="hero-left">
+
         <div class="eyebrow">
           The Story Behind Olson Outdoor Services
         </div>
 
-        <h1>Our Roots Run Deeper Than Our Name.</h1>
+        <h1>
+          Our Roots Run Deeper Than Our Name.
+        </h1>
 
         <div class="accent-line"></div>
 
         <p>
-          Olson Outdoor Services LLC may be a new chapter,
-          but the knowledge, experiences, and values
-          behind it began long before the company existed.
+          A family history rooted in craftsmanship,
+          dedication, and the lessons that continue
+          to shape a new generation.
         </p>
 
-        <!-- NEW HERO BUTTONS -->
         <div class="action-row">
+
           <a class="button button-primary"
+             href="#beginnings">
+            Discover Our Story
+          </a>
+
+          <a class="button button-outline"
              href="index.html">
             Back to Home
           </a>
-          <a class="button button-outline"
-             href="index.html#services">
-            Explore Our Services
-          </a>
+
         </div>
+
       </div>
 
-      <div class="heritage-panel">
-        <div class="heritage-content">
+      <div class="hero-right">
 
-          <div class="heritage-label">
+        <div class="hero-right-inner">
+
+          <div class="section-label">
             An Olson Family Story
           </div>
 
@@ -681,236 +984,869 @@
             The Lessons Stayed.
           </h2>
 
-          <div class="heritage-rule"></div>
+          <div class="accent-line"></div>
 
           <p>
-            A connection to the outdoors passed from
-            father to son, and carried forward into
-            a business of its own.
+            From the grounds and landscapes
+            of the Twin Cities to a new
+            owner-operated business, this
+            is the history behind the
+            Olson Outdoor Services name.
           </p>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- CHILDHOOD STORY -->
-    <section class="section beginnings">
-      <div class="container story-grid">
+    <!-- ===================================
+         CHAPTER NAVIGATION
+    =================================== -->
 
-        <div class="story-copy">
-          <div class="section-label">Where It All Began</div>
+    <nav class="chapter-nav"
+         aria-label="Story chapters">
 
-          <h2>A Childhood Spent Learning the Trade.</h2>
+      <div class="chapter-nav-inner">
+        <a href="#beginnings">Where It Began</a>
+        <a href="#lyle-landscapes">Lyle Olson Landscapes</a>
+        <a href="#childhood">Growing Up Olson</a>
+        <a href="#family">Family Lessons</a>
+        <a href="#new-chapter">A New Chapter</a>
+        <a href="#roots">The Roots That Remain</a>
+      </div>
 
-          <p>
-            My introduction to landscaping wasn't something
-            that began in a classroom or with a business plan.
-            It started when I was a kid, going to work with
-            my mom and dad.
+    </nav>
+
+    <!-- ===================================
+         WHERE IT ALL BEGAN
+    =================================== -->
+
+    <section class="section cream-section"
+             id="beginnings">
+
+      <div class="container history-grid">
+
+        <div class="story-text">
+
+          <div class="section-label">
+            Chapter One · The Early Years
+          </div>
+
+          <h2>Where It All Began</h2>
+
+          <p class="section-intro">
+            The story behind Olson Outdoor Services
+            begins long before the company itself.
           </p>
 
           <p>
-            At the time, my parents couldn't afford babysitting,
-            so it made more sense for me to accompany them
-            to job sites. What began simply as a family
-            making ends meet eventually became something
-            much more meaningful.
+            Its roots can be traced to the early 1970s,
+            when Lyle Olson began establishing his
+            career in grounds maintenance, working
+            with property management companies
+            throughout the Twin Cities metropolitan area.
           </p>
 
           <p>
-            As I grew older, I became more involved in the
-            work. I watched, listened, helped where I could,
-            and gradually learned what my dad called the
-            "tricks of the trade."
+            Among his early professional experiences
+            was serving as Grounds Maintenance Supervisor
+            at the Colony of Richfield.
           </p>
 
           <p>
-            Those early experiences gave me a foundation
-            in outdoor work that has stayed with me
-            throughout my life.
+            It was during these formative years that
+            his appreciation for landscaping developed
+            into something more than a profession.
+            He recognized the value of understanding
+            the land, the plants that grew upon it,
+            and the craftsmanship required to maintain
+            them properly.
           </p>
+
+          <p>
+            In 1974, determined to deepen his knowledge
+            and pursue his interest in horticulture,
+            Lyle enrolled at Anoka Technical College.
+          </p>
+
+          <p>
+            He completed its two-year landscaping program,
+            earning his diploma and building upon the
+            practical experience he had already gained
+            in the field.
+          </p>
+
+          <p>
+            Armed with that education, a strong work ethic,
+            and an independent spirit, he set out to
+            establish a business of his own.
+          </p>
+
         </div>
 
-        <!-- FATHER'S PHOTO -->
-        <div class="father-column">
+        <!-- LYLE OLSON PHOTOGRAPH -->
 
-          <figure class="father-photo">
-            <img
-              src="Lyle_Olson.png"
-              alt="Lyle Olson, owner of Lyle Olson Landscapes"
-              loading="lazy">
+        <aside class="photo-aside">
+
+          <figure class="portrait-figure">
+
+            <div class="portrait-frame">
+              <img
+                src="Lyle_Olson.png"
+                alt="Lyle Olson, founder of Lyle Olson Landscapes"
+                loading="lazy">
+            </div>
+
             <figcaption>
               Lyle Olson
-              <span>Lyle Olson Landscapes</span>
+              <span>Founder · Lyle Olson Landscapes</span>
             </figcaption>
+
           </figure>
 
-          <aside class="history-card">
-            <div class="section-label">
-              A Generation Before OOS
-            </div>
-            <h3>Lyle Olson Landscapes</h3>
-            <p>
-              My father, Lyle Olson, operated his own
-              landscaping business. It was alongside him
-              that I received my earliest hands-on
-              introduction to the trade.
-            </p>
-          </aside>
+        </aside>
 
-        </div>
       </div>
+
     </section>
 
-    <!-- LYLE OLSON QUOTE AND BUTTERFLY -->
-    <section class="quote-section"
-             aria-label="Words of Lyle Olson">
+    <!-- ===================================
+         LYLE OLSON LANDSCAPES
+    =================================== -->
+
+    <section class="section white-section"
+             id="lyle-landscapes">
+
+      <div class="reading-column story-text">
+
+        <div class="section-label">
+          Chapter Two · Building a Reputation
+        </div>
+
+        <h2>An Old Pickup Truck and a Few Shovels</h2>
+
+        <p class="section-intro">
+          Like many small businesses, Lyle Olson
+          Landscapes began with modest resources
+          and considerable determination.
+        </p>
+
+        <p>
+          With an old pickup truck, a few shovels,
+          and a willingness to take on whatever
+          work came his way, Lyle began building
+          his business one property and one
+          professional relationship at a time.
+        </p>
+
+        <p>
+          His early work encompassed everything
+          from general landscaping and grounds
+          maintenance to parking lot asphalt repairs.
+        </p>
+
+        <p>
+          As his experience grew, he increasingly
+          focused on landscape design, plant care,
+          and the specialized art of shrub trimming.
+        </p>
+
+        <p>
+          In 1989, he further expanded his
+          horticultural knowledge by earning
+          his Master Gardener certification
+          through the University of Minnesota.
+        </p>
+
+        <p>
+          Over the years, Lyle became particularly
+          respected for his meticulous approach
+          to shrub trimming.
+        </p>
+
+        <p>
+          He understood that different varieties
+          of shrubs required different approaches,
+          and that properly shaping a plant meant
+          respecting its natural characteristics
+          rather than treating every shrub the same.
+        </p>
+
+        <p>
+          He believed that good landscaping required
+          more than equipment and physical effort.
+          It demanded knowledge, patience, and an
+          eye for detail.
+        </p>
+
+        <p>
+          That philosophy became a defining
+          characteristic of his work.
+        </p>
+
+        <p>
+          Property management companies and homeowners
+          associations came to recognize his craftsmanship,
+          and many sought his services repeatedly because
+          of the pride and precision he brought
+          to their properties.
+        </p>
+
+        <p>
+          For Lyle, his reputation was never separate
+          from his workmanship. Every property reflected
+          his personal commitment to the trade,
+          and every completed job carried his name.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ===================================
+         FATHER'S QUOTATION
+    =================================== -->
+
+    <section class="quote-section">
 
       <div class="quote-inner">
+
         <div class="quote-mark" aria-hidden="true">
           &ldquo;
         </div>
 
         <blockquote>
-          Pride in workmanship is the best boss
-          you will ever have.
+          Pride in workmanship is the best
+          boss you will ever have.
         </blockquote>
 
         <div class="quote-credit">
           — Lyle Olson
         </div>
 
-        <figure class="butterfly-tribute">
+        <figure class="butterfly">
+
           <img
             src="Monarch_Butterfly.png"
-            alt="Monarch butterfly symbolizing a personal connection to Lyle Olson"
+            alt="Monarch butterfly, a personal symbol of Lyle Olson"
             loading="lazy">
-          <figcaption class="butterfly-caption">
-            A personal symbol of the lasting
-            connection between father and son.
+
+          <figcaption>
+            A monarch butterfly holds a special
+            place in the Olson family story.
           </figcaption>
+
         </figure>
+
       </div>
+
     </section>
 
-    <!-- A NEW CHAPTER -->
-    <section class="section new-chapter">
-      <div class="chapter-inner">
+    <!-- ===================================
+         CHILDHOOD MEMORIES
+    =================================== -->
+
+    <section class="section cream-section"
+             id="childhood">
+
+      <div class="reading-column story-text">
 
         <div class="section-label">
-          Carrying the Lessons Forward
+          Chapter Three · Growing Up Olson
         </div>
 
-        <h2>A New Business. Deeply Rooted Values.</h2>
+        <h2>Three Sons and a Family Education</h2>
 
         <p>
-          My dad passed away in 2019, but the lessons
-          he taught me continue to influence the way
-          I approach my work today.
+          Although Lyle Olson Landscapes remained
+          an independently owned, single-owner
+          business, its influence extended well
+          beyond the customers it served.
         </p>
 
         <p>
-          Olson Outdoor Services LLC is not an inherited
-          company or a continuation of Lyle Olson Landscapes
-          as a business. It is something I'm building
-          independently, shaped by the knowledge and
-          experiences that came before it.
+          It was also where Lyle's three sons
+          received their earliest education
+          in the landscaping trade.
         </p>
 
         <p>
-          To me, carrying that legacy forward doesn't
-          mean trying to recreate the past. It means
-          taking what I learned, putting it to work,
-          and continuing to grow through the opportunities
-          ahead.
+          Their introduction to the business
+          wasn't always glamorous. It often began
+          with being dragged out of bed early
+          in the morning, climbing into the
+          work truck, and accompanying their
+          father to properties throughout
+          the metropolitan area.
         </p>
 
         <p>
-          The name may be different, and the business
-          may be new, but the foundation behind it
-          reaches back to those childhood days spent
-          working alongside my father.
+          For one of those boys, the bicycle
+          his father tossed into the back
+          of the truck was nearly as important
+          as the landscaping equipment.
+        </p>
+
+        <p>
+          While his father and the crew worked,
+          there were friends to be made around
+          the properties and small adventures
+          to be had.
+        </p>
+
+        <p>
+          Occasionally, he would be handed a
+          five-dollar bill and sent riding his
+          bicycle to a nearby gas station to
+          bring back cold drinks for the crew.
+        </p>
+
+        <p>
+          Lyle even developed his own rather
+          humorous compensation arrangement
+          for his young helper.
         </p>
 
       </div>
+
+      <div class="memory-highlight">
+
+        <p>
+          He offered two dollars a day:
+          one dollar for helping with the work
+          and another dollar for staying
+          out of his hair.
+        </p>
+
+      </div>
+
+      <div class="reading-column story-text">
+
+        <p>
+          It was an arrangement that suited
+          a young boy just fine.
+        </p>
+
+        <p>
+          After carefully saving fourteen dollars,
+          that boy eventually had enough money
+          to purchase a remote-controlled car
+          from a thrift store during a stop
+          on the way home.
+        </p>
+
+        <p>
+          What seemed like ordinary childhood
+          moments at the time would eventually
+          become treasured memories of growing
+          up around a family business.
+        </p>
+
+        <p>
+          As the boys grew older, their involvement
+          became more meaningful.
+        </p>
+
+        <p>
+          Lyle taught with a combination of
+          patience and old-school firmness.
+          He expected his sons to pay attention,
+          learn the names of the shrubs they
+          worked with, and understand why
+          different plants required different care.
+        </p>
+
+        <p>
+          He was equally particular about the
+          quality of their work.
+        </p>
+
+        <p>
+          Above all, he made certain they understood
+          that his name was on every job
+          they completed.
+        </p>
+
+        <p>
+          It was an education in both a profession
+          and personal responsibility.
+        </p>
+
+      </div>
+
     </section>
 
-    <!-- OUR VALUES -->
-    <section class="section values-section">
+    <!-- ===================================
+         LYLE AND DEBRA
+    =================================== -->
+
+    <section class="section sage-section"
+             id="family">
+
+      <div class="reading-column story-text">
+
+        <div class="section-label">
+          Chapter Four · The Family Foundation
+        </div>
+
+        <h2>The Lessons of Two Parents</h2>
+
+        <p>
+          While Lyle was teaching his sons
+          the value of workmanship, their mother,
+          <strong>Debra Jones</strong>, was providing
+          another kind of foundation.
+        </p>
+
+        <p>
+          A mother and caretaker, Debra understood
+          that love was measured not simply by
+          what a person said, but by what
+          they did for others.
+        </p>
+
+        <p>
+          Through some of life's most difficult
+          moments, she was a source of comfort,
+          encouragement, and emotional strength.
+        </p>
+
+        <p>
+          When the road ahead seemed uncertain,
+          her love and support provided a reassuring
+          light through the darkness.
+        </p>
+
+        <div class="mother-feature">
+
+          <h3>Debra Jones</h3>
+
+          <p>
+            Her influence carried a lesson every
+            bit as lasting as those learned on
+            the landscaping properties.
+          </p>
+
+          <p>
+            <strong>
+              Love isn't just a word.
+              It's something we demonstrate
+              through our actions.
+            </strong>
+          </p>
+
+        </div>
+
+        <div class="subtle-divider"></div>
+
+        <p>
+          Together, Lyle and Debra helped shape
+          values that would take on deeper meaning
+          as their sons grew older.
+        </p>
+
+        <p>
+          From their father came an appreciation
+          for knowledge, hard work, accountability,
+          and pride in craftsmanship.
+        </p>
+
+        <p>
+          From their mother came an understanding
+          of compassion, loyalty, and the importance
+          of standing beside the people who matter.
+        </p>
+
+        <p>
+          Different lessons, perhaps, but both
+          rooted in the belief that character
+          is revealed through actions.
+        </p>
+
+        <p>
+          Lyle eventually retired from his
+          landscaping business around 2010,
+          bringing to a close a career built
+          through decades of dedication
+          to his profession.
+        </p>
+
+        <p>
+          He passed away in 2019.
+        </p>
+
+        <p>
+          But the knowledge he shared, the
+          standards he maintained, and the
+          lessons both parents instilled
+          would continue to shape the
+          next chapter of the Olson story.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ===================================
+         NEW CHAPTER - OWNER'S PERSONAL STORY
+         TRULEY PHOTO PLACED HERE
+    =================================== -->
+
+    <section class="section owner-section"
+             id="new-chapter">
+
       <div class="container">
 
-        <div class="values-heading">
-          <div class="section-label">The OOS Approach</div>
-          <h2>What Those Roots Mean Today.</h2>
-          <p>
-            The experiences behind Olson Outdoor Services
-            influence how we approach our work and the
-            relationships we build with customers.
-          </p>
+        <div class="owner-heading">
+
+          <div class="section-label">
+            Chapter Five · A New Generation
+          </div>
+
+          <h2>
+            A New Chapter —
+            Olson Outdoor Services LLC
+          </h2>
+
+          <div class="accent-line"></div>
+
         </div>
 
-        <div class="values-grid">
-          <article class="value-card">
-            <h3>Hands-On Knowledge</h3>
-            <p>
-              Lessons learned through real experience,
-              observation, and years of working
-              alongside family.
-            </p>
-          </article>
+        <div class="owner-grid">
 
-          <article class="value-card">
-            <h3>Personal Accountability</h3>
-            <p>
-              An owner-operated approach built around
-              direct communication and taking responsibility
-              for the work performed.
-            </p>
-          </article>
+          <!-- FIRST-PERSON PERSONAL STORY -->
 
-          <article class="value-card">
-            <h3>Attention to Workmanship</h3>
-            <p>
-              A belief that how a job is done matters
-              just as much as getting the job completed.
+          <div class="story-text">
+
+            <p class="section-intro">
+              Growing up around my father's business
+              gave me something that I didn't fully
+              appreciate until later in life:
+              a foundation of hands-on knowledge
+              and experience that had been passed
+              down to me over many years.
             </p>
-          </article>
+
+            <p>
+              But it wasn't just the landscaping
+              knowledge that stayed with me.
+            </p>
+
+            <p>
+              It was watching the relationships
+              my father built with property managers
+              and homeowners associations.
+            </p>
+
+            <p>
+              His customers came to know him personally.
+              They trusted his judgment, respected
+              his experience, and understood the
+              care he brought to their properties.
+            </p>
+
+            <p>
+              As I grew older, I began recognizing
+              the value of those relationships
+              and the craftsmanship behind them.
+            </p>
+
+            <p>
+              I also began to realize that the kind
+              of knowledge my father practiced—the
+              ability to understand plants, recognize
+              their individual needs, and take the
+              time to perform quality work—was
+              something I felt was becoming
+              increasingly rare.
+            </p>
+
+            <p>
+              I knew I possessed a skill worth
+              preserving and an opportunity
+              to build something meaningful
+              of my own.
+            </p>
+
+            <p>
+              That realization became part
+              of the inspiration behind
+              <strong>
+                Olson Outdoor Services LLC.
+              </strong>
+            </p>
+
+            <p>
+              My journey to this point hasn't
+              always followed a straight road.
+            </p>
+
+            <p>
+              There have been difficult chapters,
+              unexpected turns, and times when
+              finding my direction seemed farther
+              away than I wanted it to be.
+            </p>
+
+            <p>
+              But somewhere along that journey,
+              I began to recognize that many of
+              the values my parents had spent
+              years trying to teach me had
+              never really left.
+            </p>
+
+            <p>
+              <strong>They were still there.</strong>
+            </p>
+
+            <p>
+              My father's insistence on taking
+              pride in my work. His belief that
+              a person's name and reputation
+              should mean something.
+            </p>
+
+            <p>
+              My mother's example of showing love
+              and care through actions rather
+              than words alone.
+            </p>
+
+            <p>
+              Those lessons took time to fully
+              appreciate, but they became part
+              of the foundation upon which I'm
+              building my life and business today.
+            </p>
+
+            <p>
+              Olson Outdoor Services is not an
+              inherited business or a continuation
+              of Lyle Olson Landscapes.
+            </p>
+
+            <p>
+              It is a new, independently owned
+              company, shaped by the experiences
+              and values that came before it.
+            </p>
+
+            <p>
+              My goal is to build lasting
+              professional relationships with
+              the people who entrust their
+              properties to my care.
+            </p>
+
+            <p>
+              I want the property managers,
+              homeowners associations, and
+              customers I work with to
+              know me personally.
+            </p>
+
+            <p>
+              I want them to feel comfortable
+              asking questions, value my judgment,
+              and know that I take their
+              concerns seriously.
+            </p>
+
+            <p>
+              To me, success isn't measured only
+              by how many properties a company
+              maintains.
+            </p>
+
+            <p>
+              It's also measured by the trust
+              it earns, the relationships it develops,
+              and the reputation it builds
+              along the way.
+            </p>
+
+          </div>
+
+          <!-- TRULEY PHOTO:
+               BESIDE THE FIRST-PERSON STORY -->
+
+          <figure class="owner-photo">
+
+            <div class="portrait-frame">
+
+              <img
+                src="Truley_Blue_shirt.jpg"
+                alt="Truley Olson, owner of Olson Outdoor Services LLC"
+                loading="lazy">
+
+            </div>
+
+            <figcaption>
+              Truley Olson
+              <span>
+                Owner · Olson Outdoor Services LLC
+              </span>
+            </figcaption>
+
+          </figure>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- CONTACT SECTION: WORKING DESTINATION -->
-    <section class="contact-section" id="contact">
-      <div class="contact-inner">
+    <!-- ===================================
+         PERSONAL REFLECTION AND ENDING
+    =================================== -->
 
-        <div class="section-label">Let's Connect</div>
+    <section class="section ending"
+             id="roots">
 
-        <h2>Let's Talk About Your Property.</h2>
+      <div class="reading-column story-text">
+
+        <div class="section-label">
+          Chapter Six · The Roots That Remain
+        </div>
+
+        <h2>The Roots That Remain</h2>
 
         <p>
-          From HOA communities to commercial grounds
-          and residential properties, Olson Outdoor
-          Services brings a personal approach to
-          outdoor property maintenance.
+          There are moments in life when the
+          people who shaped us feel especially
+          close, even when they aren't
+          standing beside us.
+        </p>
+
+        <p>
+          For me, a monarch butterfly has become
+          a personal reminder of my father.
+        </p>
+
+        <p>
+          When one appears, I often feel a sense
+          of his presence and a connection
+          to the memories and lessons
+          he left behind.
+        </p>
+
+        <p>
+          A dragonfly holds a similar meaning
+          for my mother, reminding me of her love,
+          her strength, and the comfort she has
+          given me throughout my life.
+        </p>
+
+        <p>
+          These are small but meaningful reminders
+          of the people whose influence helped
+          shape the person I've become.
+        </p>
+
+        <p>
+          I sometimes wonder what my father
+          would think of the business
+          I'm building today.
+        </p>
+
+        <p>
+          I hope that, despite the winding road
+          it took me to get here, he would
+          recognize something familiar in
+          the way I approach my work.
+        </p>
+
+        <p>
+          Not perfection. Not a recreation
+          of his business.
+        </p>
+
+        <p>
+          But the values he worked so hard
+          to teach me, finally finding
+          their place in my life.
+        </p>
+
+        <p>
+          My father started with an old pickup
+          truck, a few shovels, and a belief
+          that good workmanship could
+          build a good name.
+        </p>
+
+        <p>
+          Decades later, I'm beginning
+          a chapter of my own, carrying
+          forward that same belief.
+        </p>
+
+      </div>
+
+      <div class="ending-emphasis">
+
+        <p>
+          His name was on every job
+          he completed. Today, that
+          same family name is on mine.
+        </p>
+
+        <p class="final-line">
+          And I intend to honor it.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ===================================
+         CONTACT AND WORKING BUTTONS
+    =================================== -->
+
+    <section class="contact-section"
+             id="contact">
+
+      <div class="contact-inner">
+
+        <div class="section-label">
+          Let's Connect
+        </div>
+
+        <h2>
+          Let's Talk About Your Property.
+        </h2>
+
+        <p>
+          Whether you manage a homeowners
+          association, commercial property,
+          or your own home, Olson Outdoor
+          Services welcomes the opportunity
+          to discuss your outdoor
+          maintenance needs.
         </p>
 
         <div class="contact-details">
+
           <a href="tel:+16512107486">
             (651) 210-7486
           </a>
+
           <br>
+
           <a href="mailto:OlsonOutdoorServices26@gmail.com">
             OlsonOutdoorServices26@gmail.com
           </a>
+
         </div>
 
         <p>
-          Call us or send an email describing your property
-          and the services you're interested in.
+          Call or email to discuss services
+          and request an estimate.
         </p>
 
         <div class="action-row">
+
           <a class="button button-light"
              href="mailto:OlsonOutdoorServices26@gmail.com?subject=OOS%20Estimate%20Request">
             Email OOS
@@ -925,18 +1861,30 @@
              href="index.html">
             Back to Home
           </a>
+
         </div>
+
       </div>
+
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Olson Outdoor Services LLC · Minnesota</p>
-    <p>Owner-Operated Outdoor Property Maintenance</p>
+  <!-- ===================================
+       FOOTER
+  =================================== -->
 
-    <p class="footer-nav">
+  <footer>
+
+    <p>
+      Olson Outdoor Services LLC · Minnesota
+    </p>
+
+    <p>
+      Owner-Operated Outdoor Property Maintenance
+    </p>
+
+    <p>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="#top">Back to Top ↑</a>
@@ -946,12 +1894,15 @@
       &copy; <span id="year">2026</span>
       Olson Outdoor Services LLC
     </p>
+
   </footer>
 
   <script>
+    // Keep footer year current
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
+    // Close mobile menu when a link is selected
     document.querySelectorAll(".mobile-links a").forEach(
       function(link) {
         link.addEventListener("click", function() {
