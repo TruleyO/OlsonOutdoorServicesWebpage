@@ -8,7 +8,7 @@
 
   <title>Olson Outdoor Services LLC | Minnesota Property Care</title>
 
-  <meta name="description" content="Owner-operated lawn care, snow removal, and seasonal property maintenance for HOAs, commercial properties, and residential customers in Minnesota.">
+  <meta name="description" content="Owner-operated lawn care, snow removal, and seasonal property maintenance for HOA communities, commercial properties, and residential customers in Minnesota.">
 
   <style>
     :root {
@@ -21,13 +21,11 @@
       --white: #FFFFFF;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 110px;
+      scroll-padding-top: 115px;
     }
 
     body {
@@ -43,37 +41,35 @@
       max-width: 100%;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
-    h1, h2, h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--navy);
-      line-height: 1.2;
-      font-weight: 500;
-    }
-
-    h1 {
-      font-size: clamp(40px, 4.6vw, 70px);
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: clamp(30px, 3.2vw, 46px);
-      margin: 0 0 20px;
-    }
-
-    h3 {
-      font-size: 25px;
+    section {
+      scroll-margin-top: 115px;
     }
 
     a:focus-visible,
     summary:focus-visible {
-      outline: 3px solid #247FBA;
+      outline: 3px solid #3577AC;
       outline-offset: 4px;
+    }
+
+    h1, h2, h3 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.18;
+    }
+
+    h1 {
+      font-size: clamp(42px, 4.5vw, 76px);
+      letter-spacing: -.035em;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(32px, 3vw, 47px);
+      font-weight: 500;
+      margin: 0 0 23px;
     }
 
     /* STICKY NAVIGATION */
@@ -82,20 +78,20 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(246,239,230,.98);
-      border-bottom: 1px solid #DDDFDB;
-      box-shadow: 0 3px 15px rgba(16,44,84,.06);
+      background: rgba(246,239,230,.97);
+      border-bottom: 1px solid #DCDDD9;
+      box-shadow: 0 2px 15px rgba(16,44,84,.06);
     }
 
     .nav-inner {
       max-width: 1500px;
       margin: auto;
-      min-height: 100px;
+      min-height: 96px;
       padding: 7px 5%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      justify-content: space-between;
+      gap: 25px;
     }
 
     .brand {
@@ -107,15 +103,15 @@
     }
 
     .brand img {
-      width: 190px;
-      height: 95px;
+      width: 145px;
+      height: 88px;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
 
     .brand-fallback {
       font-family: Georgia, serif;
-      font-size: 25px;
+      font-size: 24px;
       font-weight: bold;
       line-height: 1.1;
     }
@@ -125,25 +121,29 @@
       font-family: Arial, sans-serif;
       font-size: 10px;
       letter-spacing: .1em;
-      margin-top: 4px;
+      margin-top: 5px;
     }
 
     .desktop-nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 27px;
     }
 
-    .desktop-nav > a:not(.button) {
+    .desktop-nav a:not(.button) {
       color: var(--navy);
+      text-decoration: none;
       font-size: 15px;
       font-weight: 600;
-      text-decoration: none;
     }
 
-    .desktop-nav > a:not(.button):hover {
+    .desktop-nav a:not(.button):hover {
       text-decoration: underline;
       text-underline-offset: 5px;
+    }
+
+    .mobile-menu {
+      display: none;
     }
 
     /* BUTTONS */
@@ -153,37 +153,37 @@
       justify-content: center;
       align-items: center;
       min-height: 48px;
-      padding: 12px 23px;
+      padding: 13px 24px;
       border-radius: 5px;
-      text-align: center;
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      transition: background .2s ease;
+      text-align: center;
+      transition: background .2s, transform .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     .button-primary {
       background: var(--navy);
-      color: white !important;
       border: 2px solid var(--navy);
+      color: var(--white) !important;
     }
 
     .button-primary:hover {
-      background: #254A78;
+      background: #234772;
     }
 
     .button-outline {
       background: transparent;
-      color: var(--navy);
       border: 2px solid var(--navy);
+      color: var(--navy);
     }
 
     .button-outline:hover {
-      background: #E5EAE8;
-    }
-
-    .mobile-menu {
-      display: none;
+      background: #E6EBE9;
     }
 
     /* SPLIT-SCREEN HOMEPAGE */
@@ -191,7 +191,7 @@
     .hero {
       display: grid;
       grid-template-columns: 51% 49%;
-      min-height: 630px;
+      min-height: 620px;
     }
 
     .hero-content {
@@ -199,35 +199,30 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 75px clamp(30px, 6vw, 110px);
-      background: var(--cream);
+      padding: 75px clamp(30px, 6vw, 115px);
     }
 
-    .eyebrow,
-    .small-label {
+    .eyebrow {
       color: var(--slate);
       text-transform: uppercase;
       letter-spacing: .15em;
       font-size: 12px;
       font-weight: 700;
-    }
-
-    .eyebrow {
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .accent-line {
       width: 75px;
       height: 4px;
       background: var(--sage);
-      border-radius: 3px;
       margin: 28px 0;
+      border-radius: 3px;
     }
 
-    .hero-content > p {
+    .hero-content p {
+      max-width: 500px;
       font-size: 17px;
-      max-width: 480px;
-      margin: 0 0 32px;
+      margin: 0 0 30px;
     }
 
     .hero-actions {
@@ -238,9 +233,9 @@
 
     .hero-image {
       position: relative;
-      min-height: 560px;
+      min-height: 520px;
       overflow: hidden;
-      background: #C0D5CA;
+      background: #B1C6BC;
     }
 
     .hero-image img {
@@ -249,60 +244,65 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 68%;
+      object-position: center;
     }
 
     .photo-note {
       position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(16,44,84,.88);
+      right: 12px;
+      bottom: 12px;
+      background: rgba(16,44,84,.84);
       color: white;
-      font-size: 11px;
       padding: 5px 10px;
+      font-size: 11px;
       border-radius: 3px;
     }
 
-    /* GENERAL SECTIONS */
+    /* HOMEPAGE SECTIONS */
 
     .section {
-      padding: 95px 6%;
+      padding: 100px 6%;
     }
 
     .container {
       max-width: 1180px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .small-label {
-      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 12px;
     }
 
-    /* INTRODUCTION */
-
     .intro {
-      background: white;
+      background: var(--white);
     }
 
     .intro-grid {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.25fr;
       gap: 75px;
       align-items: center;
     }
 
-    .intro p {
+    .intro p,
+    .story p,
+    .contact p {
       font-size: 17px;
     }
 
     .intro-highlight {
       border-left: 4px solid var(--sage);
-      padding-left: 23px;
-      margin-top: 30px;
+      padding-left: 25px;
       color: var(--navy);
       font-family: Georgia, serif;
       font-size: 23px;
       line-height: 1.5;
+      margin-top: 28px;
     }
 
     /* SERVICES */
@@ -312,7 +312,7 @@
     }
 
     .section-heading {
-      max-width: 730px;
+      max-width: 720px;
       margin-bottom: 40px;
     }
 
@@ -324,27 +324,26 @@
 
     .service-card {
       background: white;
-      padding: 35px 29px;
       border-top: 4px solid var(--sage);
-      box-shadow: 0 8px 30px rgba(16,44,84,.04);
+      padding: 36px 29px;
+      min-height: 260px;
+      box-shadow: 0 10px 30px rgba(16,44,84,.04);
     }
 
     .service-number {
       color: var(--slate);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: .12em;
     }
 
     .service-card h3 {
+      font-size: 25px;
+      font-weight: 500;
       margin: 18px 0 12px;
     }
 
-    .service-card p {
-      margin-bottom: 0;
-    }
-
-    /* STORY PREVIEW */
+    /* FAMILY STORY */
 
     .story {
       background: #EAF0EC;
@@ -360,15 +359,15 @@
       margin: 26px auto;
     }
 
-    .story p {
-      font-size: 17px;
+    .story-link {
+      margin-top: 16px;
     }
 
     /* CONTACT */
 
     .contact {
       background: var(--navy);
-      color: white;
+      color: var(--white);
     }
 
     .contact h2 {
@@ -383,16 +382,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 45px;
       flex-wrap: wrap;
-      gap: 40px;
     }
 
     .contact-copy {
-      max-width: 680px;
-    }
-
-    .contact p {
-      font-size: 17px;
+      max-width: 700px;
     }
 
     .contact a:not(.button) {
@@ -402,20 +397,14 @@
 
     .contact .button {
       background: var(--sky);
-      color: var(--navy);
       border: 2px solid var(--sky);
+      color: var(--navy);
     }
-
-    .contact .button:hover {
-      background: #C5E4F0;
-    }
-
-    /* FOOTER */
 
     footer {
       background: #0B213F;
-      color: #DEE7F0;
       padding: 30px 6%;
+      color: #DEE7F0;
       text-align: center;
       font-size: 13px;
     }
@@ -424,19 +413,15 @@
       margin: 5px 0;
     }
 
-    /* TABLET */
+    /* TABLET AND MOBILE */
 
-    @media (max-width: 1020px) {
-      .nav-inner {
-        padding: 8px 3%;
-      }
-
+    @media (max-width: 1000px) {
       .desktop-nav {
-        gap: 14px;
+        gap: 15px;
       }
 
-      .brand img {
-        width: 150px;
+      .nav-inner {
+        padding: 7px 3%;
       }
 
       .hero-content {
@@ -448,11 +433,9 @@
       }
     }
 
-    /* MOBILE */
-
     @media (max-width: 800px) {
       .nav-inner {
-        min-height: 75px;
+        min-height: 78px;
         padding: 5px 5%;
       }
 
@@ -471,12 +454,12 @@
       }
 
       .mobile-menu summary {
+        min-height: 44px;
+        padding: 10px 15px;
         border: 1px solid var(--navy);
         border-radius: 5px;
         color: var(--navy);
         cursor: pointer;
-        padding: 10px 15px;
-        min-height: 44px;
         font-weight: 700;
       }
 
@@ -485,19 +468,19 @@
         right: 0;
         top: 49px;
         width: min(280px, 88vw);
-        padding: 12px;
-        z-index: 110;
         background: var(--cream);
         border: 1px solid #D5D6D2;
         box-shadow: 0 10px 25px rgba(0,0,0,.12);
+        padding: 12px;
+        z-index: 110;
       }
 
       .mobile-links a {
         display: block;
-        padding: 12px;
         text-decoration: none;
         color: var(--navy);
         font-weight: 600;
+        padding: 12px;
       }
 
       .hero {
@@ -522,6 +505,14 @@
 
       .service-grid {
         grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .contact-layout {
+        align-items: flex-start;
       }
     }
 
@@ -551,17 +542,20 @@
       .button {
         transition: none;
       }
+
+      .button:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- STICKY NAVIGATION -->
+  <!-- STICKY TOP NAVIGATION -->
   <header class="site-header">
     <div class="nav-inner">
 
-      <!-- EXACT NAVY LOGO FILENAME -->
       <a href="#home" class="brand"
          aria-label="Olson Outdoor Services homepage">
 
@@ -577,35 +571,42 @@
       </a>
 
       <!-- DESKTOP NAVIGATION -->
-      <nav class="desktop-nav"
-           aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Main navigation">
 
         <a href="#home">Home</a>
         <a href="#services">Services</a>
-        <a href="#about">About OOS</a>
+
+        <!-- LINK TO DEDICATED ABOUT PAGE -->
+        <a href="about-oos.html">About OOS</a>
+
         <a href="#contact">Contact</a>
 
         <a class="button button-primary"
            href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
           Request an Estimate
         </a>
+
       </nav>
 
       <!-- MOBILE NAVIGATION -->
       <details class="mobile-menu">
+
         <summary>Menu</summary>
 
-        <nav class="mobile-links"
-             aria-label="Mobile navigation">
+        <nav class="mobile-links" aria-label="Mobile navigation">
 
           <a href="#home">Home</a>
           <a href="#services">Services</a>
-          <a href="#about">About OOS</a>
+
+          <!-- MOBILE ABOUT PAGE LINK -->
+          <a href="about-oos.html">About OOS</a>
+
           <a href="#contact">Contact</a>
 
           <a href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
             Request an Estimate
           </a>
+
         </nav>
       </details>
 
@@ -648,7 +649,7 @@
         </div>
       </div>
 
-      <!-- NEW NEIGHBORHOOD PHOTOGRAPH -->
+      <!-- NEIGHBORHOOD PHOTOGRAPH -->
       <div class="hero-image">
 
         <img
@@ -659,18 +660,18 @@
         <span class="photo-note">
           Illustrative stock photography
         </span>
+
       </div>
 
     </section>
 
     <!-- OWNER-OPERATED INTRODUCTION -->
     <section class="section intro" id="about">
+
       <div class="container intro-grid">
 
         <div>
-          <div class="small-label">
-            Welcome to OOS
-          </div>
+          <div class="small-label">Welcome to OOS</div>
 
           <h2>
             A Personal Approach to Property Care.
@@ -682,8 +683,8 @@
         <div>
           <p>
             Olson Outdoor Services LLC is an owner-operated
-            Minnesota business focused on professional outdoor
-            property maintenance.
+            Minnesota business focused on professional
+            outdoor property maintenance.
           </p>
 
           <p>
@@ -701,14 +702,14 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES OVERVIEW -->
     <section class="section services" id="services">
+
       <div class="container">
 
         <div class="section-heading">
-          <div class="small-label">
-            What We Do
-          </div>
+
+          <div class="small-label">What We Do</div>
 
           <h2>
             Property Care Through the Seasons.
@@ -752,19 +753,19 @@
             <h3>Seasonal Maintenance</h3>
 
             <p>
-              Spring and fall cleanups and additional
-              outdoor maintenance services tailored
-              to your property's needs.
+              Spring and fall cleanups and additional outdoor
+              maintenance services tailored to your
+              property's needs.
             </p>
           </article>
 
         </div>
-
       </div>
     </section>
 
-    <!-- FAMILY STORY PREVIEW -->
+    <!-- FAMILY STORY WITH ABOUT OOS LINK -->
     <section class="section story">
+
       <div class="story-inner">
 
         <div class="small-label">
@@ -778,17 +779,26 @@
         <div class="accent-line"></div>
 
         <p>
-          Olson Outdoor Services is a new chapter shaped by
-          lessons and hands-on experience passed down through
-          generations. Our story is rooted in family, hard work,
-          and a lasting appreciation for quality workmanship.
+          Olson Outdoor Services is a new chapter shaped
+          by lessons and hands-on experience passed down
+          through generations. Our story is rooted in
+          family, hard work, and a lasting appreciation
+          for quality workmanship.
         </p>
+
+        <!-- LINK TO FULL ABOUT OOS PAGE -->
+        <a
+          class="button button-outline story-link"
+          href="about-oos.html">
+          Read Our Story
+        </a>
 
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <section class="section contact" id="contact">
+
       <div class="container contact-layout">
 
         <div class="contact-copy">
@@ -812,9 +822,7 @@
             <a href="tel:+16512107486">
               (651) 210-7486
             </a>
-
             <br>
-
             <a href="mailto:OlsonOutdoorServices26@gmail.com">
               OlsonOutdoorServices26@gmail.com
             </a>
@@ -822,8 +830,9 @@
 
         </div>
 
-        <a class="button"
-           href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
+        <a
+          class="button"
+          href="mailto:OlsonOutdoorServices26@gmail.com?subject=Estimate%20Request">
           Request an Estimate
         </a>
 
@@ -834,21 +843,28 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Olson Outdoor Services LLC · Minnesota</p>
-    <p>Owner-Operated Outdoor Property Maintenance</p>
+
+    <p>
+      Olson Outdoor Services LLC · Minnesota
+    </p>
+
+    <p>
+      Owner-Operated Outdoor Property Maintenance
+    </p>
 
     <p>
       &copy; <span id="year">2026</span>
       Olson Outdoor Services LLC
     </p>
+
   </footer>
 
   <script>
-    // Update footer year automatically
+    // Automatically update the footer year
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Close the mobile menu after a navigation choice
+    // Close mobile navigation after choosing a link
     document.querySelectorAll(".mobile-links a").forEach(
       function(link) {
         link.addEventListener("click", function() {
