@@ -7,13 +7,12 @@
 <meta name="theme-color" content="#F6EFE6">
 
 <title>About OOS | Olson Outdoor Services LLC</title>
-
-<meta name="description" content="Discover the family roots behind Olson Outdoor Services LLC, from Lyle Olson Landscapes to a new generation of owner-operated property care in Minnesota.">
+<meta name="description" content="Meet the family, people, and values behind Olson Outdoor Services LLC. Discover a Minnesota family story rooted in craftsmanship, dedication, and personal service.">
 
 <style>
-/* ===================================
-   OOS BRAND COLORS
-=================================== */
+/* ==========================================
+   OLSON OUTDOOR SERVICES BRAND
+========================================== */
 :root {
   --cream: #F6EFE6;
   --navy: #102C54;
@@ -25,9 +24,7 @@
   --pale-sage: #EAF0EC;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
@@ -42,22 +39,10 @@ body {
   line-height: 1.75;
 }
 
-[hidden] {
-  display: none !important;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-}
-
-section {
-  scroll-margin-top: 115px;
-}
+[hidden] { display: none !important; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+section { scroll-margin-top: 115px; }
 
 a:focus-visible,
 summary:focus-visible {
@@ -83,17 +68,12 @@ h2 {
   margin: 0 0 26px;
 }
 
-h3 {
-  font-size: 25px;
-}
+h3 { font-size: 25px; }
+p { margin: 0 0 22px; }
 
-p {
-  margin: 0 0 22px;
-}
-
-/* ===================================
-   NAVIGATION
-=================================== */
+/* ==========================================
+   HEADER AND NAVIGATION
+========================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -164,13 +144,11 @@ p {
   text-underline-offset: 7px;
 }
 
-.mobile-menu {
-  display: none;
-}
+.mobile-menu { display: none; }
 
-/* ===================================
+/* ==========================================
    BUTTONS
-=================================== */
+========================================== */
 .button {
   display: inline-flex;
   align-items: center;
@@ -192,9 +170,7 @@ p {
   color: white !important;
 }
 
-.button-primary:hover {
-  background: #254A78;
-}
+.button-primary:hover { background: #254A78; }
 
 .button-outline {
   background: transparent;
@@ -202,9 +178,7 @@ p {
   color: var(--navy);
 }
 
-.button-outline:hover {
-  background: #E5EAE8;
-}
+.button-outline:hover { background: #E5EAE8; }
 
 .button-light {
   background: var(--sky);
@@ -212,9 +186,7 @@ p {
   border: 2px solid var(--sky);
 }
 
-.button-light:hover {
-  background: #C5E4F0;
-}
+.button-light:hover { background: #C5E4F0; }
 
 .button-on-dark {
   background: transparent;
@@ -234,9 +206,9 @@ p {
   margin-top: 24px;
 }
 
-/* ===================================
+/* ==========================================
    ABOUT HERO
-=================================== */
+========================================== */
 .hero {
   display: grid;
   grid-template-columns: 56% 44%;
@@ -311,9 +283,7 @@ p {
   max-width: 400px;
 }
 
-.hero-right .section-label {
-  color: var(--sky);
-}
+.hero-right .section-label { color: var(--sky); }
 
 .hero-right h2 {
   color: white;
@@ -325,9 +295,50 @@ p {
   font-size: 17px;
 }
 
-/* ===================================
+/* ==========================================
+   INTRODUCTION — MORE THAN AN ABOUT PAGE
+========================================== */
+.story-welcome {
+  padding: 85px 7%;
+  background: var(--cream);
+}
+
+.story-welcome-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.welcome-heading { text-align: center; }
+
+.welcome-heading .accent-line {
+  margin: 25px auto 35px;
+}
+
+.welcome-content {
+  padding: clamp(28px,5vw,50px);
+  background: rgba(255,255,255,.78);
+  border-left: 5px solid var(--sage);
+  border-radius: 3px;
+}
+
+.welcome-content p {
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+.welcome-content p:last-child { margin-bottom: 0; }
+.welcome-content strong { color: var(--navy); }
+
+.welcome-invitation {
+  padding-top: 10px;
+  font-family: Georgia, serif;
+  font-size: 21px !important;
+  color: var(--navy);
+}
+
+/* ==========================================
    CHAPTER NAVIGATION
-=================================== */
+========================================== */
 .chapter-nav {
   padding: 25px 6%;
   background: white;
@@ -357,12 +368,10 @@ p {
   text-underline-offset: 5px;
 }
 
-/* ===================================
-   STORY LAYOUT
-=================================== */
-.section {
-  padding: 95px 7%;
-}
+/* ==========================================
+   MAIN STORY SECTIONS
+========================================== */
+.section { padding: 95px 7%; }
 
 .container {
   max-width: 1160px;
@@ -384,17 +393,9 @@ p {
   color: var(--navy);
 }
 
-.white-section {
-  background: white;
-}
-
-.cream-section {
-  background: var(--cream);
-}
-
-.sage-section {
-  background: var(--pale-sage);
-}
+.white-section { background: white; }
+.cream-section { background: var(--cream); }
+.sage-section { background: var(--pale-sage); }
 
 .subtle-divider {
   width: 100%;
@@ -403,9 +404,16 @@ p {
   margin: 40px 0;
 }
 
-/* ===================================
+.story-subheading {
+  font-family: Georgia, serif;
+  font-size: clamp(24px,2.7vw,32px);
+  color: var(--navy);
+  margin: 45px 0 23px;
+}
+
+/* ==========================================
    FAMILY PHOTOGRAPHS
-=================================== */
+========================================== */
 .history-grid {
   display: grid;
   grid-template-columns: 1.25fr .75fr;
@@ -453,9 +461,9 @@ p {
   top: 125px;
 }
 
-/* ===================================
-   LYLE'S QUOTATION
-=================================== */
+/* ==========================================
+   FATHER'S QUOTATION
+========================================== */
 .quote-section {
   padding: 90px 7%;
   text-align: center;
@@ -497,10 +505,9 @@ blockquote {
 }
 
 .butterfly img {
-  display: block;
   width: 145px;
   height: auto;
-  margin: 0 auto;
+  margin: auto;
   filter: drop-shadow(0 7px 8px rgba(16,44,84,.12));
 }
 
@@ -512,9 +519,9 @@ blockquote {
   font-style: italic;
 }
 
-/* ===================================
-   CHILDHOOD MEMORY
-=================================== */
+/* ==========================================
+   MEMORY HIGHLIGHTS
+========================================== */
 .memory-highlight {
   max-width: 790px;
   margin: 40px auto;
@@ -532,17 +539,25 @@ blockquote {
   margin-bottom: 0;
 }
 
-/* ===================================
-   CHAPTER FOUR — DEBRA JONES
+.memory-note {
+  margin: 32px 0;
+  padding: 26px 30px;
+  background: white;
+  border-left: 4px solid var(--sage);
+}
 
-   NEW PORTRAIT AND DRAGONFLY LAYOUT
-=================================== */
+.memory-note p:last-child { margin-bottom: 0; }
+.memory-note strong { color: var(--navy); }
+
+/* ==========================================
+   DEBRA JONES PORTRAIT AND DRAGONFLY
+========================================== */
 .mother-tribute {
   display: grid;
-  grid-template-columns: minmax(230px, .78fr) minmax(0, 1.22fr);
+  grid-template-columns: minmax(230px,.78fr) minmax(0,1.22fr);
   gap: 30px;
   align-items: start;
-  margin: 35px 0 45px;
+  margin: 38px 0 45px;
 }
 
 .mother-portrait {
@@ -550,13 +565,9 @@ blockquote {
   text-align: center;
 }
 
-.mother-portrait .portrait-frame {
-  background: white;
-}
-
 .mother-portrait img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -583,14 +594,8 @@ blockquote {
   background: rgba(255,255,255,.76);
 }
 
-.mother-feature h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.mother-feature p:last-child {
-  margin-bottom: 0;
-}
+.mother-feature h3 { margin: 0 0 15px; }
+.mother-feature p:last-child { margin-bottom: 0; }
 
 .dragonfly-figure {
   margin: 27px auto 0;
@@ -598,7 +603,7 @@ blockquote {
 }
 
 .dragonfly-figure img {
-  width: min(100%, 250px);
+  width: min(100%,250px);
   height: auto;
   margin: auto;
   border-radius: 5px;
@@ -614,12 +619,10 @@ blockquote {
   line-height: 1.6;
 }
 
-/* ===================================
+/* ==========================================
    OWNER'S STORY
-=================================== */
-.owner-section {
-  background: white;
-}
+========================================== */
+.owner-section { background: white; }
 
 .owner-heading {
   max-width: 870px;
@@ -665,12 +668,10 @@ blockquote {
   margin-top: 4px;
 }
 
-/* ===================================
+/* ==========================================
    PERSONAL ACKNOWLEDGMENTS
-=================================== */
-.thanks-section {
-  background: var(--pale-sage);
-}
+========================================== */
+.thanks-section { background: var(--pale-sage); }
 
 .thanks-inner {
   max-width: 870px;
@@ -695,7 +696,7 @@ blockquote {
 .thanks-card {
   background: white;
   border-top: 4px solid var(--sage);
-  padding: clamp(28px, 5vw, 55px);
+  padding: clamp(28px,5vw,55px);
   box-shadow: 0 12px 32px rgba(16,44,84,.05);
   border-radius: 4px;
 }
@@ -705,9 +706,7 @@ blockquote {
   line-height: 1.95;
 }
 
-.thanks-card strong {
-  color: var(--navy);
-}
+.thanks-card strong { color: var(--navy); }
 
 .special-thanks {
   background: var(--cream);
@@ -716,12 +715,27 @@ blockquote {
   margin: 32px 0;
 }
 
-.special-thanks h3 {
-  margin: 0 0 16px;
+.special-thanks h3 { margin: 0 0 16px; }
+.special-thanks p:last-child { margin-bottom: 0; }
+
+/* NEW — A SPECIAL MESSAGE TO DAENA */
+.son-tribute {
+  border-left: 4px solid var(--navy);
+  background: #F6F4EF;
 }
 
-.special-thanks p:last-child {
-  margin-bottom: 0;
+.son-tribute h3 {
+  color: var(--navy);
+}
+
+.son-tribute .rose-message {
+  font-family: Georgia, serif;
+  font-size: clamp(20px,2.5vw,27px);
+  line-height: 1.55;
+  color: var(--navy);
+  margin: 27px 0;
+  padding: 17px 0 17px 22px;
+  border-left: 3px solid var(--sage);
 }
 
 .thanks-closing {
@@ -740,12 +754,10 @@ blockquote {
   font-style: italic;
 }
 
-/* ===================================
+/* ==========================================
    STORY ENDING
-=================================== */
-.ending {
-  background: var(--cream);
-}
+========================================== */
+.ending { background: var(--cream); }
 
 .ending-emphasis {
   max-width: 880px;
@@ -770,9 +782,9 @@ blockquote {
   margin-top: 25px;
 }
 
-/* ===================================
+/* ==========================================
    CONTACT
-=================================== */
+========================================== */
 .contact-section {
   padding: 95px 7%;
   background: var(--navy);
@@ -785,22 +797,15 @@ blockquote {
   margin: auto;
 }
 
-.contact-section h2 {
-  color: white;
-}
-
-.contact-section .section-label {
-  color: var(--sky);
-}
+.contact-section h2 { color: white; }
+.contact-section .section-label { color: var(--sky); }
 
 .contact-section p {
   font-size: 17px;
   color: #E1EAF2;
 }
 
-.contact-details {
-  margin: 30px 0;
-}
+.contact-details { margin: 30px 0; }
 
 .contact-details a {
   color: white;
@@ -809,13 +814,11 @@ blockquote {
   overflow-wrap: anywhere;
 }
 
-.contact-section .action-row {
-  justify-content: center;
-}
+.contact-section .action-row { justify-content: center; }
 
-/* ===================================
+/* ==========================================
    FOOTER
-=================================== */
+========================================== */
 footer {
   padding: 30px 6%;
   text-align: center;
@@ -824,39 +827,24 @@ footer {
   font-size: 13px;
 }
 
-footer p {
-  margin: 5px 0;
-}
+footer p { margin: 5px 0; }
 
 footer a {
   color: #DEE7F0;
   margin: 0 8px;
 }
 
-/* ===================================
-   RESPONSIVE
-=================================== */
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
 @media (max-width: 1050px) {
-  .desktop-nav {
-    gap: 15px;
-  }
-
-  .brand img {
-    width: 155px;
-  }
-
-  .hero-left {
-    padding: 65px 38px;
-  }
-
-  .hero-right {
-    padding: 40px;
-  }
+  .desktop-nav { gap: 15px; }
+  .brand img { width: 155px; }
+  .hero-left { padding: 65px 38px; }
+  .hero-right { padding: 40px; }
 
   .history-grid,
-  .owner-grid {
-    gap: 35px;
-  }
+  .owner-grid { gap: 35px; }
 }
 
 @media (max-width: 800px) {
@@ -870,9 +858,7 @@ footer a {
     height: 75px;
   }
 
-  .desktop-nav {
-    display: none;
-  }
+  .desktop-nav { display: none; }
 
   .mobile-menu {
     display: block;
@@ -909,26 +895,18 @@ footer a {
     text-decoration: none;
   }
 
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-left {
-    padding: 65px 7%;
-  }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 65px 7%; }
 
   .hero-right {
     min-height: 340px;
     padding: 55px 7%;
   }
 
-  .section {
-    padding: 75px 7%;
-  }
+  .section,
+  .story-welcome { padding: 75px 7%; }
 
-  .history-grid {
-    grid-template-columns: 1fr;
-  }
+  .history-grid { grid-template-columns: 1fr; }
 
   .owner-grid {
     display: flex;
@@ -943,9 +921,7 @@ footer a {
     margin: 0 auto;
   }
 
-  .owner-photo {
-    order: -1;
-  }
+  .owner-photo { order: -1; }
 
   .mother-tribute {
     grid-template-columns: 1fr;
@@ -958,71 +934,39 @@ footer a {
     margin: 0 auto;
   }
 
-  .quote-section {
-    padding: 80px 7%;
-  }
+  .quote-section { padding: 80px 7%; }
 }
 
 @media (max-width: 480px) {
-  .story-text {
-    font-size: 16px;
-  }
-
-  .hero-left p {
-    font-size: 16px;
-  }
-
-  .action-row .button {
-    width: 100%;
-  }
+  .story-text { font-size: 16px; }
+  .hero-left p { font-size: 16px; }
+  .action-row .button { width: 100%; }
 
   .memory-highlight,
-  .mother-feature {
-    padding: 25px;
-  }
+  .mother-feature,
+  .memory-note { padding: 25px; }
 
-  .chapter-nav-inner {
-    justify-content: flex-start;
-  }
-
-  .butterfly img {
-    width: 125px;
-  }
-
-  .ending-emphasis {
-    padding: 32px 23px;
-  }
-
-  .thanks-card {
-    padding: 25px 20px;
-  }
-
-  .special-thanks {
-    padding: 23px 20px;
-  }
-
-  .mother-portrait {
-    max-width: 280px;
-  }
+  .chapter-nav-inner { justify-content: flex-start; }
+  .butterfly img { width: 125px; }
+  .ending-emphasis { padding: 32px 23px; }
+  .thanks-card { padding: 25px 20px; }
+  .special-thanks { padding: 23px 20px; }
+  .mother-portrait { max-width: 280px; }
+  .welcome-content { padding: 28px 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .button {
-    transition: none;
-  }
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
 }
 </style>
 </head>
 
 <body id="top">
 
-<!-- ===================================
+<!-- ==========================================
      HEADER
-=================================== -->
+========================================== -->
 <header class="site-header">
   <div class="nav-inner">
 
@@ -1041,14 +985,11 @@ footer a {
       </span>
     </a>
 
-    <nav class="desktop-nav"
-         aria-label="Main navigation">
-
+    <nav class="desktop-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="#top" aria-current="page">About OOS</a>
       <a href="#contact">Contact</a>
-
       <a class="button button-primary"
          href="request-estimate.html">
         Request an Estimate
@@ -1058,17 +999,12 @@ footer a {
     <details class="mobile-menu">
       <summary>Menu</summary>
 
-      <nav class="mobile-links"
-           aria-label="Mobile navigation">
-
+      <nav class="mobile-links" aria-label="Mobile navigation">
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
         <a href="#top" aria-current="page">About OOS</a>
         <a href="#contact">Contact</a>
-
-        <a href="request-estimate.html">
-          Request an Estimate
-        </a>
+        <a href="request-estimate.html">Request an Estimate</a>
       </nav>
     </details>
 
@@ -1077,9 +1013,9 @@ footer a {
 
 <main>
 
-<!-- ===================================
-     ABOUT HERO
-=================================== -->
+<!-- ==========================================
+     ABOUT OOS HERO
+========================================== -->
 <section class="hero">
 
   <div class="hero-left">
@@ -1088,9 +1024,7 @@ footer a {
       The Story Behind Olson Outdoor Services
     </div>
 
-    <h1>
-      Our Roots Run Deeper Than Our Name.
-    </h1>
+    <h1>Our Roots Run Deeper Than Our Name.</h1>
 
     <div class="accent-line"></div>
 
@@ -1101,22 +1035,18 @@ footer a {
     </p>
 
     <div class="action-row">
-
-      <a class="button button-primary"
-         href="#beginnings">
+      <a class="button button-primary" href="#welcome">
         Discover Our Story
       </a>
 
-      <a class="button button-outline"
-         href="index.html">
+      <a class="button button-outline" href="index.html">
         Back to Home
       </a>
-
     </div>
+
   </div>
 
   <div class="hero-right">
-
     <div class="hero-right-inner">
 
       <div class="section-label">
@@ -1131,10 +1061,9 @@ footer a {
       <div class="accent-line"></div>
 
       <p>
-        From the grounds and landscapes
-        of the Twin Cities to a new
-        owner-operated business, this
-        is the history behind the
+        From the grounds and landscapes of the
+        Twin Cities to a new owner-operated business,
+        this is the history behind the
         Olson Outdoor Services name.
       </p>
 
@@ -1143,13 +1072,92 @@ footer a {
 
 </section>
 
-<!-- ===================================
-     STORY NAVIGATION
-=================================== -->
+<!-- ==========================================
+     MORE THAN JUST AN ABOUT US PAGE
+========================================== -->
+<section class="story-welcome" id="welcome">
+
+  <div class="story-welcome-inner">
+
+    <div class="welcome-heading">
+      <div class="section-label">
+        Before Our Story Begins
+      </div>
+
+      <h2>More Than Just an About Us Page</h2>
+      <div class="accent-line"></div>
+    </div>
+
+    <div class="welcome-content">
+
+      <p>
+        Most businesses have a story. Ours begins
+        long before Olson Outdoor Services LLC
+        was established.
+      </p>
+
+      <p>
+        You'll notice this page is a little longer
+        than the typical About Us page, and
+        that's intentional.
+      </p>
+
+      <p>
+        This isn't simply an introduction to a company.
+        It's also a dedication to the people whose
+        hard work, guidance, encouragement, and belief
+        in me helped make Olson Outdoor Services possible.
+      </p>
+
+      <p>
+        It's a story about my parents, the different
+        paths they traveled, and the lessons they
+        passed down. It's about family, friendships,
+        personal growth, and the people who stood
+        beside me while I worked toward building
+        something of my own.
+      </p>
+
+      <p>
+        Every chapter connects back to OOS in some way.
+        From the craftsmanship and attention to detail
+        I learned growing up, to the importance of
+        treating people with respect, keeping your word,
+        and taking pride in what you do.
+      </p>
+
+      <p>
+        <strong>
+          Olson Outdoor Services LLC is a new business,
+          but the values behind it have been a lifetime
+          in the making.
+        </strong>
+      </p>
+
+      <p class="welcome-invitation">
+        So if you have a few minutes, I invite you
+        to read beyond the services we offer and
+        get to know the people, experiences,
+        and principles behind the name.
+      </p>
+
+      <p>
+        Because to me, Olson Outdoor Services is
+        more than a business. It's an opportunity
+        to put a lifetime of lessons into practice
+        and build something worth being proud of.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CHAPTER NAVIGATION
+========================================== -->
 <nav class="chapter-nav" aria-label="Story chapters">
 
   <div class="chapter-nav-inner">
-
     <a href="#beginnings">Where It Began</a>
     <a href="#lyle-landscapes">Lyle Olson Landscapes</a>
     <a href="#childhood">Growing Up Olson</a>
@@ -1157,14 +1165,13 @@ footer a {
     <a href="#new-chapter">A New Chapter</a>
     <a href="#thanks">Special Thanks</a>
     <a href="#roots">The Roots That Remain</a>
-
   </div>
 
 </nav>
 
-<!-- ===================================
-     CHAPTER ONE
-=================================== -->
+<!-- ==========================================
+     CHAPTER ONE — THE EARLY YEARS
+========================================== -->
 <section class="section cream-section" id="beginnings">
 
   <div class="container history-grid">
@@ -1202,8 +1209,8 @@ footer a {
         developed a genuine interest in the
         landscape itself: how plants grew,
         what different varieties needed,
-        and the skill required to care for
-        them properly.
+        and the skill required to care
+        for them properly.
       </p>
 
       <p>
@@ -1230,16 +1237,13 @@ footer a {
     </div>
 
     <aside class="photo-aside">
-
       <figure class="portrait-figure">
 
         <div class="portrait-frame">
-
           <img
             src="Lyle_Olson.png"
             alt="Lyle Olson, founder of Lyle Olson Landscapes"
             loading="lazy">
-
         </div>
 
         <figcaption>
@@ -1253,9 +1257,9 @@ footer a {
   </div>
 </section>
 
-<!-- ===================================
-     CHAPTER TWO
-=================================== -->
+<!-- ==========================================
+     CHAPTER TWO — BUILDING A REPUTATION
+========================================== -->
 <section class="section white-section" id="lyle-landscapes">
 
   <div class="reading-column story-text">
@@ -1273,10 +1277,9 @@ footer a {
     </p>
 
     <p>
-      With an aging pickup truck, a few
-      shovels, and an eagerness to find
-      work, Lyle began establishing
-      his company one job at a time.
+      With an aging pickup truck, a few shovels,
+      and an eagerness to find work, Lyle began
+      establishing his company one job at a time.
     </p>
 
     <p>
@@ -1288,37 +1291,35 @@ footer a {
     <p>
       As the business developed, he increasingly
       concentrated on landscape design, plant
-      maintenance, and the skilled work
-      of trimming and shaping shrubs.
+      maintenance, and the skilled work of
+      trimming and shaping shrubs.
     </p>
 
     <p>
       In 1989, Lyle broadened his horticultural
-      knowledge further by earning his
-      Master Gardener certification through
-      the University of Minnesota.
+      knowledge further by earning his Master
+      Gardener certification through the
+      University of Minnesota.
     </p>
 
     <p>
       His detailed and meticulous approach
-      to trimming shrubs became one of
-      the qualities for which customers
-      remembered him.
+      to trimming shrubs became one of the
+      qualities for which customers remembered him.
     </p>
 
     <p>
-      He knew that shrubs were not all the
-      same. Each variety needed its own
-      consideration, and proper shaping
-      required knowledge of the plant's
-      natural growth and characteristics.
+      He knew that shrubs were not all the same.
+      Each variety needed its own consideration,
+      and proper shaping required knowledge of
+      the plant's natural growth and characteristics.
     </p>
 
     <p>
       Lyle believed good landscape maintenance
       was about far more than having the right
-      equipment or putting in the hours.
-      It required patience, an educated eye,
+      equipment or putting in the hours. It
+      required patience, an educated eye,
       and genuine attention to detail.
     </p>
 
@@ -1328,26 +1329,85 @@ footer a {
     </p>
 
     <p>
-      Property management companies and
-      homeowners associations returned
-      to him because they recognized
-      the craftsmanship and care
+      Property management companies and homeowners
+      associations returned to him because they
+      recognized the craftsmanship and care
       he brought to their grounds.
     </p>
 
     <p>
       For Lyle, workmanship and reputation
-      were inseparable. Each completed
-      property was a reflection of
-      his standards and his name.
+      were inseparable. Each completed property
+      was a reflection of his standards
+      and his name.
+    </p>
+
+    <div class="subtle-divider"></div>
+
+    <h3 class="story-subheading">
+      The Woman Working Beside Him
+    </h3>
+
+    <p>
+      But the story of Lyle Olson Landscapes
+      wouldn't be complete without recognizing
+      the contributions of my mother,
+      <strong>Debra Jones</strong>.
+    </p>
+
+    <p>
+      My mother spent many years working right
+      alongside my father. She wasn't simply
+      helping from behind the scenes. She was
+      doing the same demanding, hands-on work
+      that came with building and maintaining
+      landscapes.
+    </p>
+
+    <p>
+      She shoveled rock, laid sod, planted shrubs,
+      and handled cleanup while my father worked
+      on the detailed trimming he was known for.
+    </p>
+
+    <p>
+      And she contributed something else that
+      complemented his talents.
+    </p>
+
+    <p>
+      My father could envision how he wanted
+      a landscape to look, but putting those
+      ideas onto paper wasn't his strongest skill.
+      My mother could draw and paint, and she
+      used that artistic ability to illustrate
+      the landscape designs he envisioned.
+    </p>
+
+    <p>
+      In that way, she helped take the ideas
+      in his mind and make them visible to others.
+    </p>
+
+    <p>
+      They brought different abilities to the
+      work, and both contributed to the business
+      in ways that mattered.
+    </p>
+
+    <p>
+      Those years of working together became
+      part of the family history that would
+      eventually influence my own approach
+      to Olson Outdoor Services.
     </p>
 
   </div>
 </section>
 
-<!-- ===================================
+<!-- ==========================================
      LYLE OLSON QUOTATION
-=================================== -->
+========================================== -->
 <section class="quote-section">
 
   <div class="quote-inner">
@@ -1382,9 +1442,9 @@ footer a {
   </div>
 </section>
 
-<!-- ===================================
-     CHAPTER THREE
-=================================== -->
+<!-- ==========================================
+     CHAPTER THREE — GROWING UP OLSON
+========================================== -->
 <section class="section cream-section" id="childhood">
 
   <div class="reading-column story-text">
@@ -1404,39 +1464,37 @@ footer a {
     <p>
       It was also where Lyle's three sons
       first learned about landscaping,
-      working hard, and taking
-      responsibility for a job.
+      working hard, and taking responsibility
+      for a job.
     </p>
 
     <p>
-      Their earliest experiences weren't
-      always exciting. Sometimes they
-      involved waking up much earlier
-      than they wanted to, getting
-      into the work truck, and spending
-      the day accompanying their father
-      to properties around the Twin Cities.
+      Their earliest experiences weren't always
+      exciting. Sometimes they involved waking
+      up much earlier than they wanted to,
+      getting into the work truck, and spending
+      the day accompanying their father to
+      properties around the Twin Cities.
     </p>
 
     <p>
-      For one of the boys, the bicycle
-      his father brought along in the
-      truck was an especially important
-      part of those days.
+      For one of the boys, the bicycle his
+      father brought along in the truck
+      was an especially important part
+      of those days.
     </p>
 
     <p>
       While the crew worked, there were
-      neighborhood friends to meet
-      and little adventures to discover.
+      neighborhood friends to meet and
+      little adventures to discover.
     </p>
 
     <p>
-      Occasionally, his father would
-      hand him five dollars and send
-      him off on his bicycle to
-      a nearby gas station to buy
-      cold drinks for everyone.
+      Occasionally, his father would hand
+      him five dollars and send him off on
+      his bicycle to a nearby gas station
+      to buy cold drinks for everyone.
     </p>
 
     <p>
@@ -1448,28 +1506,26 @@ footer a {
   </div>
 
   <div class="memory-highlight">
-
     <p>
       He offered two dollars a day:
       one dollar for helping with the work
       and another dollar for staying
       out of his hair.
     </p>
-
   </div>
 
   <div class="reading-column story-text">
 
     <p>
-      That arrangement worked out
-      quite nicely for a young boy.
+      That arrangement worked out quite
+      nicely for a young boy.
     </p>
 
     <p>
       After saving fourteen dollars,
-      he was finally able to buy
-      a remote-controlled car from
-      a thrift store during a stop
+      he was finally able to buy a
+      remote-controlled car from a
+      thrift store during a stop
       on the way home.
     </p>
 
@@ -1487,18 +1543,17 @@ footer a {
     </p>
 
     <p>
-      Lyle's teaching style balanced
-      patience with old-fashioned
-      firmness. His sons were expected
-      to pay attention, recognize
-      different shrubs, and understand
-      the reasons behind the care
-      each plant required.
+      Lyle's teaching style balanced patience
+      with old-fashioned firmness. His sons
+      were expected to pay attention,
+      recognize different shrubs, and
+      understand the reasons behind the
+      care each plant required.
     </p>
 
     <p>
-      He was especially particular
-      about doing the work correctly.
+      He was especially particular about
+      doing the work correctly.
     </p>
 
     <p>
@@ -1510,17 +1565,26 @@ footer a {
 
     <p>
       It was an education in the trade,
-      but also in accountability
-      and personal character.
+      but also in accountability and
+      personal character.
+    </p>
+
+    <p>
+      Looking back, I realize those days
+      were about more than learning a trade.
+      They helped form an appreciation for
+      the care and effort that goes into
+      doing a job well — something both
+      of my parents demonstrated
+      throughout my childhood.
     </p>
 
   </div>
 </section>
 
-<!-- ===================================
-     CHAPTER FOUR
-     THE LESSONS OF TWO PARENTS
-=================================== -->
+<!-- ==========================================
+     CHAPTER FOUR — DEBRA JONES
+========================================== -->
 <section class="section sage-section" id="family">
 
   <div class="reading-column story-text">
@@ -1531,53 +1595,43 @@ footer a {
 
     <h2>The Lessons of Two Parents</h2>
 
-    <p>
-      As Lyle taught his sons about
-      craftsmanship and responsibility,
-      their mother, <strong>Debra Jones</strong>,
-      was teaching them lessons of
-      a different but equally
-      meaningful kind.
+    <p class="section-intro">
+      My father's landscaping career is an
+      important part of my story. But to
+      understand the person I became,
+      you also have to know about
+      my mother, Debra Jones.
     </p>
 
     <p>
-      As a mother and caretaker,
-      Debra understood that love
-      was expressed through what
-      someone did for others,
-      not only through words.
+      My mother was a hardworking woman
+      with many different talents.
     </p>
 
     <p>
-      When life was difficult,
-      she offered compassion,
-      reassurance, encouragement,
-      and emotional strength.
+      She could work alongside my father
+      shoveling rock and planting shrubs.
+      She could turn his landscape ideas
+      into drawings. She could create
+      beautiful quilts with remarkable
+      attention to detail.
     </p>
 
     <p>
-      During uncertain times,
-      her presence was a
-      dependable source of
-      support and comfort.
+      And she would eventually introduce
+      me to a completely different world —
+      the world of professional trucking.
     </p>
-
-    <!-- ===================================
-         NEW: DEBRA JONES PORTRAIT
-         AND PURPLE DRAGONFLY
-    =================================== -->
 
     <div class="mother-tribute">
 
       <figure class="mother-portrait">
 
         <div class="portrait-frame">
-
           <img
             src="Debra_Jones.JPG"
-            alt="Debra Jones smiling"
+            alt="Portrait of Debra Jones"
             loading="lazy">
-
         </div>
 
         <figcaption>
@@ -1594,10 +1648,9 @@ footer a {
           <h3>Debra Jones</h3>
 
           <p>
-            Her example taught a lesson
-            just as enduring as the ones
-            learned through the family
-            landscaping business.
+            My mother taught me something
+            that has remained important
+            throughout my life.
           </p>
 
           <p>
@@ -1606,6 +1659,14 @@ footer a {
               It's something we demonstrate
               through our actions.
             </strong>
+          </p>
+
+          <p>
+            Her example showed me that caring
+            for people is about being there
+            for them, putting in the effort,
+            and demonstrating that love
+            through what we do.
           </p>
 
         </div>
@@ -1618,71 +1679,374 @@ footer a {
             loading="lazy">
 
           <figcaption>
-            The purple dragonfly represents
-            Debra's love, strength, and
-            lasting influence in the
-            Olson family story.
+            The purple dragonfly is a personal
+            reminder of my mother's love,
+            strength, and lasting influence.
           </figcaption>
 
         </figure>
 
       </div>
-
     </div>
 
     <div class="subtle-divider"></div>
 
+    <h3 class="story-subheading">
+      The Artist Behind the Designs
+    </h3>
+
     <p>
-      Lyle and Debra together helped
-      establish values whose importance
-      became clearer with time.
+      My mother had a creative ability
+      that complemented my father's
+      knowledge of landscaping.
     </p>
 
     <p>
-      From Lyle came lessons in
-      knowledge, hard work, accountability,
-      and taking care with every detail.
+      He understood plants, their needs,
+      and how to envision a finished
+      landscape. She had the artistic
+      skill to draw those ideas onto paper.
     </p>
 
     <p>
-      From Debra came lessons in
-      compassion, devotion, loyalty,
-      and standing by those we love.
+      She didn't spend much of her personal
+      time drawing or painting, but she
+      used those abilities to help
+      my father's business.
     </p>
 
     <p>
-      Their examples were different,
-      but they shared a central
-      message: character is
-      demonstrated by actions.
+      Her own favorite form of creativity
+      was something different.
+    </p>
+
+    <p><strong>She loved quilting.</strong></p>
+
+    <p>
+      My mother made some of the most beautiful
+      quilts. I remember falling asleep on
+      so many nights as a child to the
+      familiar sound of her sewing machine.
     </p>
 
     <p>
-      Lyle retired from his landscaping
-      business around 2010, ending
-      a professional career shaped
-      by decades of dedication
+      At the time, it was simply one of
+      the sounds of home. Today, it's
+      one of the memories of her
+      that has stayed with me.
+    </p>
+
+    <p>
+      There's one quilt in particular
+      that I still have.
+    </p>
+
+    <p>
+      It's a floral design made up of
+      individual square sections. Inside
+      each square are flower-shaped pieces
+      of fabric, carefully stitched
+      together with precision.
+    </p>
+
+    <p>
+      It has cream-colored buttons,
+      with little heart-shaped buttons
+      layered over round ones, and
+      a deep forest-green backing.
+    </p>
+
+    <p>
+      I don't remember whether she made
+      it specifically for me or whether
+      it simply became mine over time.
+      What I do know is that it
+      became my favorite.
+    </p>
+
+    <p>
+      It's worn and torn now from years
+      of use, and I've carefully packed
+      it away in hopes of someday
+      having it repaired.
+    </p>
+
+    <div class="memory-note">
+
+      <p>
+        <strong>
+          To me, that quilt is more
+          than fabric and thread.
+        </strong>
+      </p>
+
+      <p>
+        It's a piece of my mother's love
+        and craftsmanship that I
+        want to preserve.
+      </p>
+
+    </div>
+
+    <p>
+      I see a connection between the
+      precision my mother put into her
+      quilting and the attention my father
+      gave to the shrubs and landscapes
+      he maintained.
+    </p>
+
+    <p>
+      They practiced different crafts,
+      but both taught me that
+      details matter.
+    </p>
+
+    <p>
+      And today, that shared appreciation
+      for quality workmanship is part of
+      what I want Olson Outdoor Services
+      to stand for.
+    </p>
+
+    <div class="subtle-divider"></div>
+
+    <h3 class="story-subheading">
+      Those Cold Minnesota Mornings
+    </h3>
+
+    <p>
+      While my mother spent years helping
+      my father with landscaping, her
+      primary job during much of my
+      childhood was driving a school bus.
+    </p>
+
+    <p>
+      She drove for the bus company that
+      serviced the school I attended.
+    </p>
+
+    <p>
+      Some of my earliest memories of
+      her working involve getting up
+      in the wee hours of the morning
+      on bitterly cold Minnesota days
+      so I could ride along with her.
+    </p>
+
+    <p>
+      I would climb onto the bus and
+      ride the entire morning route,
+      from the very first pickup
+      until she eventually dropped
+      me off at school.
+    </p>
+
+    <p>
+      Looking back, those mornings
+      were another example of how
+      much of my childhood was spent
+      accompanying my parents while
+      they worked.
+    </p>
+
+    <p>
+      With my father, I spent days
+      traveling between landscaping
+      properties. With my mother,
+      I spent early mornings riding
+      her school bus.
+    </p>
+
+    <p>
+      And before long, her driving
+      career would take us much
+      farther than the neighborhoods
+      around my school.
+    </p>
+
+    <div class="subtle-divider"></div>
+
+    <h3 class="story-subheading">
+      A Childhood Spent on the Road
+    </h3>
+
+    <p>
+      When I was about fifteen or sixteen,
+      my mother's driving career
+      took another direction.
+    </p>
+
+    <p>
+      She became a semi-truck driver,
+      traveling across the country,
+      and I began accompanying
+      her on some of those trips.
+    </p>
+
+    <p>
+      Sometimes I would spend weeks
+      out on the road with her.
+      We traveled from one corner
+      of the country to another,
+      even making trips into Canada.
+    </p>
+
+    <p>
+      Some of my most vivid memories
+      aren't necessarily of the places
+      we visited, but of the sights,
+      sounds, and smells that came
+      with life on the road.
+    </p>
+
+    <div class="memory-note">
+
+      <p>
+        <strong>
+          The unmistakable smell
+          of diesel in the morning.
+        </strong>
+      </p>
+
+      <p>
+        The quiet, steady rumble of
+        semi-trucks idling through the
+        night in truck-stop parking lots.
+      </p>
+
+      <p>
+        Sleeping in the top bunk
+        of my mother's semi, surrounded
+        by those familiar sounds.
+      </p>
+
+    </div>
+
+    <p>
+      Those experiences became
+      a part of me.
+    </p>
+
+    <p>
+      What began as riding along with
+      my mom eventually became an
+      interest in trucking that
+      stayed with me as I grew older.
+    </p>
+
+    <p>
+      In 2013, I attended commercial
+      driving school and obtained
+      my CDL, beginning a professional
+      driving career inspired by
+      the years I spent alongside her.
+    </p>
+
+    <p>
+      And today, I still drive
+      a semi-truck professionally.
+    </p>
+
+    <p>
+      Every time I think about how
+      that career began, I come back
+      to those mornings on her school
+      bus and the weeks I spent
+      traveling the country with her.
+    </p>
+
+    <p>
+      Just as my father introduced me
+      to the world of landscaping,
+      my mother introduced me
+      to the world of trucking.
+    </p>
+
+    <p>
+      Neither path was simply
+      something I learned about
+      from a distance.
+    </p>
+
+    <p>
+      <strong>
+        I grew up experiencing both
+        of them beside the people
+        who inspired me most.
+      </strong>
+    </p>
+
+    <div class="subtle-divider"></div>
+
+    <h3 class="story-subheading">
+      Lessons That Stayed
+    </h3>
+
+    <p>
+      My mother and father both instilled
+      in me the importance of craftsmanship,
+      attention to detail, and taking
+      pride in good work.
+    </p>
+
+    <p>
+      From my father, I learned about
+      landscaping, horticulture, responsibility,
+      and the value of establishing a
+      reputation through the work you do.
+    </p>
+
+    <p>
+      From my mother, I learned through
+      her hard work, her creativity,
+      her love, and the determination
+      she brought to the different
+      paths she pursued.
+    </p>
+
+    <p>
+      But neither parent taught
+      those values alone.
+    </p>
+
+    <p>
+      Both showed me the importance of
+      making an effort, paying attention
+      to the details, and doing
+      something well.
+    </p>
+
+    <p>
+      They helped shape the person
+      who would one day establish
+      Olson Outdoor Services LLC.
+    </p>
+
+    <p>
+      My father retired from his
+      landscaping business around 2010,
+      ending a professional career
+      shaped by decades of dedication
       to his trade.
     </p>
 
-    <p>
-      He passed away in 2019.
-    </p>
+    <p>He passed away in 2019.</p>
 
     <p>
-      Yet the skills he taught
-      and the principles both parents
-      lived by would continue to
-      influence the next generation.
+      The lessons he taught, along with
+      the lessons my mother passed down
+      through her own work and example,
+      are still part of my life today.
     </p>
 
   </div>
 </section>
 
-<!-- ===================================
-     CHAPTER FIVE
-     A NEW CHAPTER
-=================================== -->
+<!-- ==========================================
+     CHAPTER FIVE — A NEW GENERATION
+========================================== -->
 <section class="section owner-section" id="new-chapter">
 
   <div class="container">
@@ -1707,25 +2071,22 @@ footer a {
       <div class="story-text">
 
         <p class="section-intro">
-          Growing up around my father's
-          landscaping business gave me
-          years of hands-on experience
-          and knowledge that I didn't
-          fully appreciate until
-          much later in life.
+          Growing up around my father's landscaping
+          business gave me years of hands-on experience
+          and knowledge that I didn't fully appreciate
+          until much later in life.
         </p>
 
         <p>
-          But the lessons that stayed
-          with me went beyond knowing
-          how to maintain a landscape.
+          But the lessons that stayed with
+          me went beyond knowing how
+          to maintain a landscape.
         </p>
 
         <p>
-          I remembered the relationships
-          my father developed with
-          property managers and
-          homeowners associations.
+          I remembered the relationships my
+          father developed with property
+          managers and homeowners associations.
         </p>
 
         <p>
@@ -1744,139 +2105,227 @@ footer a {
         </p>
 
         <p>
-          I also came to recognize how
-          special my father's knowledge
-          was. He understood different
-          plants, their individual
-          needs, and the importance
-          of doing quality work
-          instead of simply
+          I also came to recognize
+          how special my father's
+          knowledge was.
+        </p>
+
+        <p>
+          He understood different plants,
+          their individual needs, and
+          the importance of doing quality
+          work instead of simply
           finishing a task.
         </p>
 
         <p>
           Those were skills I wanted
           to carry forward, and I
-          began imagining how I
-          could build something
-          meaningful myself.
+          began imagining how I could
+          build something meaningful myself.
         </p>
 
         <p>
-          That realization helped
-          inspire the creation of
-          <strong>
-            Olson Outdoor Services LLC.
-          </strong>
+          That realization helped inspire
+          the creation of
+          <strong>Olson Outdoor Services LLC.</strong>
         </p>
 
         <p>
-          The road to this point
-          hasn't always been easy
-          or straightforward.
+          The road to this point hasn't
+          always been easy or straightforward.
         </p>
 
         <p>
           Life has brought difficult
-          experiences, unexpected
-          changes, and periods when
-          I wasn't sure where
-          I was headed.
+          experiences, unexpected changes,
+          and periods when I wasn't sure
+          where I was headed.
         </p>
 
         <p>
-          But along the way,
-          I began to understand
-          that the values my
-          parents taught me
-          had remained with me.
+          But along the way, I began
+          to understand that the values
+          my parents taught me had
+          remained with me.
+        </p>
+
+        <p><strong>They were still there.</strong></p>
+
+        <p>
+          My father's insistence on quality
+          work and the importance of protecting
+          your name and reputation.
         </p>
 
         <p>
-          <strong>They were still there.</strong>
+          My mother's example of showing genuine
+          love through actions, her creativity
+          and determination, and the dedication
+          she brought to her work.
         </p>
 
         <p>
-          My father's insistence
-          on quality work and
-          the importance of
-          protecting your name
-          and reputation.
+          And both parents' attention to detail,
+          willingness to work hard, and pride
+          in what they created.
         </p>
 
         <p>
-          My mother's example
-          of showing genuine
-          love and concern
-          through everyday actions.
+          I may have needed time to recognize
+          the depth of those lessons, but
+          they are now an important part
+          of the life and business
+          I'm building.
+        </p>
+
+        <h3 class="story-subheading">
+          Following Two Paths
+        </h3>
+
+        <p>
+          Today, there's something particularly
+          meaningful about the direction
+          my life has taken.
         </p>
 
         <p>
-          I may have needed time
-          to recognize the depth
-          of those lessons,
-          but they are now
-          an important part
-          of the life and
-          business I'm building.
+          I drive a semi-truck professionally,
+          following the career path my mother
+          introduced me to years ago.
         </p>
 
         <p>
-          Olson Outdoor Services
-          is not a business
-          I inherited, nor is
-          it a continuation
-          of Lyle Olson Landscapes.
+          And I own and operate Olson Outdoor
+          Services LLC, working in the trade
+          my father first introduced me
+          to as a child.
         </p>
 
         <p>
-          It is a new and independently
-          owned company influenced
-          by the experiences,
-          principles, and family
-          history that preceded it.
+          In many ways, I have followed
+          two different paths that helped
+          shape my childhood.
         </p>
 
         <p>
-          I want to develop
-          lasting professional
-          relationships with
-          the people who trust
-          me with their properties.
+          Sometimes I find myself feeling
+          pulled between those two worlds.
         </p>
 
         <p>
-          Whether I'm working
-          with a property manager,
-          an HOA, or an individual
-          homeowner, I want my
-          customers to know
-          who they're dealing with.
+          When I'm driving truck, I think
+          about my mother's influence.
+          When I'm working on OOS, I think
+          about the business my father built
+          and the knowledge he passed down.
         </p>
 
         <p>
-          I want them to feel
-          comfortable reaching
-          out with questions
-          and to know that
-          their concerns
+          But I've come to recognize that
+          their influences aren't limited
+          to the type of work I'm doing
+          on any particular day.
+        </p>
+
+        <p>
+          Both are part of who I am,
+          and both have helped shape
+          the standards I want to carry
+          into my own business.
+        </p>
+
+        <p>
+          I hold onto a personal hope that
+          someday those two paths might come
+          together in an even more meaningful way.
+        </p>
+
+        <p>
+          For now, I'm proud to keep building
+          something of my own while carrying
+          forward the lessons both
+          parents taught me.
+        </p>
+
+        <div class="subtle-divider"></div>
+
+        <h3 class="story-subheading">
+          What OOS Means to Me
+        </h3>
+
+        <p>
+          Olson Outdoor Services is not a
+          business I inherited, nor is it
+          a continuation of Lyle
+          Olson Landscapes.
+        </p>
+
+        <p>
+          It is a new and independently owned
+          company influenced by the experiences,
+          principles, and family history
+          that preceded it.
+        </p>
+
+        <p>
+          I want to develop lasting professional
+          relationships with the people who
+          trust me with their properties.
+        </p>
+
+        <p>
+          Whether I'm working with a property
+          manager, an HOA, or an individual
+          homeowner, I want my customers
+          to know who they're dealing with.
+        </p>
+
+        <p>
+          I want them to feel comfortable
+          reaching out with questions and
+          to know that their concerns
           matter to me.
         </p>
 
         <p>
-          I don't measure
-          success simply
-          by the number
-          of properties
+          My father's belief in craftsmanship
+          influences the way I approach
+          property maintenance.
+        </p>
+
+        <p>
+          My mother's hard work, creativity,
+          and example of showing care through
+          actions remind me that the way we
+          treat people matters just as much.
+        </p>
+
+        <p>
+          And the attention to detail
+          I learned from both of them
+          is something I want reflected
+          in the work OOS performs.
+        </p>
+
+        <p>
+          I don't measure success simply
+          by the number of properties
           under contract.
         </p>
 
         <p>
-          I measure it
-          through the trust,
+          I measure it through the trust,
           professional relationships,
-          and reputation
-          I build over time.
+          and reputation I build over time.
+        </p>
+
+        <p>
+          <strong>
+            To me, that's how Olson Outdoor
+            Services becomes more than just
+            another property maintenance company.
+          </strong>
         </p>
 
       </div>
@@ -1884,19 +2333,15 @@ footer a {
       <figure class="owner-photo">
 
         <div class="portrait-frame">
-
           <img
             src="Truley_Blue_shirt.jpg"
             alt="Truley Olson, owner of Olson Outdoor Services LLC"
             loading="lazy">
-
         </div>
 
         <figcaption>
           Truley Olson
-          <span>
-            Owner · Olson Outdoor Services LLC
-          </span>
+          <span>Owner · Olson Outdoor Services LLC</span>
         </figcaption>
 
       </figure>
@@ -1905,9 +2350,9 @@ footer a {
   </div>
 </section>
 
-<!-- ===================================
+<!-- ==========================================
      PERSONAL ACKNOWLEDGMENTS
-=================================== -->
+========================================== -->
 <section class="section thanks-section" id="thanks">
 
   <div class="thanks-inner">
@@ -1918,9 +2363,7 @@ footer a {
         A Personal Thank You
       </div>
 
-      <h2>
-        The People Who Stood Beside Me
-      </h2>
+      <h2>The People Who Stood Beside Me</h2>
 
       <div class="accent-line"></div>
 
@@ -1953,8 +2396,8 @@ footer a {
         thank you for your continued support
         and encouragement. Family means a
         great deal to me, and knowing I have
-        your support is something I
-        genuinely appreciate.
+        your support is something
+        I genuinely appreciate.
       </p>
 
       <p>
@@ -1965,8 +2408,8 @@ footer a {
         </strong>,
         I want to personally thank each of you.
         Your friendship, encouragement, and
-        support have meant more to me than
-        you may realize.
+        support have meant more to me
+        than you may realize.
       </p>
 
       <p>
@@ -1976,6 +2419,72 @@ footer a {
         hasn't gone unnoticed.
       </p>
 
+      <!-- ===================================
+           NEW SPECIAL DEDICATION TO DAENA
+      =================================== -->
+      <section class="special-thanks son-tribute"
+               aria-labelledby="daena-title">
+
+        <h3 id="daena-title">
+          To My Son, Daena
+        </h3>
+
+        <p>
+          And to my son, <strong>Daena</strong>,
+          if there's one thing I hope you learn
+          from watching my journey, it's that
+          where you find yourself in life
+          doesn't have to determine
+          where you end up.
+        </p>
+
+        <p>
+          Life isn't always going to be easy.
+          You're going to face challenges,
+          make mistakes, and experience
+          moments that test everything
+          you've got.
+        </p>
+
+        <p>
+          But no matter how far life knocks
+          you down, you can always find the
+          strength to get back up, dust
+          yourself off, and build
+          something better.
+        </p>
+
+        <p>
+          I hope that as you watch me work
+          toward building Olson Outdoor Services,
+          you'll understand that success isn't
+          about never falling. It's about
+          refusing to let your lowest moments
+          define the rest of your life.
+        </p>
+
+        <p class="rose-message">
+          <strong>
+            You can go through the worst of
+            life's circumstances and still
+            come out the other side
+            smelling like a rose.
+          </strong>
+        </p>
+
+        <p>
+          And if my journey teaches you even
+          a little of that, then I'll have
+          accomplished something far more
+          meaningful than simply
+          building a business.
+        </p>
+
+      </section>
+
+      <!-- ===================================
+           SPECIAL THANKS TO SAMANTHA
+      =================================== -->
       <div class="special-thanks">
 
         <h3>To Samantha</h3>
@@ -1990,9 +2499,9 @@ footer a {
         <p>
           For the past two years, you've
           continued to encourage me,
-          challenge me, and push me to
-          become a better person every
-          single day.
+          challenge me, and push me
+          to become a better person
+          every single day.
         </p>
 
         <p>
@@ -2003,25 +2512,24 @@ footer a {
         </p>
 
         <p>
-          Your support has played an
-          important part in the person
-          I'm working to become, and
-          I am deeply grateful to
-          have you beside me.
+          Your support has played an important
+          part in the person I'm working to
+          become, and I am deeply grateful
+          to have you beside me.
         </p>
 
       </div>
 
       <p>
         Starting Olson Outdoor Services
-        is about more than building a
-        business. It's about personal
-        growth, purpose, and creating
-        something that I can genuinely
-        be proud of.
+        is about more than building a business.
+        It's about personal growth, purpose,
+        and creating something that I can
+        genuinely be proud of.
       </p>
 
       <div class="thanks-closing">
+
         To everyone who has supported me,
         believed in me, and encouraged
         me to keep moving forward —
@@ -2030,6 +2538,7 @@ footer a {
         <span>
           I hope to make you all proud.
         </span>
+
       </div>
 
     </div>
@@ -2037,10 +2546,9 @@ footer a {
   </div>
 </section>
 
-<!-- ===================================
-     CHAPTER SIX
-     THE ROOTS THAT REMAIN
-=================================== -->
+<!-- ==========================================
+     CHAPTER SIX — THE ROOTS THAT REMAIN
+========================================== -->
 <section class="section ending" id="roots">
 
   <div class="reading-column story-text">
@@ -2052,92 +2560,147 @@ footer a {
     <h2>The Roots That Remain</h2>
 
     <p>
-      Sometimes the influence of
-      people we love feels especially
-      close, even when they can
-      no longer stand beside us.
+      Sometimes the influence of people
+      we love feels especially close,
+      even when they can no longer
+      stand beside us.
     </p>
 
     <p>
-      For me, a monarch butterfly
-      is a meaningful reminder
-      of my father.
+      For me, a monarch butterfly is
+      a meaningful reminder of my father.
     </p>
 
     <p>
-      Seeing one brings back
-      memories of him, the
-      years we spent together,
-      and everything he
-      tried to teach me.
+      Seeing one brings back memories
+      of him, the years we spent together,
+      and everything he tried to teach me.
     </p>
 
     <p>
-      A dragonfly carries
-      similar meaning when
-      I think of my mother.
-      It reminds me of her
-      strength, her love,
-      and the comfort she
-      has always given me.
+      A dragonfly carries similar meaning
+      when I think of my mother.
     </p>
 
     <p>
-      They're simple things,
-      but they represent
-      meaningful connections
-      to the people who
-      helped shape my life.
+      It reminds me of her strength,
+      her love, and the comfort
+      she has given me.
     </p>
 
     <p>
-      I sometimes think about
-      how my father would
-      feel seeing the company
-      I'm building today.
+      I also carry very different, everyday
+      memories of both my parents.
     </p>
 
     <p>
-      I hope that he would
-      recognize his influence
-      in the way I work,
-      even if my journey
-      here was far from
-      a straight path.
+      My father carefully shaping shrubs,
+      explaining the difference between
+      plants, and reminding his sons
+      to take pride in their work.
     </p>
 
     <p>
-      I'm not trying
-      to recreate his
-      landscaping business
-      or claim that I
-      do everything perfectly.
+      My mother at her sewing machine,
+      creating quilts one careful
+      stitch at a time.
     </p>
 
     <p>
-      Instead, I'm trying
-      to put the values
-      he taught me
-      into practice
-      in my own life.
+      The cold mornings riding her school
+      bus and the distant rumble of diesel
+      engines as I slept in the top bunk
+      of her semi.
     </p>
 
     <p>
-      My father started
-      with an old pickup
-      truck and a few
-      shovels, believing
-      that honest work
-      and craftsmanship
-      could establish
+      Those memories may seem ordinary
+      to someone else. To me, they are
+      reminders of the experiences
+      that made me who I am.
+    </p>
+
+    <p>
+      I sometimes think about how my
+      father would feel seeing the
+      company I'm building today.
+    </p>
+
+    <p>
+      I hope that he would recognize
+      his influence in the way I work,
+      even if my journey here was
+      far from a straight path.
+    </p>
+
+    <p>
+      And when I think of my mother,
+      I recognize how much of her
+      influence continues through
+      my own working life.
+    </p>
+
+    <p>
+      My parents each taught me valuable
+      lessons, and together they gave
+      me a foundation that reaches
+      far beyond either profession.
+    </p>
+
+    <p>
+      I'm not trying to recreate my
+      father's landscaping business
+      or claim that I do
+      everything perfectly.
+    </p>
+
+    <p>
+      Instead, I'm trying to put the
+      values both of my parents taught
+      me into practice in my own life.
+    </p>
+
+    <p>
+      My father started with an old
+      pickup truck and a few shovels,
+      believing that honest work and
+      craftsmanship could establish
       a respected name.
     </p>
 
     <p>
-      Now I'm beginning
-      a chapter of my own,
-      guided by that
-      same belief.
+      My mother showed me that determination,
+      creativity, and care could take many
+      forms, whether through physical work,
+      something carefully made by hand,
+      or a career spent traveling the road.
+    </p>
+
+    <p>
+      Today, I carry pieces of both
+      those stories into my own.
+    </p>
+
+    <p>
+      And while I don't know exactly
+      where the future will lead,
+      I hold onto a hope that the
+      paths they helped me discover
+      may someday come together in
+      an even more meaningful way.
+    </p>
+
+    <p>
+      Until then, every property I maintain,
+      every professional relationship I build,
+      and every opportunity to do something
+      well is another chance to honor
+      what they taught me.
+    </p>
+
+    <p>
+      That's the foundation I'm building
+      Olson Outdoor Services LLC upon.
     </p>
 
   </div>
@@ -2145,22 +2708,22 @@ footer a {
   <div class="ending-emphasis">
 
     <p>
-      His name was on every job
-      he completed. Today, that
-      same family name is on mine.
+      The Olson name is on the work I do today.
+      But behind that name are the lessons,
+      love, and craftsmanship of both
+      my parents.
     </p>
 
     <p class="final-line">
-      And I intend to honor it.
+      And I intend to honor them.
     </p>
 
   </div>
-
 </section>
 
-<!-- ===================================
+<!-- ==========================================
      CONTACT
-=================================== -->
+========================================== -->
 <section class="contact-section" id="contact">
 
   <div class="contact-inner">
@@ -2169,16 +2732,13 @@ footer a {
       Let's Connect
     </div>
 
-    <h2>
-      Let's Talk About Your Property.
-    </h2>
+    <h2>Let's Talk About Your Property.</h2>
 
     <p>
-      Whether you manage a homeowners
-      association, commercial property,
-      or your own home, Olson Outdoor
-      Services welcomes the opportunity
-      to discuss your outdoor
+      Whether you manage a homeowners association,
+      commercial property, or your own home,
+      Olson Outdoor Services welcomes the
+      opportunity to discuss your outdoor
       maintenance needs.
     </p>
 
@@ -2197,9 +2757,8 @@ footer a {
     </div>
 
     <p>
-      Request an estimate online
-      or contact OOS directly
-      by phone, text, or email.
+      Request an estimate online or contact
+      OOS directly by phone, text, or email.
     </p>
 
     <div class="action-row">
@@ -2231,9 +2790,9 @@ footer a {
 
 </main>
 
-<!-- ===================================
+<!-- ==========================================
      FOOTER
-=================================== -->
+========================================== -->
 <footer>
 
   <p>
