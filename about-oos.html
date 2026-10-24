@@ -8,11 +8,11 @@
 
 <title>About OOS | Olson Outdoor Services LLC</title>
 
-<meta name="description" content="Discover the Olson family history behind Olson Outdoor Services LLC, from Lyle Olson Landscapes to a new generation of owner-operated property care in Minnesota.">
+<meta name="description" content="Discover the family roots behind Olson Outdoor Services LLC, from Lyle Olson Landscapes to a new generation of owner-operated property care in Minnesota.">
 
 <style>
 /* ===================================
-   BRAND COLORS
+   OOS BRAND COLORS
 =================================== */
 :root {
   --cream: #F6EFE6;
@@ -31,7 +31,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 115px;
 }
 
 body {
@@ -39,7 +39,7 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 [hidden] {
@@ -56,7 +56,13 @@ a {
 }
 
 section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 115px;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #2876B2;
+  outline-offset: 4px;
 }
 
 h1, h2, h3 {
@@ -85,14 +91,8 @@ p {
   margin: 0 0 22px;
 }
 
-a:focus-visible,
-summary:focus-visible {
-  outline: 3px solid #2876B2;
-  outline-offset: 4px;
-}
-
 /* ===================================
-   STICKY NAVIGATION
+   NAVIGATION
 =================================== */
 .site-header {
   position: sticky;
@@ -235,7 +235,7 @@ summary:focus-visible {
 }
 
 /* ===================================
-   HERO
+   ABOUT HERO
 =================================== */
 .hero {
   display: grid;
@@ -358,7 +358,7 @@ summary:focus-visible {
 }
 
 /* ===================================
-   GENERAL STORY LAYOUT
+   STORY LAYOUT
 =================================== */
 .section {
   padding: 95px 7%;
@@ -533,27 +533,89 @@ blockquote {
 }
 
 /* ===================================
-   MOTHER'S STORY
+   CHAPTER FOUR — DEBRA JONES
+
+   NEW PORTRAIT AND DRAGONFLY LAYOUT
 =================================== */
+.mother-tribute {
+  display: grid;
+  grid-template-columns: minmax(230px, .78fr) minmax(0, 1.22fr);
+  gap: 30px;
+  align-items: start;
+  margin: 35px 0 45px;
+}
+
+.mother-portrait {
+  margin: 0;
+  text-align: center;
+}
+
+.mother-portrait .portrait-frame {
+  background: white;
+}
+
+.mother-portrait img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mother-portrait figcaption {
+  padding: 16px 0 0;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.mother-portrait figcaption span {
+  display: block;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+  color: var(--slate);
+  margin-top: 5px;
+}
+
 .mother-feature {
-  margin-top: 35px;
-  padding: 34px 40px;
+  padding: 30px;
   border-left: 4px solid var(--sage);
-  background: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.76);
 }
 
 .mother-feature h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  color: var(--navy);
 }
 
 .mother-feature p:last-child {
   margin-bottom: 0;
 }
 
+.dragonfly-figure {
+  margin: 27px auto 0;
+  text-align: center;
+}
+
+.dragonfly-figure img {
+  width: min(100%, 250px);
+  height: auto;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 7px 20px rgba(16,44,84,.12);
+}
+
+.dragonfly-figure figcaption {
+  margin: 12px auto 0;
+  max-width: 320px;
+  font-size: 13px;
+  color: var(--slate);
+  font-style: italic;
+  line-height: 1.6;
+}
+
 /* ===================================
-   OWNER'S STORY AND PHOTOGRAPH
+   OWNER'S STORY
 =================================== */
 .owner-section {
   background: white;
@@ -604,7 +666,7 @@ blockquote {
 }
 
 /* ===================================
-   NEW: PERSONAL ACKNOWLEDGMENTS
+   PERSONAL ACKNOWLEDGMENTS
 =================================== */
 .thanks-section {
   background: var(--pale-sage);
@@ -679,7 +741,7 @@ blockquote {
 }
 
 /* ===================================
-   THE ENDING
+   STORY ENDING
 =================================== */
 .ending {
   background: var(--cream);
@@ -772,14 +834,29 @@ footer a {
 }
 
 /* ===================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 =================================== */
 @media (max-width: 1050px) {
-  .desktop-nav { gap: 15px; }
-  .brand img { width: 155px; }
-  .hero-left { padding: 65px 38px; }
-  .hero-right { padding: 40px; }
-  .history-grid, .owner-grid { gap: 35px; }
+  .desktop-nav {
+    gap: 15px;
+  }
+
+  .brand img {
+    width: 155px;
+  }
+
+  .hero-left {
+    padding: 65px 38px;
+  }
+
+  .hero-right {
+    padding: 40px;
+  }
+
+  .history-grid,
+  .owner-grid {
+    gap: 35px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -870,6 +947,17 @@ footer a {
     order: -1;
   }
 
+  .mother-tribute {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .mother-portrait {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .quote-section {
     padding: 80px 7%;
   }
@@ -911,6 +999,10 @@ footer a {
 
   .special-thanks {
     padding: 23px 20px;
+  }
+
+  .mother-portrait {
+    max-width: 280px;
   }
 }
 
@@ -1057,6 +1149,7 @@ footer a {
 <nav class="chapter-nav" aria-label="Story chapters">
 
   <div class="chapter-nav-inner">
+
     <a href="#beginnings">Where It Began</a>
     <a href="#lyle-landscapes">Lyle Olson Landscapes</a>
     <a href="#childhood">Growing Up Olson</a>
@@ -1064,16 +1157,15 @@ footer a {
     <a href="#new-chapter">A New Chapter</a>
     <a href="#thanks">Special Thanks</a>
     <a href="#roots">The Roots That Remain</a>
+
   </div>
 
 </nav>
 
 <!-- ===================================
      CHAPTER ONE
-     WHERE IT ALL BEGAN
 =================================== -->
-<section class="section cream-section"
-         id="beginnings">
+<section class="section cream-section" id="beginnings">
 
   <div class="container history-grid">
 
@@ -1163,10 +1255,8 @@ footer a {
 
 <!-- ===================================
      CHAPTER TWO
-     LYLE OLSON LANDSCAPES
 =================================== -->
-<section class="section white-section"
-         id="lyle-landscapes">
+<section class="section white-section" id="lyle-landscapes">
 
   <div class="reading-column story-text">
 
@@ -1294,10 +1384,8 @@ footer a {
 
 <!-- ===================================
      CHAPTER THREE
-     CHILDHOOD MEMORIES
 =================================== -->
-<section class="section cream-section"
-         id="childhood">
+<section class="section cream-section" id="childhood">
 
   <div class="reading-column story-text">
 
@@ -1431,10 +1519,9 @@ footer a {
 
 <!-- ===================================
      CHAPTER FOUR
-     LYLE AND DEBRA
+     THE LESSONS OF TWO PARENTS
 =================================== -->
-<section class="section sage-section"
-         id="family">
+<section class="section sage-section" id="family">
 
   <div class="reading-column story-text">
 
@@ -1475,24 +1562,71 @@ footer a {
       support and comfort.
     </p>
 
-    <div class="mother-feature">
+    <!-- ===================================
+         NEW: DEBRA JONES PORTRAIT
+         AND PURPLE DRAGONFLY
+    =================================== -->
 
-      <h3>Debra Jones</h3>
+    <div class="mother-tribute">
 
-      <p>
-        Her example taught a lesson
-        just as enduring as the ones
-        learned through the family
-        landscaping business.
-      </p>
+      <figure class="mother-portrait">
 
-      <p>
-        <strong>
-          Love isn't just a word.
-          It's something we demonstrate
-          through our actions.
-        </strong>
-      </p>
+        <div class="portrait-frame">
+
+          <img
+            src="Debra_Jones.JPG"
+            alt="Debra Jones smiling"
+            loading="lazy">
+
+        </div>
+
+        <figcaption>
+          Debra Jones
+          <span>A Mother's Love and Influence</span>
+        </figcaption>
+
+      </figure>
+
+      <div>
+
+        <div class="mother-feature">
+
+          <h3>Debra Jones</h3>
+
+          <p>
+            Her example taught a lesson
+            just as enduring as the ones
+            learned through the family
+            landscaping business.
+          </p>
+
+          <p>
+            <strong>
+              Love isn't just a word.
+              It's something we demonstrate
+              through our actions.
+            </strong>
+          </p>
+
+        </div>
+
+        <figure class="dragonfly-figure">
+
+          <img
+            src="Purple_Dragonfly.jpg"
+            alt="Purple dragonfly, a personal symbol of Debra Jones"
+            loading="lazy">
+
+          <figcaption>
+            The purple dragonfly represents
+            Debra's love, strength, and
+            lasting influence in the
+            Olson family story.
+          </figcaption>
+
+        </figure>
+
+      </div>
 
     </div>
 
@@ -1547,10 +1681,9 @@ footer a {
 
 <!-- ===================================
      CHAPTER FIVE
-     NEW OOS BUSINESS
+     A NEW CHAPTER
 =================================== -->
-<section class="section owner-section"
-         id="new-chapter">
+<section class="section owner-section" id="new-chapter">
 
   <div class="container">
 
@@ -1773,11 +1906,9 @@ footer a {
 </section>
 
 <!-- ===================================
-     NEW SECTION
      PERSONAL ACKNOWLEDGMENTS
 =================================== -->
-<section class="section thanks-section"
-         id="thanks">
+<section class="section thanks-section" id="thanks">
 
   <div class="thanks-inner">
 
@@ -1845,8 +1976,6 @@ footer a {
         hasn't gone unnoticed.
       </p>
 
-      <!-- SPECIAL ACKNOWLEDGMENT TO SAMANTHA -->
-
       <div class="special-thanks">
 
         <h3>To Samantha</h3>
@@ -1912,8 +2041,7 @@ footer a {
      CHAPTER SIX
      THE ROOTS THAT REMAIN
 =================================== -->
-<section class="section ending"
-         id="roots">
+<section class="section ending" id="roots">
 
   <div class="reading-column story-text">
 
@@ -2031,10 +2159,9 @@ footer a {
 </section>
 
 <!-- ===================================
-     CONTACT AND ESTIMATE BUTTONS
+     CONTACT
 =================================== -->
-<section class="contact-section"
-         id="contact">
+<section class="contact-section" id="contact">
 
   <div class="contact-inner">
 
@@ -2131,29 +2258,17 @@ footer a {
 
 </footer>
 
-<!-- ===================================
-     JAVASCRIPT
-=================================== -->
 <script>
 "use strict";
-
-// Update footer year automatically.
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
-// Close the mobile navigation
-// after a link is selected.
-
 document.querySelectorAll(".mobile-links a")
   .forEach(function(link) {
-
     link.addEventListener("click", function() {
-
       document.querySelector(".mobile-menu").open = false;
-
     });
-
   });
 </script>
 
