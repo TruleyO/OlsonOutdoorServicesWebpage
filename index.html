@@ -8,7 +8,9 @@
         content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F6EFE6">
 
-  <title>Olson Outdoor Services LLC | Minnesota Property Care</title>
+  <title>
+    Olson Outdoor Services LLC | Minnesota Property Care
+  </title>
 
   <meta name="description"
         content="Owner-operated lawn care, snow removal, and seasonal property maintenance for HOA communities, commercial properties, and residential customers in Minnesota.">
@@ -17,6 +19,7 @@
 
     /* ==================================
        OOS BRAND COLORS
+       THESE REMAIN YEAR-ROUND
     ================================== */
 
     :root {
@@ -27,6 +30,10 @@
       --slate: #64798A;
       --ink: #34465B;
       --white: #FFFFFF;
+
+      /* Seasonal accent defaults to autumn. */
+      --season-accent: #B58555;
+      --season-card: #FFFBF6;
     }
 
     * {
@@ -245,11 +252,34 @@
       margin: 0 0 32px;
     }
 
+    /* ==================================
+       NEW: SEASONAL HERO MESSAGE
+
+       Small and understated.
+       Does not replace our slogan
+       or main supporting paragraph.
+    ================================== */
+
+    .hero-content .seasonal-message {
+      max-width: 480px;
+      margin: -7px 0 30px;
+      padding: 3px 0 3px 16px;
+      border-left: 3px solid var(--season-accent);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.6;
+      color: var(--navy);
+    }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 13px;
     }
+
+    /* ==================================
+       SEASONAL HERO PHOTOGRAPH
+    ================================== */
 
     .hero-image {
       position: relative;
@@ -264,7 +294,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 68%;
+      object-position: center 60%;
     }
 
     .photo-note {
@@ -348,6 +378,8 @@
       padding: 35px 29px;
       border-top: 4px solid var(--sage);
       box-shadow: 0 8px 30px rgba(16,44,84,.04);
+      transition: background .2s ease,
+                  border-color .2s ease;
     }
 
     .service-number {
@@ -363,6 +395,30 @@
 
     .service-card p {
       margin-bottom: 0;
+    }
+
+    /* ==================================
+       NEW: SUBTLE SEASONAL SERVICE FOCUS
+
+       Only relevant existing service
+       cards receive a gentle highlight.
+       No services are added or removed.
+    ================================== */
+
+    .service-card.seasonal-feature {
+      border-top-color: var(--season-accent);
+      background: var(--season-card);
+      box-shadow: 0 9px 28px rgba(16,44,84,.075);
+    }
+
+    .service-card .seasonal-card-note {
+      display: block;
+      margin-top: 19px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .035em;
+      line-height: 1.5;
     }
 
     /* ==================================
@@ -502,6 +558,7 @@
       .intro-grid {
         gap: 35px;
       }
+
     }
 
     @media (max-width: 800px) {
@@ -603,6 +660,10 @@
         width: 100%;
       }
 
+      .hero-content .seasonal-message {
+        font-size: 14px;
+      }
+
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -611,7 +672,8 @@
         scroll-behavior: auto;
       }
 
-      .button {
+      .button,
+      .service-card {
         transition: none;
       }
 
@@ -667,8 +729,6 @@
           Contact
         </a>
 
-        <!-- NEW ESTIMATE PAGE LINK -->
-
         <a class="button button-primary"
            href="request-estimate.html">
 
@@ -703,8 +763,6 @@
             Contact
           </a>
 
-          <!-- MOBILE ESTIMATE LINK -->
-
           <a href="request-estimate.html">
             Request an Estimate
           </a>
@@ -737,15 +795,27 @@
 
         <div class="accent-line"></div>
 
+        <!-- ORIGINAL YEAR-ROUND PARAGRAPH -->
+
         <p>
           Lawn care, snow removal, and seasonal
           property maintenance with a personal,
           professional approach.
         </p>
 
-        <div class="hero-actions">
+        <!-- ==================================
+             NEW: AUTOMATIC SEASONAL MESSAGE
+        ================================== -->
 
-          <!-- HERO ESTIMATE BUTTON -->
+        <p class="seasonal-message"
+           id="seasonalMessage">
+
+          As the Seasons Change, We're Here
+          to Help Your Property Look Its Best.
+
+        </p>
+
+        <div class="hero-actions">
 
           <a class="button button-primary"
              href="request-estimate.html">
@@ -765,13 +835,20 @@
 
       </div>
 
-      <!-- EXISTING NEIGHBORHOOD PHOTOGRAPH -->
+      <!-- ==================================
+           AUTOMATIC SEASONAL PHOTOGRAPH
+
+           The autumn image is the default.
+           JavaScript selects the correct
+           image for Minnesota's date.
+      ================================== -->
 
       <div class="hero-image">
 
         <img
-          src="https://images.pexels.com/photos/37480475/pexels-photo-37480475.jpeg"
-          alt="Sunny residential neighborhood with green lawns, sidewalks, mature trees, and landscaping"
+          id="seasonalHeroImage"
+          src="https://images.pexels.com/photos/5846801/pexels-photo-5846801.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+          alt="Peaceful suburban neighborhood with mature trees displaying golden autumn foliage"
           fetchpriority="high">
 
         <span class="photo-note">
@@ -862,7 +939,8 @@
 
           <!-- LAWN AND GROUNDS CARE -->
 
-          <article class="service-card">
+          <article class="service-card"
+                   data-service="lawn">
 
             <div class="service-number">
               01 / GROUNDS
@@ -879,11 +957,15 @@
               the growing season.
             </p>
 
+            <span class="seasonal-card-note" hidden>
+            </span>
+
           </article>
 
           <!-- SNOW REMOVAL -->
 
-          <article class="service-card">
+          <article class="service-card"
+                   data-service="snow">
 
             <div class="service-number">
               02 / WINTER
@@ -899,11 +981,15 @@
               parking areas, and pedestrian walkways.
             </p>
 
+            <span class="seasonal-card-note" hidden>
+            </span>
+
           </article>
 
           <!-- SEASONAL MAINTENANCE -->
 
-          <article class="service-card">
+          <article class="service-card"
+                   data-service="seasonal">
 
             <div class="service-number">
               03 / SEASONAL
@@ -918,6 +1004,9 @@
               outdoor maintenance services tailored
               to your property's needs.
             </p>
+
+            <span class="seasonal-card-note" hidden>
+            </span>
 
           </article>
 
@@ -953,8 +1042,6 @@
           and a lasting appreciation for
           quality workmanship.
         </p>
-
-        <!-- LINK TO COMPLETE ABOUT OOS STORY -->
 
         <a class="button button-outline"
            href="about-oos.html">
@@ -1014,8 +1101,6 @@
           </p>
 
         </div>
-
-        <!-- CONTACT SECTION BUTTONS -->
 
         <div class="contact-actions">
 
@@ -1083,20 +1168,25 @@
   </footer>
 
   <!-- ==================================
-       JAVASCRIPT
+       AUTOMATIC SEASONAL JAVASCRIPT
   ================================== -->
 
   <script>
+    "use strict";
 
-    // Automatically update copyright year
+    /* ==================================
+       COPYRIGHT YEAR
+    ================================== */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Close mobile navigation after choosing a link
+    /* ==================================
+       MOBILE NAVIGATION
+    ================================== */
 
-    document.querySelectorAll(".mobile-links a").forEach(
-      function(link) {
+    document.querySelectorAll(".mobile-links a")
+      .forEach(function(link) {
 
         link.addEventListener("click", function() {
 
@@ -1105,8 +1195,356 @@
 
         });
 
+      });
+
+    /* ==================================
+       SEASONAL CONFIGURATION
+
+       Four approved, real photographs
+       from Pexels.
+
+       Schedule:
+       Spring: March 15 - May 31
+       Summer: June 1 - August 31
+       Autumn: September 1 - November 30
+       Winter: December 1 - March 14
+
+       The main site branding and original
+       service descriptions never change.
+    ================================== */
+
+    const seasons = {
+
+      spring: {
+
+        photo:
+          "https://images.pexels.com/photos/30577131/pexels-photo-30577131.jpeg?auto=compress&cs=tinysrgb&w=1600",
+
+        alt:
+          "Sunlit tree-lined residential street in spring with greenery and welcoming neighborhood surroundings",
+
+        position: "center center",
+
+        message:
+          "As Minnesota Comes Back to Life, We're Here to Help Your Property Look Its Best.",
+
+        accent: "#87A38A",
+
+        cardBackground: "#F7FAF5",
+
+        serviceFocus: {
+          lawn: "Growing-Season Preparation",
+          seasonal: "Spring Cleanup Season"
+        }
+
+      },
+
+      summer: {
+
+        photo:
+          "https://images.pexels.com/photos/10628469/pexels-photo-10628469.jpeg?auto=compress&cs=tinysrgb&w=1600",
+
+        alt:
+          "Sunny suburban townhome community with bright skies and attractive residential grounds",
+
+        position: "center center",
+
+        message:
+          "Beautiful Grounds. Lasting Impressions. All Summer Long.",
+
+        accent: "#89A484",
+
+        cardBackground: "#F8FAF5",
+
+        serviceFocus: {
+          lawn: "Summer Grounds Care"
+        }
+
+      },
+
+      autumn: {
+
+        photo:
+          "https://images.pexels.com/photos/5846801/pexels-photo-5846801.jpeg?auto=compress&cs=tinysrgb&w=1600",
+
+        alt:
+          "Peaceful suburban neighborhood with mature trees displaying golden autumn foliage",
+
+        position: "center 60%",
+
+        message:
+          "As the Seasons Change, We're Here to Help Your Property Look Its Best.",
+
+        accent: "#B58555",
+
+        cardBackground: "#FFFBF6",
+
+        serviceFocus: {
+          snow: "Preparing for Winter Weather",
+          seasonal: "Fall Cleanup Season"
+        }
+
+      },
+
+      winter: {
+
+        photo:
+          "https://images.pexels.com/photos/30181546/pexels-photo-30181546.jpeg?auto=compress&cs=tinysrgb&w=1600",
+
+        alt:
+          "Peaceful snow-covered residential community during gentle winter snowfall",
+
+        position: "center center",
+
+        message:
+          "When Winter Arrives, We're Here to Help You Weather the Season.",
+
+        accent: "#91B6C9",
+
+        cardBackground: "#F5F9FC",
+
+        serviceFocus: {
+          snow: "Winter Property Care"
+        }
+
       }
-    );
+
+    };
+
+    /* ==================================
+       GET CURRENT MINNESOTA DATE
+
+       We use America/Chicago rather than
+       the visitor's timezone, so our
+       website follows Minnesota's calendar
+       even for visitors in other states.
+    ================================== */
+
+    function getMinnesotaDate() {
+
+      const now = new Date();
+
+      try {
+
+        const formatter = new Intl.DateTimeFormat(
+          "en-US",
+          {
+            timeZone: "America/Chicago",
+            month: "numeric",
+            day: "numeric"
+          }
+        );
+
+        const parts = formatter.formatToParts(now);
+
+        const monthPart = parts.find(function(part) {
+          return part.type === "month";
+        });
+
+        const dayPart = parts.find(function(part) {
+          return part.type === "day";
+        });
+
+        return {
+          month: Number(monthPart.value),
+          day: Number(dayPart.value)
+        };
+
+      } catch (error) {
+
+        /* Browser fallback */
+
+        return {
+          month: now.getMonth() + 1,
+          day: now.getDate()
+        };
+
+      }
+
+    }
+
+    /* ==================================
+       DETERMINE CURRENT SEASON
+    ================================== */
+
+    function getCurrentSeason() {
+
+      const today = getMinnesotaDate();
+
+      const month = today.month;
+      const day = today.day;
+
+      /* Spring begins March 15 */
+
+      if (
+        (month === 3 && day >= 15) ||
+        month === 4 ||
+        month === 5
+      ) {
+        return "spring";
+      }
+
+      /* Summer begins June 1 */
+
+      if (
+        month >= 6 &&
+        month <= 8
+      ) {
+        return "summer";
+      }
+
+      /* Autumn begins September 1 */
+
+      if (
+        month >= 9 &&
+        month <= 11
+      ) {
+        return "autumn";
+      }
+
+      /* Winter begins December 1
+         and continues through March 14. */
+
+      return "winter";
+
+    }
+
+    /* ==================================
+       APPLY SEASON TO HOMEPAGE
+    ================================== */
+
+    function applySeason(seasonName) {
+
+      const config = seasons[seasonName];
+
+      if (!config) {
+        return;
+      }
+
+      /* Apply only restrained accents. */
+
+      document.documentElement.style.setProperty(
+        "--season-accent",
+        config.accent
+      );
+
+      document.documentElement.style.setProperty(
+        "--season-card",
+        config.cardBackground
+      );
+
+      /* Update seasonal message. */
+
+      const seasonalMessage =
+        document.getElementById("seasonalMessage");
+
+      seasonalMessage.textContent =
+        config.message;
+
+      /* Change the hero photograph. */
+
+      const heroImage =
+        document.getElementById("seasonalHeroImage");
+
+      heroImage.alt =
+        config.alt;
+
+      heroImage.style.objectPosition =
+        config.position;
+
+      heroImage.src =
+        config.photo;
+
+      /* Fallback if the photo cannot load. */
+
+      heroImage.onerror = function() {
+
+        this.onerror = null;
+
+        this.src =
+          "https://images.pexels.com/photos/37480475/pexels-photo-37480475.jpeg";
+
+        this.alt =
+          "Welcoming residential neighborhood";
+
+      };
+
+      /* Highlight appropriate service cards. */
+
+      document.querySelectorAll(
+        ".service-card[data-service]"
+      ).forEach(function(card) {
+
+        const service = card.getAttribute(
+          "data-service"
+        );
+
+        const seasonalNote =
+          config.serviceFocus[service];
+
+        const noteElement =
+          card.querySelector(".seasonal-card-note");
+
+        card.classList.toggle(
+          "seasonal-feature",
+          Boolean(seasonalNote)
+        );
+
+        if (noteElement) {
+
+          noteElement.textContent =
+            seasonalNote || "";
+
+          noteElement.hidden =
+            !seasonalNote;
+
+        }
+
+      });
+
+      /* Store season on the page for testing. */
+
+      document.documentElement.setAttribute(
+        "data-current-season",
+        seasonName
+      );
+
+    }
+
+    /* ==================================
+       OPTIONAL SEASON PREVIEW
+
+       Useful for testing all four seasons
+       without changing the computer date.
+
+       Add ?previewSeason=spring
+       or ?previewSeason=summer
+       or ?previewSeason=autumn
+       or ?previewSeason=winter
+
+       A normal visit uses the current
+       Minnesota date automatically.
+    ================================== */
+
+    const previewParams =
+      new URLSearchParams(window.location.search);
+
+    const requestedPreview =
+      previewParams.get("previewSeason");
+
+    const validPreview =
+      requestedPreview &&
+      Object.prototype.hasOwnProperty.call(
+        seasons,
+        requestedPreview
+      );
+
+    const selectedSeason =
+      validPreview
+        ? requestedPreview
+        : getCurrentSeason();
+
+    applySeason(selectedSeason);
 
   </script>
 
