@@ -1,0 +1,1763 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F6EFE6">
+
+  <title>Our Services | Olson Outdoor Services LLC</title>
+
+  <meta name="description"
+    content="Explore lawn mowing, landscape maintenance, shrub trimming, spring and fall cleanup, snow plowing, walkway clearing, and deicing services from Olson Outdoor Services LLC in the Twin Cities Metro.">
+
+  <style>
+    /* =====================================
+       OOS BRAND COLORS
+    ===================================== */
+    :root {
+      --cream: #F6EFE6;
+      --navy: #102C54;
+      --sky: #9BCBE0;
+      --sage: #A4B49E;
+      --slate: #64798A;
+      --ink: #34465B;
+      --white: #FFFFFF;
+      --pale-sage: #EAF0EC;
+      --border: #DDE1DD;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 115px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(40px, 5vw, 72px);
+      letter-spacing: -0.035em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(32px, 3.5vw, 46px);
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    section {
+      scroll-margin-top: 115px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #2876B2;
+      outline-offset: 4px;
+    }
+
+    .container {
+      max-width: 1220px;
+      margin: auto;
+    }
+
+    .eyebrow,
+    .small-label {
+      color: var(--slate);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      margin-bottom: 19px;
+    }
+
+    .accent-line {
+      width: 75px;
+      height: 4px;
+      border-radius: 3px;
+      background: var(--sage);
+      margin: 27px 0;
+    }
+
+    /* =====================================
+       SKIP LINK
+    ===================================== */
+    .skip-link {
+      position: absolute;
+      left: 15px;
+      top: -70px;
+      padding: 12px 18px;
+      background: var(--navy);
+      color: white;
+      z-index: 200;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* =====================================
+       STICKY NAVIGATION
+    ===================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246,239,230,0.98);
+      border-bottom: 1px solid #DCDDD9;
+      box-shadow: 0 2px 15px rgba(16,44,84,0.06);
+    }
+
+    .nav-inner {
+      max-width: 1500px;
+      margin: auto;
+      min-height: 100px;
+      padding: 7px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      text-decoration: none;
+      color: var(--navy);
+    }
+
+    .brand img {
+      width: 190px;
+      height: 95px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .brand-fallback {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .brand-fallback small {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .desktop-nav a:not(.button) {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .desktop-nav a:not(.button):hover,
+    .desktop-nav a[aria-current="page"] {
+      text-decoration: underline;
+      text-decoration-color: var(--sage);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 7px;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* =====================================
+       BUTTONS
+    ===================================== */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 23px;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      transition: background 0.2s ease,
+                  border-color 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white !important;
+      border: 2px solid var(--navy);
+    }
+
+    .button-primary:hover {
+      background: #254A78;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+
+    .button-outline:hover {
+      background: #E5EAE8;
+    }
+
+    .button-light {
+      background: var(--sky);
+      color: var(--navy);
+      border: 2px solid var(--sky);
+    }
+
+    .button-light:hover {
+      background: #C5E4F0;
+    }
+
+    .button-on-dark {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .button-on-dark:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 13px;
+      margin-top: 28px;
+    }
+
+    /* =====================================
+       SPLIT HERO
+    ===================================== */
+    .hero {
+      display: grid;
+      grid-template-columns: 52% 48%;
+      min-height: 615px;
+      background: var(--cream);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 75px clamp(32px, 6vw, 110px);
+    }
+
+    .hero-content p {
+      max-width: 620px;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .hero-photo {
+      position: relative;
+      min-height: 550px;
+      overflow: hidden;
+      background: #D6E0D6;
+    }
+
+    .hero-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .photo-note {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      padding: 7px 12px;
+      background: rgba(16,44,84,0.82);
+      color: white;
+      border-radius: 4px;
+      font-size: 11px;
+      letter-spacing: 0.025em;
+    }
+
+    .service-area {
+      margin-top: 25px;
+      padding-left: 17px;
+      border-left: 3px solid var(--sage);
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.7;
+    }
+
+    /* =====================================
+       QUICK CATEGORY NAVIGATION
+    ===================================== */
+    .category-navigation {
+      background: white;
+      padding: 35px 6%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .category-nav-inner {
+      max-width: 1170px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .category-nav-inner a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 47px;
+      padding: 10px 22px;
+      background: var(--cream);
+      border: 1px solid #DCE0DA;
+      border-radius: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .category-nav-inner a:hover {
+      background: var(--pale-sage);
+      border-color: var(--sage);
+    }
+
+    /* =====================================
+       SERVICE SECTIONS
+    ===================================== */
+    .services-section {
+      padding: 92px 7% 100px;
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    .section-cream {
+      background: var(--cream);
+    }
+
+    .section-sage {
+      background: #F0F3EF;
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 0 45px;
+    }
+
+    .section-heading p {
+      font-size: 17px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .section-heading .accent-line {
+      margin: 23px 0;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .service-grid-two {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+      max-width: 810px;
+      margin: auto;
+    }
+
+    /* =====================================
+       INDIVIDUAL SERVICE CARDS
+    ===================================== */
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      height: 100%;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(16,44,84,0.045);
+      transition: transform 0.2s ease,
+                  box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(16,44,84,0.1);
+    }
+
+    .card-photo {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #DBE3DC;
+      overflow: hidden;
+    }
+
+    .card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px 27px 28px;
+    }
+
+    .card-label {
+      display: block;
+      margin-bottom: 13px;
+      color: var(--slate);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .service-card h3 {
+      font-size: clamp(23px, 2.1vw, 29px);
+      margin: 0 0 17px;
+    }
+
+    .service-card p {
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0 0 22px;
+    }
+
+    .card-actions {
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    .card-actions .button {
+      width: 100%;
+    }
+
+    /* =====================================
+       NOTES BELOW SERVICE CATEGORIES
+    ===================================== */
+    .section-note {
+      max-width: 940px;
+      margin: 42px auto 0;
+      padding: 23px 28px;
+      background: rgba(164,180,158,0.12);
+      border-left: 4px solid var(--sage);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .section-note p {
+      margin: 0;
+    }
+
+    .section-note strong {
+      color: var(--navy);
+    }
+
+    /* =====================================
+       END-OF-SERVICES INVITATION
+    ===================================== */
+    .service-summary {
+      background: var(--pale-sage);
+      padding: 72px 7%;
+      text-align: center;
+    }
+
+    .service-summary-inner {
+      max-width: 830px;
+      margin: auto;
+    }
+
+    .service-summary h2 {
+      font-size: clamp(28px, 3vw, 39px);
+      margin-bottom: 20px;
+    }
+
+    .service-summary p {
+      font-size: 17px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .stock-disclosure {
+      margin-top: 20px !important;
+      font-size: 12px !important;
+      color: var(--slate);
+    }
+
+    /* =====================================
+       HOMEPAGE-STYLE CONTACT SECTION
+    ===================================== */
+    .contact-section {
+      padding: 95px 7%;
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-inner {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .contact-section .small-label {
+      color: var(--sky);
+    }
+
+    .contact-section h2 {
+      color: white;
+    }
+
+    .contact-section p {
+      color: #E1EAF2;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .contact-details {
+      margin: 28px 0;
+    }
+
+    .contact-details a {
+      color: white;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+      font-size: 17px;
+    }
+
+    .contact-action-panel {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.17);
+      border-radius: 8px;
+      padding: 32px;
+    }
+
+    .contact-action-panel p {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .contact-buttons .button {
+      width: 100%;
+    }
+
+    .contact-buttons .button:first-child {
+      grid-column: 1 / -1;
+    }
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+    footer {
+      padding: 32px 6%;
+      text-align: center;
+      background: #0B213F;
+      color: #DEE7F0;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    footer a {
+      color: #DEE7F0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin: 0 7px;
+    }
+
+    /* =====================================
+       TABLET RESPONSIVENESS
+    ===================================== */
+    @media (max-width: 1100px) {
+      .desktop-nav {
+        gap: 16px;
+      }
+
+      .brand img {
+        width: 160px;
+      }
+
+      .hero-content {
+        padding: 65px 40px;
+      }
+
+      .card-content {
+        padding: 24px 22px;
+      }
+
+      .contact-inner {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .nav-inner {
+        min-height: 82px;
+        padding: 5px 5%;
+      }
+
+      .brand img {
+        width: 140px;
+        height: 76px;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+        position: relative;
+      }
+
+      .mobile-menu summary {
+        min-height: 44px;
+        padding: 10px 15px;
+        border: 1px solid var(--navy);
+        border-radius: 5px;
+        color: var(--navy);
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .mobile-links {
+        position: absolute;
+        top: 49px;
+        right: 0;
+        width: min(290px, 88vw);
+        background: var(--cream);
+        border: 1px solid #D5D6D2;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        padding: 12px;
+        z-index: 110;
+      }
+
+      .mobile-links a {
+        display: block;
+        padding: 12px;
+        color: var(--navy);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .mobile-links a:hover {
+        background: var(--pale-sage);
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 67px 7%;
+      }
+
+      .hero-photo {
+        min-height: 350px;
+      }
+
+      .services-section {
+        padding: 72px 6%;
+      }
+
+      .service-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .contact-action-panel {
+        max-width: 600px;
+      }
+    }
+
+    /* =====================================
+       MOBILE RESPONSIVENESS
+    ===================================== */
+    @media (max-width: 580px) {
+      .hero-content p {
+        font-size: 16px;
+      }
+
+      .hero-photo {
+        min-height: 290px;
+      }
+
+      .hero .button {
+        width: 100%;
+      }
+
+      .category-navigation {
+        padding: 28px 5%;
+      }
+
+      .category-nav-inner {
+        flex-direction: column;
+        gap: 11px;
+      }
+
+      .category-nav-inner a {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .services-section {
+        padding: 65px 6%;
+      }
+
+      .section-heading p {
+        font-size: 16px;
+      }
+
+      .service-grid,
+      .service-grid-two {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .service-card h3 {
+        font-size: 27px;
+      }
+
+      .card-content {
+        padding: 26px 24px;
+      }
+
+      .section-note {
+        padding: 21px;
+        font-size: 14px;
+      }
+
+      .service-summary {
+        padding: 60px 7%;
+      }
+
+      .contact-section {
+        padding: 70px 7%;
+      }
+
+      .contact-action-panel {
+        padding: 23px;
+      }
+
+      .contact-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-buttons .button:first-child {
+        grid-column: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button,
+      .service-card,
+      .category-nav-inner a {
+        transition: none;
+      }
+
+      .service-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+<a class="skip-link" href="#main">
+  Skip to main content
+</a>
+
+<!-- =====================================
+     HEADER
+===================================== -->
+<header class="site-header">
+  <div class="nav-inner">
+
+    <a href="index.html"
+       class="brand"
+       aria-label="Olson Outdoor Services homepage">
+
+      <img
+        src="Finalized logo - Navy blue.png"
+        alt="Olson Outdoor Services LLC logo"
+        onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+
+      <span class="brand-fallback" hidden>
+        OLSON
+        <small>OUTDOOR SERVICES, LLC</small>
+      </span>
+
+    </a>
+
+    <nav class="desktop-nav"
+         aria-label="Main navigation">
+
+      <a href="index.html">Home</a>
+
+      <a href="services.html"
+         aria-current="page">
+        Services
+      </a>
+
+      <a href="about-oos.html">
+        About OOS
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+      <a class="button button-primary"
+         href="request-estimate.html">
+        Request an Estimate
+      </a>
+
+    </nav>
+
+    <details class="mobile-menu">
+
+      <summary>Menu</summary>
+
+      <nav class="mobile-links"
+           aria-label="Mobile navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="services.html"
+           aria-current="page">
+          Services
+        </a>
+
+        <a href="about-oos.html">
+          About OOS
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a href="request-estimate.html">
+          Request an Estimate
+        </a>
+
+      </nav>
+
+    </details>
+
+  </div>
+</header>
+
+<main id="main">
+
+<!-- =====================================
+     SERVICES HERO
+===================================== -->
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Olson Outdoor Services LLC · Our Services
+    </div>
+
+    <h1>
+      Beautiful Properties.
+      Lasting Impressions.
+    </h1>
+
+    <div class="accent-line"></div>
+
+    <p>
+      From professional lawn care and landscape
+      maintenance to seasonal cleanups and
+      snow and ice management, Olson Outdoor
+      Services LLC provides dependable,
+      personalized property care.
+    </p>
+
+    <p>
+      Proudly serving residential homeowners,
+      HOA and townhome communities, and
+      commercial properties.
+    </p>
+
+    <div class="action-row">
+
+      <a class="button button-primary"
+         href="#service-categories">
+        Explore Our Services
+      </a>
+
+      <a class="button button-outline"
+         href="request-estimate.html">
+        Request an Estimate
+      </a>
+
+    </div>
+
+    <div class="service-area">
+      Serving the Twin Cities Metro &amp;
+      Surrounding Communities.
+      Service availability varies by
+      location and project requirements.
+    </div>
+
+  </div>
+
+  <div class="hero-photo">
+
+    <img
+      src="https://images.pexels.com/photos/10628469/pexels-photo-10628469.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+      alt="Beautifully landscaped property with green lawns and attractive summer grounds"
+      fetchpriority="high">
+
+    <span class="photo-note">
+      Illustrative stock photography
+    </span>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+     CATEGORY JUMP LINKS
+===================================== -->
+<nav class="category-navigation"
+     id="service-categories"
+     aria-label="Service categories">
+
+  <div class="category-nav-inner">
+
+    <a href="#lawn-landscape">
+      Lawn &amp; Landscape Care
+    </a>
+
+    <a href="#seasonal-cleanup">
+      Seasonal Cleanup
+    </a>
+
+    <a href="#snow-ice">
+      Snow &amp; Ice Management
+    </a>
+
+  </div>
+
+</nav>
+
+<!-- =====================================
+     SECTION ONE
+     LAWN AND LANDSCAPE CARE
+===================================== -->
+<section class="services-section section-white"
+         id="lawn-landscape">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="small-label">
+        Service Category 01
+      </div>
+
+      <h2>
+        Lawn &amp; Landscape Care
+      </h2>
+
+      <div class="accent-line"></div>
+
+      <p>
+        Attractive, well-maintained grounds
+        help create a positive first impression.
+        Our lawn and landscape services focus
+        on consistent care, attention to detail,
+        and maintaining the appearance
+        of your outdoor spaces.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <!-- =================================
+           CARD 1 — LAWN MOWING
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/12087398/pexels-photo-12087398.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Lawn care worker mowing green grass in a landscaped setting"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Lawn Care
+          </span>
+
+          <h3>
+            Lawn Mowing &amp; Trimming
+          </h3>
+
+          <p>
+            Keep your lawn looking neat
+            and professionally maintained
+            with routine mowing and
+            string trimming.
+          </p>
+
+          <p>
+            Depending on the agreed service
+            scope, visits may also include
+            minor litter and small debris
+            pickup before mowing, along
+            with blowing grass clippings
+            from sidewalks, curbs, and
+            other maintained hard surfaces.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for lawn mowing and trimming">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- =================================
+           CARD 2 — LANDSCAPE BEDS
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/13834298/pexels-photo-13834298.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Gardener tending an established planting bed"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Landscape Care
+          </span>
+
+          <h3>
+            Landscape Bed &amp; Light
+            Landscape Maintenance
+          </h3>
+
+          <p>
+            Maintain the appearance of
+            existing landscape beds with
+            hand-weeding, bed cleanup,
+            and general planting-bed care.
+          </p>
+
+          <p>
+            Services can also include
+            landscape bed top dressing,
+            small plant replacements,
+            and other light maintenance
+            of established landscapes,
+            as agreed in the estimate.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for landscape bed and light landscape maintenance">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- =================================
+           CARD 3 — SHRUB TRIMMING
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/24595769/pexels-photo-24595769.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Gardener carefully trimming an established green hedge"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Shrub Care
+          </span>
+
+          <h3>
+            Shrub &amp; Hedge Trimming
+          </h3>
+
+          <p>
+            Thoughtful trimming and shaping
+            help maintain the appearance
+            of established shrubs and hedges
+            throughout the growing season.
+          </p>
+
+          <p>
+            OOS approaches shrub trimming
+            with attention to each plant's
+            natural form, growth habits,
+            and maintenance needs rather
+            than treating every variety
+            the same.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for shrub and hedge trimming">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =====================================
+     SECTION TWO
+     SEASONAL CLEANUP
+===================================== -->
+<section class="services-section section-cream"
+         id="seasonal-cleanup">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="small-label">
+        Service Category 02
+      </div>
+
+      <h2>
+        Seasonal Cleanup
+      </h2>
+
+      <div class="accent-line"></div>
+
+      <p>
+        Minnesota's changing seasons
+        bring different property care
+        needs. Our spring and fall
+        cleanup services help keep
+        outdoor areas maintained
+        and ready for the
+        months ahead.
+      </p>
+
+    </div>
+
+    <div class="service-grid service-grid-two">
+
+      <!-- =================================
+           CARD 4 — SPRING CLEANUP
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/31335547/pexels-photo-31335547.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Gardener raking and maintaining green outdoor grounds"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Spring Services
+          </span>
+
+          <h3>
+            Spring Cleanup
+          </h3>
+
+          <p>
+            Refresh your property's
+            appearance after winter
+            with seasonal cleanup
+            and grounds preparation.
+          </p>
+
+          <p>
+            Services may include
+            clearing accumulated leaves
+            and winter debris, cleaning
+            landscape beds, and tidying
+            maintained outdoor areas
+            ahead of the growing season.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for spring cleanup">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- =================================
+           CARD 5 — FALL CLEANUP
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/34796869/pexels-photo-34796869.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Outdoor maintenance workers clearing fallen leaves in autumn"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Autumn Services
+          </span>
+
+          <h3>
+            Fall Cleanup
+          </h3>
+
+          <p>
+            Keep your property looking
+            cared for as autumn leaves
+            fall and winter approaches.
+          </p>
+
+          <p>
+            Fall cleanup may include
+            leaf collection, removal
+            of seasonal yard debris,
+            landscape bed cleanup,
+            and general preparation
+            of maintained outdoor
+            areas for winter.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for fall cleanup">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+
+    <div class="section-note">
+      <p>
+        <strong>Cleanup and debris disposal:</strong>
+        Depending on the property and approved
+        scope, collected leaves and yard debris
+        may be handled on-site or hauled away.
+        Off-site removal and disposal are
+        subject to availability and will
+        be addressed in the estimate.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =====================================
+     SECTION THREE
+     SNOW AND ICE MANAGEMENT
+===================================== -->
+<section class="services-section section-white"
+         id="snow-ice">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="small-label">
+        Service Category 03
+      </div>
+
+      <h2>
+        Snow &amp; Ice Management
+      </h2>
+
+      <div class="accent-line"></div>
+
+      <p>
+        Minnesota winters demand a
+        practical approach to keeping
+        properties accessible and
+        maintaining outdoor travel areas.
+      </p>
+
+      <p>
+        OOS offers seasonal winter
+        service arrangements as well
+        as individual per-event
+        services when scheduling
+        and equipment availability
+        permit.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <!-- =================================
+           CARD 6 — SNOW PLOWING
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/11508827/pexels-photo-11508827.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Snowplow vehicle clearing a snowy Minnesota roadway"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Snow Services
+          </span>
+
+          <h3>
+            Snow Plowing &amp; Clearing
+          </h3>
+
+          <p>
+            Snow plowing and clearing
+            for appropriate driveways,
+            parking areas, private
+            roadways, and designated
+            vehicle access areas.
+          </p>
+
+          <p>
+            Service arrangements are
+            based on the property's
+            layout, snow placement
+            needs, and agreed
+            maintenance requirements.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for snow plowing and clearing">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- =================================
+           CARD 7 — WALKWAY CLEARING
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/6952452/pexels-photo-6952452.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Snow being cleared from an outdoor pedestrian walkway"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Pedestrian Access
+          </span>
+
+          <h3>
+            Sidewalk &amp; Walkway
+            Snow Clearing
+          </h3>
+
+          <p>
+            Snow clearing for
+            sidewalks, pedestrian
+            walkways, designated
+            entryways, and other
+            agreed access areas.
+          </p>
+
+          <p>
+            Appropriate hand tools
+            and snow-clearing equipment
+            are selected according
+            to the property layout
+            and required service.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for sidewalk and walkway snow clearing">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- =================================
+           CARD 8 — DEICING
+      ================================= -->
+      <article class="service-card">
+
+        <div class="card-photo">
+          <img
+            src="https://images.pexels.com/photos/11108148/pexels-photo-11108148.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000"
+            alt="Ice-melt material being applied on a snowy outdoor surface"
+            loading="lazy">
+        </div>
+
+        <div class="card-content">
+
+          <span class="card-label">
+            Ice Management
+          </span>
+
+          <h3>
+            Deicing &amp; Ice Management
+          </h3>
+
+          <p>
+            Help manage icy conditions
+            on designated sidewalks,
+            walkways, parking areas,
+            and other appropriate
+            outdoor surfaces.
+          </p>
+
+          <p>
+            Services may include
+            applications of salt
+            or suitable ice-melt
+            products based on
+            surface conditions,
+            material suitability,
+            and the agreed scope.
+          </p>
+
+          <div class="card-actions">
+            <a class="button button-primary"
+               href="request-estimate.html"
+               aria-label="Request an estimate for deicing and ice management">
+              Request an Estimate
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+
+    <div class="section-note">
+      <p>
+        <strong>Winter service availability:</strong>
+        Seasonal service contracts are available
+        for qualifying properties. Individual
+        per-event snow and ice services may
+        also be available, depending on storm
+        conditions, existing commitments,
+        location, and scheduling.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =====================================
+     SERVICE SUMMARY
+===================================== -->
+<section class="service-summary">
+
+  <div class="service-summary-inner">
+
+    <div class="small-label">
+      A Personal Approach to Property Care
+    </div>
+
+    <h2>
+      Professional Standards.
+      Personal Attention.
+    </h2>
+
+    <div class="accent-line"
+         style="margin: 25px auto;">
+    </div>
+
+    <p>
+      From the first conversation
+      through the work performed
+      on your property, OOS strives
+      to provide thoughtful service,
+      clear communication, and
+      workmanship you can feel
+      confident in.
+    </p>
+
+    <p class="stock-disclosure">
+      Service photographs are illustrative
+      stock images and do not depict
+      completed OOS projects.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+     CONTACT SECTION
+     MATCHES HOMEPAGE LANGUAGE
+===================================== -->
+<section class="contact-section" id="contact">
+
+  <div class="contact-inner">
+
+    <div class="contact-copy">
+
+      <div class="small-label">
+        Let's Connect
+      </div>
+
+      <h2>
+        Let's Talk About Your Property.
+      </h2>
+
+      <p>
+        Whether you manage a residential
+        community, commercial property,
+        or your own home, we'd welcome
+        the opportunity to discuss your
+        outdoor maintenance needs.
+      </p>
+
+      <div class="contact-details">
+
+        <a href="tel:+16512107486">
+          (651) 210-7486
+        </a>
+
+        <br>
+
+        <a href="mailto:OlsonOutdoorServices26@gmail.com">
+          OlsonOutdoorServices26@gmail.com
+        </a>
+
+      </div>
+
+      <p>
+        You can request an estimate online
+        or contact us directly by phone,
+        text message, or email.
+      </p>
+
+    </div>
+
+    <div class="contact-action-panel">
+
+      <p>
+        Ready to discuss your property?
+        Choose the contact option
+        that's most convenient for you.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a class="button button-light"
+           href="request-estimate.html">
+          Request an Estimate
+        </a>
+
+        <a class="button button-on-dark"
+           href="tel:+16512107486">
+          Call OOS
+        </a>
+
+        <a class="button button-on-dark"
+           href="sms:+16512107486">
+          Text OOS
+        </a>
+
+        <a class="button button-on-dark"
+           href="mailto:OlsonOutdoorServices26@gmail.com">
+          Email OOS
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+<footer>
+
+  <p>
+    Olson Outdoor Services LLC · Minnesota
+  </p>
+
+  <p>
+    Owner-Operated Outdoor Property Maintenance
+  </p>
+
+  <p>
+    <a href="index.html">Home</a>
+    <a href="about-oos.html">About OOS</a>
+    <a href="request-estimate.html">Request an Estimate</a>
+    <a href="#top">Back to Top ↑</a>
+  </p>
+
+  <p>
+    &copy; <span id="year">2026</span>
+    Olson Outdoor Services LLC
+  </p>
+
+</footer>
+
+<script>
+"use strict";
+
+/* Keep the copyright year current. */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* Close mobile navigation after selecting a link. */
+document.querySelectorAll(".mobile-links a")
+  .forEach(function(link) {
+    link.addEventListener("click", function() {
+      const menu = document.querySelector(".mobile-menu");
+
+      if (menu) {
+        menu.open = false;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
