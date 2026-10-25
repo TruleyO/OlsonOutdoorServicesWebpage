@@ -1,27 +1,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F6EFE6">
-
-  <title>
-    Olson Outdoor Services LLC | Minnesota Property Care
-  </title>
-
-  <meta name="description"
-        content="Owner-operated lawn care, snow removal, and seasonal property maintenance for HOA communities, commercial properties, and residential customers in Minnesota.">
+  <title>Olson Outdoor Services LLC | Minnesota Property Care</title>
+  <meta name="description" content="Owner-operated lawn care, snow removal, and seasonal property maintenance for HOA communities, commercial properties, and residential customers in Minnesota.">
 
   <style>
-
-    /* ==================================
-       OOS BRAND COLORS
-       THESE REMAIN YEAR-ROUND
-    ================================== */
-
+    /* OOS BRAND COLORS — kept consistent all year. */
     :root {
       --cream: #F6EFE6;
       --navy: #102C54;
@@ -30,8 +18,6 @@
       --slate: #64798A;
       --ink: #34465B;
       --white: #FFFFFF;
-
-      /* Seasonal accent defaults to autumn. */
       --season-accent: #B58555;
       --season-card: #FFFBF6;
     }
@@ -84,20 +70,19 @@
     }
 
     h1 {
-      font-size: clamp(42px,4.5vw,76px);
+      font-size: clamp(42px, 4.5vw, 76px);
       letter-spacing: -.035em;
       margin: 0;
     }
 
     h2 {
-      font-size: clamp(32px,3vw,47px);
+      font-size: clamp(32px, 3vw, 47px);
       margin: 0 0 23px;
     }
 
-    /* ==================================
-       STICKY NAVIGATION
-    ================================== */
-
+    /* =====================================
+       STICKY HEADER
+    ===================================== */
     .site-header {
       position: sticky;
       top: 0;
@@ -169,10 +154,9 @@
       display: none;
     }
 
-    /* ==================================
+    /* =====================================
        BUTTONS
-    ================================== */
-
+    ===================================== */
     .button {
       display: inline-flex;
       justify-content: center;
@@ -207,10 +191,9 @@
       background: #E5EAE8;
     }
 
-    /* ==================================
-       SPLIT-SCREEN HOMEPAGE
-    ================================== */
-
+    /* =====================================
+       SPLIT-SCREEN HERO
+    ===================================== */
     .hero {
       display: grid;
       grid-template-columns: 51% 49%;
@@ -222,7 +205,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 75px clamp(30px,6vw,110px);
+      padding: 75px clamp(30px, 6vw, 110px);
     }
 
     .eyebrow,
@@ -252,14 +235,7 @@
       margin: 0 0 32px;
     }
 
-    /* ==================================
-       NEW: SEASONAL HERO MESSAGE
-
-       Small and understated.
-       Does not replace our slogan
-       or main supporting paragraph.
-    ================================== */
-
+    /* AUTOMATIC SEASONAL MESSAGE */
     .hero-content .seasonal-message {
       max-width: 480px;
       margin: -7px 0 30px;
@@ -276,10 +252,6 @@
       flex-wrap: wrap;
       gap: 13px;
     }
-
-    /* ==================================
-       SEASONAL HERO PHOTOGRAPH
-    ================================== */
 
     .hero-image {
       position: relative;
@@ -308,10 +280,9 @@
       border-radius: 3px;
     }
 
-    /* ==================================
-       GENERAL SECTIONS
-    ================================== */
-
+    /* =====================================
+       SITE SECTIONS
+    ===================================== */
     .section {
       padding: 95px 6%;
     }
@@ -324,10 +295,6 @@
     .small-label {
       margin-bottom: 15px;
     }
-
-    /* ==================================
-       OWNER-OPERATED INTRODUCTION
-    ================================== */
 
     .intro {
       background: white;
@@ -354,10 +321,9 @@
       line-height: 1.5;
     }
 
-    /* ==================================
-       SERVICES
-    ================================== */
-
+    /* =====================================
+       HOMEPAGE SERVICE PREVIEW CARDS
+    ===================================== */
     .services {
       background: var(--cream);
     }
@@ -369,7 +335,7 @@
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
@@ -397,14 +363,7 @@
       margin-bottom: 0;
     }
 
-    /* ==================================
-       NEW: SUBTLE SEASONAL SERVICE FOCUS
-
-       Only relevant existing service
-       cards receive a gentle highlight.
-       No services are added or removed.
-    ================================== */
-
+    /* SEASONAL CARD HIGHLIGHTING */
     .service-card.seasonal-feature {
       border-top-color: var(--season-accent);
       background: var(--season-card);
@@ -421,10 +380,24 @@
       line-height: 1.5;
     }
 
-    /* ==================================
-       FAMILY STORY PREVIEW
-    ================================== */
+    /* NEW SERVICE PAGE LINKS */
+    .service-link {
+      display: inline-block;
+      margin-top: 23px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
+    .service-link:hover {
+      color: #254A78;
+    }
+
+    /* =====================================
+       STORY PREVIEW
+    ===================================== */
     .story {
       background: #EAF0EC;
       text-align: center;
@@ -447,10 +420,9 @@
       margin-top: 20px;
     }
 
-    /* ==================================
+    /* =====================================
        CONTACT SECTION
-    ================================== */
-
+    ===================================== */
     .contact {
       background: var(--navy);
       color: white;
@@ -513,10 +485,9 @@
       background: rgba(255,255,255,.12);
     }
 
-    /* ==================================
+    /* =====================================
        FOOTER
-    ================================== */
-
+    ===================================== */
     footer {
       background: #0B213F;
       color: #DEE7F0;
@@ -533,12 +504,10 @@
       color: #DEE7F0;
     }
 
-    /* ==================================
+    /* =====================================
        RESPONSIVE DESIGN
-    ================================== */
-
+    ===================================== */
     @media (max-width: 1020px) {
-
       .nav-inner {
         padding: 8px 3%;
       }
@@ -558,11 +527,9 @@
       .intro-grid {
         gap: 35px;
       }
-
     }
 
     @media (max-width: 800px) {
-
       .nav-inner {
         min-height: 78px;
         padding: 5px 5%;
@@ -612,6 +579,10 @@
         padding: 12px;
       }
 
+      .mobile-links a:hover {
+        background: #EAF0EC;
+      }
+
       .hero {
         grid-template-columns: 1fr;
       }
@@ -635,11 +606,9 @@
       .service-grid {
         grid-template-columns: 1fr;
       }
-
     }
 
     @media (max-width: 480px) {
-
       .hero-image {
         min-height: 340px;
       }
@@ -655,19 +624,9 @@
       .brand img {
         width: 125px;
       }
-
-      .contact-actions {
-        width: 100%;
-      }
-
-      .hero-content .seasonal-message {
-        font-size: 14px;
-      }
-
     }
 
     @media (prefers-reduced-motion: reduce) {
-
       html {
         scroll-behavior: auto;
       }
@@ -676,18 +635,15 @@
       .service-card {
         transition: none;
       }
-
     }
-
   </style>
 </head>
 
 <body id="top">
 
-  <!-- ==================================
-       STICKY NAVIGATION
-  ================================== -->
-
+  <!-- =====================================
+       STICKY TOP NAVIGATION
+  ===================================== -->
   <header class="site-header">
 
     <div class="nav-inner">
@@ -709,7 +665,6 @@
       </a>
 
       <!-- DESKTOP NAVIGATION -->
-
       <nav class="desktop-nav"
            aria-label="Main navigation">
 
@@ -717,7 +672,7 @@
           Home
         </a>
 
-        <a href="#services">
+        <a href="services.html">
           Services
         </a>
 
@@ -731,15 +686,12 @@
 
         <a class="button button-primary"
            href="request-estimate.html">
-
           Request an Estimate
-
         </a>
 
       </nav>
 
       <!-- MOBILE NAVIGATION -->
-
       <details class="mobile-menu">
 
         <summary>Menu</summary>
@@ -751,7 +703,7 @@
             Home
           </a>
 
-          <a href="#services">
+          <a href="services.html">
             Services
           </a>
 
@@ -772,15 +724,14 @@
       </details>
 
     </div>
-
   </header>
 
   <main>
 
-    <!-- ==================================
-         SPLIT-SCREEN HOMEPAGE
-    ================================== -->
-
+    <!-- =====================================
+         HOMEPAGE HERO
+         AUTOMATIC SEASONAL PHOTOGRAPHY
+    ===================================== -->
     <section class="hero" id="home">
 
       <div class="hero-content">
@@ -795,54 +746,36 @@
 
         <div class="accent-line"></div>
 
-        <!-- ORIGINAL YEAR-ROUND PARAGRAPH -->
-
         <p>
-          Lawn care, snow removal, and seasonal
-          property maintenance with a personal,
-          professional approach.
+          Lawn care, snow removal, and seasonal property
+          maintenance with a personal, professional approach.
         </p>
 
-        <!-- ==================================
-             NEW: AUTOMATIC SEASONAL MESSAGE
-        ================================== -->
-
+        <!-- AUTOMATIC SEASONAL MESSAGE -->
         <p class="seasonal-message"
            id="seasonalMessage">
-
-          As the Seasons Change, We're Here
-          to Help Your Property Look Its Best.
-
+          As the Seasons Change, We're Here to Help
+          Your Property Look Its Best.
         </p>
 
+        <!-- UPDATED HERO BUTTONS -->
         <div class="hero-actions">
 
           <a class="button button-primary"
              href="request-estimate.html">
-
             Request an Estimate
-
           </a>
 
           <a class="button button-outline"
-             href="#services">
-
+             href="services.html">
             Explore Our Services
-
           </a>
 
         </div>
 
       </div>
 
-      <!-- ==================================
-           AUTOMATIC SEASONAL PHOTOGRAPH
-
-           The autumn image is the default.
-           JavaScript selects the correct
-           image for Minnesota's date.
-      ================================== -->
-
+      <!-- SEASONALLY CHANGING PHOTOGRAPH -->
       <div class="hero-image">
 
         <img
@@ -859,10 +792,9 @@
 
     </section>
 
-    <!-- ==================================
+    <!-- =====================================
          OWNER-OPERATED INTRODUCTION
-    ================================== -->
-
+    ===================================== -->
     <section class="section intro" id="about">
 
       <div class="container intro-grid">
@@ -884,18 +816,16 @@
         <div>
 
           <p>
-            Olson Outdoor Services LLC is an
-            owner-operated Minnesota business
-            focused on professional outdoor
-            property maintenance.
+            Olson Outdoor Services LLC is an owner-operated
+            Minnesota business focused on professional
+            outdoor property maintenance.
           </p>
 
           <p>
-            We work to build lasting customer
-            relationships through clear
-            communication, thoughtful attention
-            to detail, and care for the
-            properties entrusted to us.
+            We work to build lasting customer relationships
+            through clear communication, thoughtful attention
+            to detail, and care for the properties entrusted
+            to us.
           </p>
 
           <div class="intro-highlight">
@@ -909,10 +839,10 @@
 
     </section>
 
-    <!-- ==================================
-         SERVICES OVERVIEW
-    ================================== -->
-
+    <!-- =====================================
+         HOMEPAGE SERVICE OVERVIEW
+         NOW LINKS TO SERVICES.HTML
+    ===================================== -->
     <section class="section services" id="services">
 
       <div class="container">
@@ -928,17 +858,18 @@
           </h2>
 
           <p>
-            Outdoor maintenance services
-            for HOA communities, commercial
-            properties, and residential customers.
+            Outdoor maintenance services for HOA communities,
+            commercial properties, and residential customers.
           </p>
 
         </div>
 
         <div class="service-grid">
 
-          <!-- LAWN AND GROUNDS CARE -->
-
+          <!-- =================================
+               SERVICE CARD 1
+               LAWN & GROUNDS CARE
+          ================================= -->
           <article class="service-card"
                    data-service="lawn">
 
@@ -951,19 +882,30 @@
             </h3>
 
             <p>
-              Lawn mowing, trimming, and routine
-              grounds maintenance to help
-              properties look their best throughout
-              the growing season.
+              Lawn mowing, trimming, and routine grounds
+              maintenance to help properties look their
+              best throughout the growing season.
             </p>
 
-            <span class="seasonal-card-note" hidden>
+            <span class="seasonal-card-note"
+                  hidden>
             </span>
+
+            <a
+              class="service-link"
+              href="services.html#lawn-landscape"
+              aria-label="Explore lawn and landscape care services">
+
+              Explore Lawn &amp; Landscape Care &rarr;
+
+            </a>
 
           </article>
 
-          <!-- SNOW REMOVAL -->
-
+          <!-- =================================
+               SERVICE CARD 2
+               SNOW REMOVAL
+          ================================= -->
           <article class="service-card"
                    data-service="snow">
 
@@ -976,18 +918,30 @@
             </h3>
 
             <p>
-              Winter property services focused
-              on maintaining accessible driveways,
-              parking areas, and pedestrian walkways.
+              Winter property services focused on maintaining
+              accessible driveways, parking areas, and
+              pedestrian walkways.
             </p>
 
-            <span class="seasonal-card-note" hidden>
+            <span class="seasonal-card-note"
+                  hidden>
             </span>
+
+            <a
+              class="service-link"
+              href="services.html#snow-ice"
+              aria-label="Explore snow and ice management services">
+
+              Explore Snow &amp; Ice Management &rarr;
+
+            </a>
 
           </article>
 
-          <!-- SEASONAL MAINTENANCE -->
-
+          <!-- =================================
+               SERVICE CARD 3
+               SEASONAL MAINTENANCE
+          ================================= -->
           <article class="service-card"
                    data-service="seasonal">
 
@@ -1000,13 +954,23 @@
             </h3>
 
             <p>
-              Spring and fall cleanups and additional
-              outdoor maintenance services tailored
-              to your property's needs.
+              Spring and fall cleanups and additional outdoor
+              maintenance services tailored to your
+              property's needs.
             </p>
 
-            <span class="seasonal-card-note" hidden>
+            <span class="seasonal-card-note"
+                  hidden>
             </span>
+
+            <a
+              class="service-link"
+              href="services.html#seasonal-cleanup"
+              aria-label="Explore spring and fall cleanup services">
+
+              Explore Seasonal Cleanup &rarr;
+
+            </a>
 
           </article>
 
@@ -1016,10 +980,9 @@
 
     </section>
 
-    <!-- ==================================
+    <!-- =====================================
          FAMILY STORY PREVIEW
-    ================================== -->
-
+    ===================================== -->
     <section class="section story">
 
       <div class="story-inner">
@@ -1035,12 +998,13 @@
         <div class="accent-line"></div>
 
         <p>
-          Olson Outdoor Services is a new chapter
-          shaped by lessons and hands-on experience
-          passed down through generations.
+          Olson Outdoor Services is a new chapter shaped
+          by lessons and hands-on experience passed down
+          through generations.
+
           Our story is rooted in family, hard work,
-          and a lasting appreciation for
-          quality workmanship.
+          and a lasting appreciation for quality
+          workmanship.
         </p>
 
         <a class="button button-outline"
@@ -1054,10 +1018,10 @@
 
     </section>
 
-    <!-- ==================================
-         CONTACT AND ESTIMATE REQUESTS
-    ================================== -->
-
+    <!-- =====================================
+         CONTACT SECTION
+         CONSISTENT WITH SERVICES PAGE
+    ===================================== -->
     <section class="section contact" id="contact">
 
       <div class="container contact-layout">
@@ -1073,11 +1037,10 @@
           </h2>
 
           <p>
-            Whether you manage a residential
-            community, commercial property,
-            or your own home, we'd welcome
-            the opportunity to discuss your
-            outdoor maintenance needs.
+            Whether you manage a residential community,
+            commercial property, or your own home,
+            we'd welcome the opportunity to discuss
+            your outdoor maintenance needs.
           </p>
 
           <p>
@@ -1106,13 +1069,12 @@
 
           <a class="button"
              href="request-estimate.html">
-
             Request an Estimate
-
           </a>
 
-          <a class="button button-secondary"
-             href="mailto:OlsonOutdoorServices26@gmail.com?subject=OOS%20Estimate%20Request">
+          <a
+            class="button button-secondary"
+            href="mailto:OlsonOutdoorServices26@gmail.com?subject=OOS%20Estimate%20Request">
 
             Email OOS
 
@@ -1126,10 +1088,9 @@
 
   </main>
 
-  <!-- ==================================
+  <!-- =====================================
        FOOTER
-  ================================== -->
-
+  ===================================== -->
   <footer>
 
     <p>
@@ -1143,7 +1104,7 @@
     <p>
 
       <a href="#top">
-        Back to Top ↑
+        Back to Top &uarr;
       </a>
 
       &nbsp;·&nbsp;
@@ -1161,60 +1122,60 @@
     </p>
 
     <p>
-      &copy; <span id="year">2026</span>
+      &copy;
+      <span id="year">2026</span>
       Olson Outdoor Services LLC
     </p>
 
   </footer>
 
-  <!-- ==================================
-       AUTOMATIC SEASONAL JAVASCRIPT
-  ================================== -->
-
+  <!-- =====================================
+       AUTOMATIC MINNESOTA SEASONAL SYSTEM
+  ===================================== -->
   <script>
     "use strict";
 
-    /* ==================================
-       COPYRIGHT YEAR
-    ================================== */
-
+    /* =====================================
+       AUTOMATIC COPYRIGHT YEAR
+    ===================================== */
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    /* ==================================
-       MOBILE NAVIGATION
-    ================================== */
-
+    /* =====================================
+       MOBILE MENU LINK BEHAVIOR
+    ===================================== */
     document.querySelectorAll(".mobile-links a")
       .forEach(function(link) {
 
         link.addEventListener("click", function() {
 
-          document.querySelector(".mobile-menu").open =
-            false;
+          document.querySelector(".mobile-menu").open = false;
 
         });
 
       });
 
-    /* ==================================
-       SEASONAL CONFIGURATION
+    /* =====================================
+       MINNESOTA SEASONAL SCHEDULE
 
-       Four approved, real photographs
-       from Pexels.
+       SPRING:
+         March 15 - May 31
 
-       Schedule:
-       Spring: March 15 - May 31
-       Summer: June 1 - August 31
-       Autumn: September 1 - November 30
-       Winter: December 1 - March 14
+       SUMMER:
+         June 1 - August 31
 
-       The main site branding and original
-       service descriptions never change.
-    ================================== */
+       AUTUMN:
+         September 1 - November 30
+
+       WINTER:
+         December 1 - March 14
+    ===================================== */
 
     const seasons = {
 
+      /* =================================
+         SPRING
+      ================================= */
       spring: {
 
         photo:
@@ -1239,6 +1200,9 @@
 
       },
 
+      /* =================================
+         SUMMER
+      ================================= */
       summer: {
 
         photo:
@@ -1262,6 +1226,9 @@
 
       },
 
+      /* =================================
+         AUTUMN
+      ================================= */
       autumn: {
 
         photo:
@@ -1286,6 +1253,9 @@
 
       },
 
+      /* =================================
+         WINTER
+      ================================= */
       winter: {
 
         photo:
@@ -1311,38 +1281,32 @@
 
     };
 
-    /* ==================================
+    /* =====================================
        GET CURRENT MINNESOTA DATE
 
-       We use America/Chicago rather than
-       the visitor's timezone, so our
-       website follows Minnesota's calendar
-       even for visitors in other states.
-    ================================== */
-
+       America/Chicago ensures seasonal
+       changes follow Minnesota time.
+    ===================================== */
     function getMinnesotaDate() {
 
       const now = new Date();
 
       try {
 
-        const formatter = new Intl.DateTimeFormat(
-          "en-US",
-          {
-            timeZone: "America/Chicago",
-            month: "numeric",
-            day: "numeric"
-          }
-        );
+        const formatter = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Chicago",
+          month: "numeric",
+          day: "numeric"
+        });
 
         const parts = formatter.formatToParts(now);
 
-        const monthPart = parts.find(function(part) {
-          return part.type === "month";
+        const monthPart = parts.find(function(p) {
+          return p.type === "month";
         });
 
-        const dayPart = parts.find(function(part) {
-          return part.type === "day";
+        const dayPart = parts.find(function(p) {
+          return p.type === "day";
         });
 
         return {
@@ -1351,8 +1315,6 @@
         };
 
       } catch (error) {
-
-        /* Browser fallback */
 
         return {
           month: now.getMonth() + 1,
@@ -1363,10 +1325,9 @@
 
     }
 
-    /* ==================================
-       DETERMINE CURRENT SEASON
-    ================================== */
-
+    /* =====================================
+       SELECT CURRENT SEASON
+    ===================================== */
     function getCurrentSeason() {
 
       const today = getMinnesotaDate();
@@ -1374,8 +1335,7 @@
       const month = today.month;
       const day = today.day;
 
-      /* Spring begins March 15 */
-
+      /* March 15 through May 31 */
       if (
         (month === 3 && day >= 15) ||
         month === 4 ||
@@ -1384,35 +1344,25 @@
         return "spring";
       }
 
-      /* Summer begins June 1 */
-
-      if (
-        month >= 6 &&
-        month <= 8
-      ) {
+      /* June 1 through August 31 */
+      if (month >= 6 && month <= 8) {
         return "summer";
       }
 
-      /* Autumn begins September 1 */
-
-      if (
-        month >= 9 &&
-        month <= 11
-      ) {
+      /* September 1 through November 30 */
+      if (month >= 9 && month <= 11) {
         return "autumn";
       }
 
-      /* Winter begins December 1
-         and continues through March 14. */
-
+      /* December 1 through March 14 */
       return "winter";
 
     }
 
-    /* ==================================
-       APPLY SEASON TO HOMEPAGE
-    ================================== */
-
+    /* =====================================
+       APPLY SEASONAL PHOTOGRAPH,
+       MESSAGE, AND SERVICE HIGHLIGHTS
+    ===================================== */
     function applySeason(seasonName) {
 
       const config = seasons[seasonName];
@@ -1421,8 +1371,7 @@
         return;
       }
 
-      /* Apply only restrained accents. */
-
+      /* Apply seasonal accent colors */
       document.documentElement.style.setProperty(
         "--season-accent",
         config.accent
@@ -1433,30 +1382,22 @@
         config.cardBackground
       );
 
-      /* Update seasonal message. */
-
-      const seasonalMessage =
-        document.getElementById("seasonalMessage");
-
-      seasonalMessage.textContent =
+      /* Update seasonal message */
+      document.getElementById("seasonalMessage").textContent =
         config.message;
 
-      /* Change the hero photograph. */
-
+      /* Update hero photo */
       const heroImage =
         document.getElementById("seasonalHeroImage");
 
-      heroImage.alt =
-        config.alt;
+      heroImage.alt = config.alt;
 
       heroImage.style.objectPosition =
         config.position;
 
-      heroImage.src =
-        config.photo;
+      heroImage.src = config.photo;
 
-      /* Fallback if the photo cannot load. */
-
+      /* Backup image if a Pexels photo cannot load */
       heroImage.onerror = function() {
 
         this.onerror = null;
@@ -1469,15 +1410,13 @@
 
       };
 
-      /* Highlight appropriate service cards. */
-
+      /* Update homepage service highlights */
       document.querySelectorAll(
         ".service-card[data-service]"
       ).forEach(function(card) {
 
-        const service = card.getAttribute(
-          "data-service"
-        );
+        const service =
+          card.getAttribute("data-service");
 
         const seasonalNote =
           config.serviceFocus[service];
@@ -1502,8 +1441,7 @@
 
       });
 
-      /* Store season on the page for testing. */
-
+      /* Save selected season on root element */
       document.documentElement.setAttribute(
         "data-current-season",
         seasonName
@@ -1511,21 +1449,19 @@
 
     }
 
-    /* ==================================
-       OPTIONAL SEASON PREVIEW
+    /* =====================================
+       OPTIONAL TESTING
 
-       Useful for testing all four seasons
-       without changing the computer date.
+       Add one of these to your URL:
 
-       Add ?previewSeason=spring
-       or ?previewSeason=summer
-       or ?previewSeason=autumn
-       or ?previewSeason=winter
+       ?previewSeason=spring
+       ?previewSeason=summer
+       ?previewSeason=autumn
+       ?previewSeason=winter
 
-       A normal visit uses the current
-       Minnesota date automatically.
-    ================================== */
-
+       Normal visitors see the season
+       chosen automatically by date.
+    ===================================== */
     const previewParams =
       new URLSearchParams(window.location.search);
 
@@ -1544,6 +1480,7 @@
         ? requestedPreview
         : getCurrentSeason();
 
+    /* Activate the selected season */
     applySeason(selectedSeason);
 
   </script>
